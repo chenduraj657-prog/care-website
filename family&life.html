@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Family & Life Programs | CARE - Caring society EST . 2006</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* COLOR PALETTE - CONSISTENT BLUE THEME */
+        :root {
+            --primary-blue: #2482eb;
+            --dark-blue: #1a5fb0;
+            --soft-blue: #eef6ff;
+            --accent-teal: #2dd4bf;
+            --text-main: #444;
+        }
+
+        body { font-family: 'Poppins', sans-serif; color: var(--text-main); }
+
+        .blue-gradient-text {
+            background: linear-gradient(90deg, var(--primary-blue), var(--accent-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        /* HERO SECTION - ORGANIC STYLE */
+        .hero-life {
+            padding: 100px 0 150px;
+            background: linear-gradient(180deg, #fff 0%, var(--soft-blue) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-circle-img {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%; /* Organic Shape */
+            box-shadow: 0 20px 50px rgba(36, 130, 235, 0.2);
+            border: 10px solid #fff;
+        }
+
+        /* AUDIENCE BADGES */
+        .badge-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+        .life-badge {
+            background: #fff;
+            color: var(--primary-blue);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--soft-blue);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        /* WAVE DIVIDER */
+        .wave-container {
+            position: relative;
+            height: 100px;
+            width: 100%;
+            background: var(--soft-blue);
+            margin-top: -100px;
+        }
+
+        /* 3D FOCUS CARDS */
+        .focus-section { padding: 80px 0; background: #fff; }
+        
+        .card-3d {
+            background: #fff;
+            border-radius: 20px;
+            padding: 50px 30px 40px;
+            margin-top: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            transition: all 0.4s ease;
+            position: relative;
+            height: 100%;
+        }
+
+        .card-3d:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(36, 130, 235, 0.1);
+            border-color: var(--primary-blue);
+        }
+
+        .floating-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--primary-blue);
+            color: #fff;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            position: absolute;
+            top: -35px;
+            left: 30px;
+            box-shadow: 0 10px 20px rgba(36, 130, 235, 0.3);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .feature-item i {
+            color: var(--accent-teal);
+            margin-right: 12px;
+            margin-top: 5px;
+        }
+
+        .outcome-box {
+            background: var(--soft-blue);
+            color: var(--primary-blue);
+            padding: 15px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* BENEFITS LIST */
+        .benefit-section { padding: 80px 0; background: var(--soft-blue); border-radius: 60px 60px 0 0; }
+        .benefit-pill {
+            background: #fff;
+            padding: 30px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .benefit-pill i { font-size: 40px; color: var(--primary-blue); }
+
+        /* CTA BOX */
+        .cta-premium {
+            background: var(--primary-blue);
+            border-radius: 40px;
+            padding: 80px 40px;
+            color: #fff;
+            text-align: center;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-premium h2 { color: #fff; font-size: 36px; margin-bottom: 20px; }
+        .cta-btn {
+            background: #fff;
+            color: var(--primary-blue) !important;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .cta-btn:hover { transform: scale(1.05); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 991px) {
+            .hero-life { text-align: center; padding: 60px 0 100px; }
+            .hero-circle-img { margin-top: 40px; }
+            .badge-container { justify-content: center; }
+            .card-3d { margin-bottom: 60px; }
+        }
+
+        @media (max-width: 767px) {
+            .hero-life h1 { font-size: 32px; }
+            .cta-premium h2 { font-size: 26px; }
+            .benefit-pill { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+        <!-- HEADER (Standard Nav) -->
+       <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                 <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li class="active"><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="TrainingDevelopment.html">Training & Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="corprate-solution.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                            <li class="show-search">
+                                                <a href="#"><i class="icon_search"></i></a>
+                                            </li>
+                                        </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Family and Life</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="life-coaching.html">Life coaching</a></li>
+                                        <li>Family and Life</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-life">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="title">Stronger Families. <br><span class="blue-gradient-text">Happier Lives.</span></h1>
+                        <p class="section-intro-text">
+                            Life is more than just professional success. Our Family & Life Programs help you find the rhythm between personal growth and family harmony, ensuring well-being for those who matter most.
+                        </p>
+                        <div class="badge-container">
+                            <div class="life-badge">Working Professionals</div>
+                            <div class="life-badge">Parents</div>
+                            <div class="life-badge">Couples</div>
+                            <div class="life-badge">Women</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="images/work/2.jpg" alt="Family Harmony" class="hero-circle-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAVE TRANSITION -->
+        <div class="wave-container">
+            <svg viewBox="0 0 1440 320" style="position: absolute; bottom: 0;">
+                <path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+
+        <!-- FOCUS AREAS GRID -->
+        <section class="focus-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Area 1 -->
+                    <div class="col-md-4">
+                        <div class="card-3d">
+                            <div class="floating-icon"><i class="fa fa-balance-scale"></i></div>
+                            <h3>Work-Life Balance</h3>
+                            <p>Managing work and personal life shouldn't be a struggle. Find peace while you succeed.</p>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Set healthy boundaries</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Reduce burnout fatigue</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Sustainable lifestyle</span></div>
+                            <div class="outcome-box">Outcome: Productive & Present</div>
+                        </div>
+                    </div>
+
+                    <!-- Area 2 -->
+                    <div class="col-md-4">
+                        <div class="card-3d">
+                            <div class="floating-icon"><i class="fa fa-child"></i></div>
+                            <h3>Art of Parenting</h3>
+                            <p>Guide your children with confidence in a fast-paced, digital world.</p>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Emotional intelligence</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Communication & Trust</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Handling peer pressure</span></div>
+                            <div class="outcome-box">Outcome: Trusting Parent-Child Bond</div>
+                        </div>
+                    </div>
+
+                    <!-- Area 3 -->
+                    <div class="col-md-4">
+                        <div class="card-3d">
+                            <div class="floating-icon"><i class="fa fa-heart"></i></div>
+                            <h3>Happy Married Life</h3>
+                            <p>Nurture your relationship. Build a partnership that grows stronger over time.</p>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Conflict resolution</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Emotional connection</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Mutual respect</span></div>
+                            <div class="outcome-box">Outcome: Connected & Fulfilling</div>
+                        </div>
+                    </div>
+
+                    <!-- Area 4 -->
+                    <div class="col-md-4">
+                        <div class="card-3d">
+                            <div class="floating-icon"><i class="fa fa-female"></i></div>
+                            <h3>Women Empowerment</h3>
+                            <p>Discover your strength and lead your life with independence and grace.</p>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Self-confidence building</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Growth opportunities</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Taking future control</span></div>
+                            <div class="outcome-box">Outcome: Confident Independence</div>
+                        </div>
+                    </div>
+
+                    <!-- Area 5 -->
+                    <div class="col-md-4">
+                        <div class="card-3d">
+                            <div class="floating-icon"><i class="fa fa-money"></i></div>
+                            <h3>Financial Awareness</h3>
+                            <p>Make informed decisions for a secure, stress-free future for your family.</p>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Financial planning</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Savings management</span></div>
+                            <div class="feature-item"><i class="fa fa-check-circle"></i> <span>Avoid common pitfalls</span></div>
+                            <div class="outcome-box">Outcome: A Secure Future</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW THIS HELPS SECTION -->
+        <section class="benefit-section">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title">How This <span class="blue-gradient-text">Helps You</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="benefit-pill">
+                            <i class="fa fa-users"></i>
+                            <div>
+                                <h5>Stronger Bonds</h5>
+                                <p>Deepen family relationships through understanding and better communication.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="benefit-pill">
+                            <i class="fa fa-heartbeat"></i>
+                            <div>
+                                <h5>Emotional Well-being</h5>
+                                <p>Find a calmer mind and more joyful outlook on daily life and challenges.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="benefit-pill">
+                            <i class="fa fa-clock-o"></i>
+                            <div>
+                                <h5>Life Balance</h5>
+                                <p>Finally find the time for what truly matters—your family and yourself.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="benefit-pill">
+                            <i class="fa fa-check-square-o"></i>
+                            <div>
+                                <h5>Confident Choices</h5>
+                                <p>Gain the clarity to make secure life and financial decisions for your future.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+     
+         <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-infomation">
+                            <div id="logo" class="logo responsive-logo-container">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+                            <ul class="flat-information">
+                                <li class="phone">
+                                    <a href="tel:+919865223321">+91 98652 23321</a>
+                                </li>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                                <li class="address">
+                                    <a href="#">
+                                        CARE HRD – Chidambaram Academy of Refinement & Enrichment, Hosur, Tamil Nadu,
+                                        India
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts & Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2025 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+     <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascript/owl.carousel.js"></script>
+    <script type="text/javascript" src="javascript/jquery-waypoints.js"></script>
+    <script type="text/javascript" src="javascript/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.twentytwenty.js"></script>
+    <script type="text/javascript" src="javascript/jquery.event.move.js"></script>
+    <script type="text/javascript" src="javascript/parallax.js"></script>
+
+    <!-- Revolution Slider Scripts -->
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="revolution/js/slider3.js"></script>
+
+    <!-- Revolution Extensions -->
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+</html> 

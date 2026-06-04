@@ -1,0 +1,67 @@
+/**
+  * Color
+  * Border Color
+  * Background Color  
+*/
+
+/* Color
+-------------------------------------------------------------- */
+.header-full-width .logo.color-green h1 span, .header.header-full-width  .logo h1 a:hover span, .social-links a:hover, .header-full-width .wrap-right .hotline p a, .flat-imagebox a.flat-link.style2:hover, .flat-counter.style2 .content-number .numb-count, article.post.style3.border .entry-post .entry-author a.name-author:hover,
+article.post.style3.border .entry-post h6.entry-title a:hover, .contact-info .infomation .contact-email a:hover, .iconbox .box-header .box-icon i,
+article.post.style3.border .entry-post ul.entry-comment li a:hover, .post.style3.lates .entry .entry-post .notes, .post.style3.lates .entry-post h6.entry-title a:hover, .testimonials.style2 .message strong.title, .testimonials.style2 .message strong.title::before, .logo-footer a:hover,
+.copyright p a:hover, .link-bottom li a:hover, .menu.menu-extra li a:hover, .flat-counter .content-number .numb-count, .header .logo h1 a:hover, .nav-wrap .top-search #searchform-all #searchsubmit, .default-course #searchform #searchcourse, .widget ul li a:hover, .breadcrumbs ul li a:hover, .footer .logo-footer a:hover, .bottom .copyright p a:hover, .bottom .link-bottom li a:hover, .top.bg-white .flat-language .current > a:hover, .top.bg-white .flat-sign-in .current > a:hover, .top.bg-white .social-links a:hover, .top.bg-white .flat-information > li > a:hover,
+.post.style3 .entry-post .entry-author a.name-author:hover, .wrap-pagination.style2 .flat-pagination li a:hover, .wrap-pagination.style2 .flat-pagination li.active a,
+.wrap-pagination.style2 .flat-pagination li.next:hover:after, .completed .payment h4 span, .your-order .list-order li span.color-blue, .check-out .customer p a, a:hover, a:focus, td.product-price a, td.product-subtotal, .detail-product .item-content h6 a:hover, .shop-detail .detail-product .item-content .product_meta ul li a, .shop-detail .detail-product .item-content .social-links li a:hover, .price-box ins, .widget-product .product-shop .product-name a:hover, .widget-shopby .price_slider_amount .price_label input, .widget.widget-categories.style2 ul li:hover a ~ span,
+.widget.widget-categories.style2 ul li.active span, .flat-tabs ul.menu-tab li.active a, .instructor .ins-author ul.meta li a:hover, .instructor .ins-content .ins-header span, .instructor .ins-author ul.meta li::before, .reviews .comment-list .comment-body .comment-author .position a, a.flat-link.style2.color-blue, a.flat-link.style2.color-blue::before, .page-course-list .post .entry .entry-author a:hover, .post.course-details .entry .entry-author a:hover, .widget-course .course-content .course-name a:hover, .widget.widget-twiter p, .widget.widget-twiter a, .social-links.style3 li a:hover,
+.flat-more ul.meta-vote li a:hover, a.flat-link::before, a.flat-link:after, .iconbox.style3 .box-header .box-icon i, .wrap-steps .flat-steps .step li a:hover, .flat-language .current > a:hover, .flat-sign-in .current > a:hover, .social-links a:hover, .flat-information > li > a:hover, .flat-list ul.list-steps li::before, .testimonials .message strong.title, .testimonials .message strong.title::before, .post.style3 .entry-post h6.entry-title a:hover, .post .entry-post ul.entry-comment li a:hover, .entry .header-post .flat-title h3.title-post a:hover, .entry .content-post .name-team a:hover,
+.comment-list .comment-metadata .comment-info h5 a:hover, .widget-twiter .latest-tweets ul li a:hover, .flat-contact-form2 label.error, .iconbox.style3 .box-content a:hover, .tparrows:hover::before, .contactform label.error, .flat-contact-form .notification_ok, .loading-overlay, .entry .header-post .flat-title ul.meta-post li a, a.flat-link.style2:hover, .entry .header-post .post-comment li span, .entry .header-post .post-comment li {
+	color: #1eaf13;
+}
+
+/* Background Color
+-------------------------------------------------------------- */
+#mainnav > ul > li > a:after, #mainnav ul.submenu > li > a:hover, .wrap-price article.flat-tag:hover .header-tag, .contact-info .infomation .contact-email a:hover:after, .flat-accordion .toggle-title::before, .fluid-width-video .video-icon.fa-play, .plan-green1 .fluid-width-video .video-icon.fa-play, .plan-green1 .flat-accordion .toggle-title::before, .social-links.style2 li a:hover, .title-section.oregano .title::before, .go-top, .btn-menu:before, .btn-menu:after, .btn-menu span,
+.flat-button, .flat-button.bg-gray:hover::after, .flat-button.bg-gray:hover::before, .flat-button.bg-gray::after, .flat-button.bg-gray::before, .blog-pagination ul.flat-pagination .flat-button:after, .blog-pagination ul.flat-pagination .flat-button:before, .comment-list .comment-body .comment-reply .flat-button:hover::before, .comment-list .comment-body .comment-reply .flat-button:hover::after, .comment-list .comment-body .comment-reply .flat-button:before, .comment-list .comment-body .comment-reply .flat-button:after, .comment-respond .comment-form .form-submit .flat-button, .flat-button.bg-black:hover::after, .flat-button.bg-black:hover::before, .flat-button.bg-black::after, .flat-button.bg-black::before,
+.videopage .fancybox, .fancybox, .flat-language > ul > li > ul, .flat-sign-in > ul > li > ul, .toggle-panel, .main-content .wrap-pagination .flat-pagination li a:hover, .main-content .wrap-pagination .flat-pagination li.active a, .shop-detail .flat-tabs ul.menu-tab li.active, .detail-product .overlay a:hover, .widget-shopby .ui-slider .ui-slider-handle span.shadow.dow, .widget-shopby .ui-slider .ui-slider-range, .portfolio-filter li.active a::after, .flat-comming::after, .wrap-comming-soon .social-links li:hover, .flat-tabs ul.menu-tab li.active::before, .switcher-container h2 a, .widget.widget-tags .tags-list a:hover, .sk-cube-grid .sk-cube, .flat-progress .progress-animate, .title-section .title::before, .video-icon.fa-play, .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar, .flat-select .flat-sort a.active
+ {
+	background-color: #1eaf13;
+}
+
+.switcher-container h2 i, .wrap-pagination .flat-pagination li a:hover {
+	color: #fff;
+}
+
+.wrap-pagination .flat-pagination li a:hover {
+	background-color: transparent;
+}
+
+/* Border Color
+-------------------------------------------------------------- */
+.wrap-stories .social-links.style2 li a:hover, .main-content .wrap-pagination .flat-pagination li.active a,
+.main-content .wrap-pagination .flat-pagination li a:hover, .info-customer input:focus, .info-customer textarea:focus, .info-customer select:focus, .widget.widget-tags .tags-list a:hover {
+	border-color: #1eaf13;
+}
+
+.loader {
+	border-left-color: #1eaf13 ;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus {
+	border-color: #1eaf13;
+}
+
+

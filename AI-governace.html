@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>AI Governance | CARE - Consulting & Advisory</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* BRAND COLOR PATTERN */
+        :root {
+            --brand-blue: #2482eb;
+            --brand-teal: #2dd4bf;
+            --soft-blue: #f0f7ff;
+            --dark-navy: #1a2a44;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* NEW STYLE: STRATEGIC HERO */
+        .hero-ai {
+            padding: 120px 0;
+            background: radial-gradient(circle at bottom right, #eef6ff 0%, #ffffff 60%);
+            position: relative;
+        }
+
+        .hero-ai-img {
+            border-radius: 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+            border-bottom: 8px solid var(--brand-blue);
+        }
+
+        /* AUDIENCE CARDS: ROW STYLE */
+        .audience-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .audience-item {
+            background: #fff;
+            padding: 12px 25px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--brand-blue);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+        }
+
+        /* ALTERNATING STRATEGY BLOCKS */
+        .ai-block {
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .ai-block-bg {
+            background-color: var(--soft-blue);
+        }
+
+        .ai-content {
+            padding: 40px;
+        }
+
+        .ai-icon-box {
+            width: 70px;
+            height: 70px;
+            background: #fff;
+            color: var(--brand-blue);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 20px rgba(36, 130, 235, 0.1);
+        }
+
+        .ai-list {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .ai-list li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            font-size: 16px;
+            color: #555;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .ai-list li::before {
+            content: "\f058";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: var(--brand-teal);
+            font-size: 18px;
+        }
+
+        .ai-outcome-pill {
+            display: inline-block;
+            background: var(--brand-blue);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* WHY CHOOSE US: NODE GRID */
+        .node-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .node-item {
+            padding: 30px;
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid #f0f0f0;
+            transition: 0.3s;
+        }
+
+        .node-item:hover {
+            border-color: var(--brand-teal);
+            transform: translateY(-5px);
+        }
+
+        .node-item h6 {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--brand-blue);
+        }
+
+        /* CTA: DARK THEME */
+        .cta-ai {
+            background: var(--dark-navy);
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            border-radius: 60px 60px 0 0;
+        }
+
+        @media (max-width: 991px) {
+            .hero-ai {
+                text-align: center;
+            }
+
+            .hero-ai-img {
+                margin-top: 50px;
+            }
+
+            .ai-block {
+                flex-direction: column !important;
+                text-align: center;
+                padding: 60px 0;
+            }
+
+            .ai-content {
+                padding: 30px 0;
+            }
+
+            .ai-list li {
+                text-align: left;
+            }
+
+            .node-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .col-md-push-6,
+            .col-md-pull-6 {
+                left: 0 !important;
+                right: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+        <!-- HEADER CLEARFIX -->
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container1">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.col-md-6 -->
+                        <!-- <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                            <div class="flat-dropdown flat-sign-in">
+                                <ul class="unstyled">
+                                    <li class="current"><a href="#">Sign In</a>
+                                        <ul class="unstyled">
+                                            <li class="en"><a href="#">Profile</a></li>
+                                            <li class="ge"><a href="#">Sign Out</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flat-dropdown flat-language">
+                                <ul class="unstyled">
+                                    <li class="current"><a href="#">English</a>
+                                        <ul class="unstyled">
+                                            <li class="en"><a href="#">French</a></li>
+                                            <li class="ge"><a href="#">German</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.top -->
+
+            <!-- Header -->
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                 <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li ><a href="TrainingDevelopment.html">Training &
+                                                    Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active"><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="corprate-solution.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                        <li class="show-search">
+                                            <a href="#"><i class="icon_search"></i></a>
+                                        </li>
+                                    </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>AI Governance</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="#">Consulting & Advisory</a></li>
+                                        <li>AI Governance</li>
+                                    </ul>
+                                </div><!-- breadcrumb -->
+                            </div><!-- page-title -->
+                        </div>
+                    </div>
+                </div><!-- container -->
+            </div><!-- wrap-slider -->
+        </div><!-- /.site-wrapper -->
+
+        <!-- HERO SECTION -->
+        <section class="hero-ai">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <h1 class="title" style="font-size: 48px; line-height: 1.2;">Building Trust and <br><span
+                                class="gradient-text">Value in AI Adoption.</span></h1>
+                        <p class="section-intro-text" style="font-size: 20px; margin-top: 20px;">
+                            Responsible, ethical, and well-governed systems are the backbone of modern AI integration.
+                            We help organizations manage risks while maximizing accountability.
+                        </p>
+                        <div class="audience-row">
+                            <div class="audience-item">Business Leaders</div>
+                            <div class="audience-item">HR & Analytics</div>
+                            <div class="audience-item">Governance Professionals</div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="images/work/1.jpg" alt="Strategic AI Governance" class="hero-ai-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AREA 1: RESPONSIBLE AI -->
+        <section class="ai-block ai-block-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/work/2.jpg" alt="Ethics"
+                            style="border-radius: 20px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ai-content">
+                            <div class="ai-icon-box"><i class="fa fa-balance-scale"></i></div>
+                            <h3>Responsible AI Frameworks</h3>
+                            <p>Design systems with ethics at the core. Ensure technology is fair, transparent, and
+                                unbiased.</p>
+                            <ul class="ai-list">
+                                <li>Build ethical AI governance policies</li>
+                                <li>Identify and reduce algorithmic bias</li>
+                                <li>Ensure transparency and accountability</li>
+                                <li>Manage responsible data usage protocols</li>
+                            </ul>
+                            <div class="ai-outcome-pill">Outcome: Trustworthy Systems</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AREA 2: RISK & COMPLIANCE (REVERSED) -->
+        <section class="ai-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-push-6">
+                        <img src="images/work/1.jpg" alt="Compliance"
+                            style="border-radius: 20px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="col-md-6 col-md-pull-6">
+                        <div class="ai-content">
+                            <div class="ai-icon-box"><i class="fa fa-shield"></i></div>
+                            <h3>AI Risk & Compliance</h3>
+                            <p>Proactively manage the new frontier of risks introduced by Artificial Intelligence.</p>
+                            <ul class="ai-list">
+                                <li>Identify legal and reputational risks</li>
+                                <li>Align with global regulatory requirements</li>
+                                <li>Implement real-time risk monitoring</li>
+                                <li>Ensure high-level data privacy standards</li>
+                            </ul>
+                            <div class="ai-outcome-pill">Outcome: Compliant Implementation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AREA 3: STRATEGY -->
+        <section class="ai-block ai-block-bg" style="border-radius: 0 0 60px 60px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/work/2.jpg" alt="AI Business Strategy"
+                            style="border-radius: 20px; width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="ai-content">
+                            <div class="ai-icon-box"><i class="fa fa-lightbulb-o"></i></div>
+                            <h3>AI Strategy for HR & Business</h3>
+                            <p>Technology adoption is only useful if it delivers measurable business value and ROI.</p>
+                            <ul class="ai-list">
+                                <li>Identify high-impact AI use cases</li>
+                                <li>Integrate AI into core HR processes</li>
+                                <li>Align initiatives with business goals</li>
+                                <li>Drive organizational change management</li>
+                            </ul>
+                            <div class="ai-outcome-pill">Outcome: Measurable ROI</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="flat-row">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2 class="title">Why Choose Our <br><span class="gradient-text">Advisory?</span></h2>
+                        <p style="font-size: 18px; margin-top: 20px;">We blend business-first strategy with global
+                            governance trends to ensure AI serves your goals responsibly.</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="node-grid">
+                            <div class="node-item">
+                                <h6>Practical Approach</h6>
+                                <p>Focus on frameworks that work in real-world scenarios, not just theory.</p>
+                            </div>
+                            <div class="node-item">
+                                <h6>Global Trends</h6>
+                                <p>Stay aligned with the rapidly changing landscape of AI compliance.</p>
+                            </div>
+                            <div class="node-item">
+                                <h6>Business-First</h6>
+                                <p>Ensuring AI initiatives deliver actual impact on your bottom line.</p>
+                            </div>
+                            <div class="node-item">
+                                <h6>Expert Transformation</h6>
+                                <p>Deep expertise in HR, Risk, and organizational change.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-ai">
+            <div class="container">
+                <h2 style="color: #fff; margin-bottom: 20px;">Secure your AI journey today.</h2>
+                <p style="font-size: 20px; opacity: 0.8; margin-bottom: 40px;">Ready to build a framework that balances
+                    innovation with accountability?</p>
+                <a href="contact.html" class="flat-button"
+                    style="background: var(--brand-blue); color: #fff; border: none; font-weight: 700;">Request an
+                    Executive Session</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-infomation">
+                            <!-- Logo instead of COACHING text -->
+                            <div id="logo" class="logo responsive-logo-container footer-logo">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                                <li class="address">
+                                    <a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near
+                                        Ashok Pillar, Hosur - 635 109. (TN).
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts & Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2017 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+
+    <!-- Javascript -->
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascript/imagesloaded.min.js"></script>
+    <script type="text/javascript" src="javascript/switcher.js"></script>
+    <script type="text/javascript" src="javascript/jquery.event.move.js"></script>
+    <script type="text/javascript" src="javascript/jquery.twentytwenty.js"></script>
+
+    <script type="text/javascript" src="javascript/jquery-waypoints.js"></script>
+    <script type="text/javascript" src="javascript/jquery.cookie.js"></script>
+    <script type="text/javascript" src="javascript/parallax.js"></script>
+    <script type="text/javascript" src="javascript/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
+</html>

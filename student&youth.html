@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Student & Youth Coaching | CARE - Caring society EST . 2006</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* COLOR PATTERN - CONSISTENT BLUE & TEAL */
+        :root {
+            --youth-blue: #2482eb;
+            --youth-teal: #2dd4bf;
+            --youth-bg: #f0f7ff;
+            --youth-dark: #1a5fb0;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--youth-blue), var(--youth-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* MODERN HERO SECTION */
+        .hero-youth {
+            padding: 100px 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-youth::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: var(--youth-bg);
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0.6;
+        }
+
+        .youth-hero-img {
+            border-radius: 30px;
+            box-shadow: 20px 20px 0px var(--youth-teal);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        /* AUDIENCE CARDS */
+        .audience-tag {
+            display: inline-block;
+            background: #fff;
+            border: 2px solid var(--youth-bg);
+            padding: 10px 20px;
+            border-radius: 15px;
+            margin: 5px;
+            font-weight: 600;
+            color: var(--youth-blue);
+            transition: 0.3s;
+        }
+
+        .audience-tag:hover {
+            border-color: var(--youth-blue);
+            transform: scale(1.05);
+        }
+
+        /* MOSAIC GRID STYLE */
+        .youth-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 60px 0;
+        }
+
+        .youth-card {
+            background: #fff;
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+            width: calc(50% - 13px);
+            /* 2 columns */
+        }
+
+        @media (max-width: 991px) {
+            .youth-card {
+                width: 100%;
+            }
+        }
+
+        .youth-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(36, 130, 235, 0.12);
+        }
+
+        .youth-card i {
+            font-size: 40px;
+            color: var(--youth-blue);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .youth-card h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .youth-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 25px 0;
+        }
+
+        .youth-card ul li {
+            padding: 5px 0 5px 25px;
+            position: relative;
+            font-size: 15px;
+            color: #666;
+        }
+
+        .youth-card ul li::before {
+            content: "\f05d";
+            /* FontAwesome check-circle */
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: var(--youth-teal);
+        }
+
+        .outcome-pill {
+            display: inline-block;
+            background: var(--youth-blue);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            box-shadow: 0 5px 15px rgba(36, 130, 235, 0.3);
+        }
+
+        /* STEPS SECTION */
+        .steps-box {
+            background: var(--youth-dark);
+            border-radius: 40px;
+            padding: 60px;
+            color: #fff;
+            margin-bottom: 60px;
+        }
+
+        .step-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .step-circle {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background: var(--youth-teal);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--youth-dark);
+        }
+
+        /* CTA SECTION */
+        .cta-youth {
+            text-align: center;
+            padding: 80px 20px;
+            background: var(--youth-bg);
+            border-radius: 30px;
+            margin-bottom: 80px;
+        }
+
+        /* RESPONSIVE BUTTON */
+        .btn-youth {
+            background: var(--youth-blue);
+            color: #fff !important;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+            border: none;
+        }
+
+        .btn-youth:hover {
+            background: var(--youth-dark);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="header-sticky v3">
+    <div class="boxed">
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                 <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li class="active"><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="TrainingDevelopment.html">Training & Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="corprate-solution.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                            <li class="show-search">
+                                                <a href="#"><i class="icon_search"></i></a>
+                                            </li>
+                                        </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Student and youth coaching</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="life-coaching.html">Life coaching</a></li>
+                                        <li>Student and youth coaching</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-youth">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="title">Guiding Young Minds <br><span class="text-gradient">Toward a Confident
+                                Future</span></h1>
+                        <p class="section-intro-text">
+                            Today’s students face immense pressure and constant change. We provide a safe, encouraging
+                            space to build clarity, confidence, and essential life skills.
+                        </p>
+                        <div class="audience-grid">
+                            <div class="audience-tag">School Students</div>
+                            <div class="audience-tag">College Students</div>
+                            <div class="audience-tag">Teenagers</div>
+                            <div class="audience-tag">Career Seekers</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="images/work/1.jpg" alt="Student Coaching" class="youth-hero-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOCUS AREAS GRID -->
+        <section class="flat-row bg-gray">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title">How We <span class="text-gradient">Support You</span></h2>
+                    <p>Relatable, practical, and focused on your personal growth.</p>
+                </div>
+
+                <div class="youth-grid">
+                    <!-- Area 1 -->
+                    <div class="youth-card">
+                        <i class="fa fa-smile-o"></i>
+                        <h4>Teenage Problem Management</h4>
+                        <p>Navigate the emotional and social challenges of the teenage years with a stable mindset.</p>
+                        <ul>
+                            <li>Handle peer pressure & anxiety</li>
+                            <li>Manage academic stress</li>
+                            <li>Build positive thinking habits</li>
+                        </ul>
+                        <div class="outcome-pill">Outcome: Balanced Mindset</div>
+                    </div>
+
+                    <!-- Area 2 -->
+                    <div class="youth-card">
+                        <i class="fa fa-book"></i>
+                        <h4>Study Skills & Focus</h4>
+                        <p>Learn smarter, not harder. We provide methods to improve concentration and exam confidence.
+                        </p>
+                        <ul>
+                            <li>Effective study techniques</li>
+                            <li>Time management & exam prep</li>
+                            <li>Reduce distractions & procrastination</li>
+                        </ul>
+                        <div class="outcome-pill">Outcome: Academic Confidence</div>
+                    </div>
+
+                    <!-- Area 3 -->
+                    <div class="youth-card">
+                        <i class="fa fa-comments-o"></i>
+                        <h4>Communication Confidence</h4>
+                        <p>Express yourself clearly. Build the confidence to speak in presentations and social settings.
+                        </p>
+                        <ul>
+                            <li>Overcome fear of public speaking</li>
+                            <li>Improve presentation skills</li>
+                            <li>Clear expression of thoughts</li>
+                        </ul>
+                        <div class="outcome-pill">Outcome: Confident Expression</div>
+                    </div>
+
+                    <!-- Area 4 -->
+                    <div class="youth-card">
+                        <i class="fa fa-compass"></i>
+                        <h4>Career Awareness</h4>
+                        <p>Explore possibilities. Identify your strengths and interests to choose the right path.</p>
+                        <ul>
+                            <li>Explore various career opportunities</li>
+                            <li>Identify personal interests</li>
+                            <li>Informed educational decisions</li>
+                        </ul>
+                        <div class="outcome-pill">Outcome: Clear Career Direction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT STEPS -->
+        <section class="container">
+            <div class="steps-box">
+                <div class="row">
+                    <div class="col-md-3 step-item">
+                        <div class="step-circle">01</div>
+                        <h5>Self Awareness</h5>
+                        <p>Build confidence from within</p>
+                    </div>
+                    <div class="col-md-3 step-item">
+                        <div class="step-circle">02</div>
+                        <h5>Reduce Confusion</h5>
+                        <p>Gain clarity on future goals</p>
+                    </div>
+                    <div class="col-md-3 step-item">
+                        <div class="step-circle">03</div>
+                        <h5>Better Performance</h5>
+                        <p>In academics and personal life</p>
+                    </div>
+                    <div class="col-md-3 step-item">
+                        <div class="step-circle">04</div>
+                        <h5>Future Ready</h5>
+                        <p>Prepared for life's challenges</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-infomation">
+                            <div id="logo" class="logo responsive-logo-container">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+                            <ul class="flat-information">
+                                <li class="phone">
+                                    <a href="tel:+919865223321">+91 98652 23321</a>
+                                </li>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                                <li class="address">
+                                    <a href="#">
+                                        CARE HRD – Chidambaram Academy of Refinement & Enrichment, Hosur, Tamil Nadu,
+                                        India
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts & Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2025 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascript/imagesloaded.min.js"></script>
+    <script type="text/javascript" src="javascript/switcher.js"></script>
+    <script type="text/javascript" src="javascript/jquery.event.move.js"></script>
+    <script type="text/javascript" src="javascript/jquery.twentytwenty.js"></script>
+
+    <script type="text/javascript" src="javascript/jquery-waypoints.js"></script>
+    <script type="text/javascript" src="javascript/jquery.cookie.js"></script>
+    <script type="text/javascript" src="javascript/parallax.js"></script>
+    <script type="text/javascript" src="javascript/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
+</html>

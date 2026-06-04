@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Risk & Audit | CARE - Consulting & Advisory</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* RISK & AUDIT: STRATEGIC BENTO SYSTEM */
+        :root {
+            --r-blue: #2482eb;
+            --r-teal: #2dd4bf;
+            --r-navy: #1e293b;
+            --r-light: #f8fbff;
+            --r-border: #e2e8f0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--r-blue), var(--r-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* NEW HERO: PRECISION LAYOUT */
+        .hero-precision {
+            padding: 120px 0 80px;
+            background: var(--r-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-precision::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            right: -5%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(36, 130, 235, 0.05) 0%, transparent 70%);
+        }
+
+        .trust-chip {
+            display: inline-block;
+            padding: 6px 16px;
+            background: #fff;
+            border: 1px solid var(--r-border);
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--r-blue);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        /* BENTO GRID SYSTEM */
+        .bento-section {
+            padding: 100px 0;
+            background: #fff;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+            margin-top: 50px;
+        }
+
+        .bento-card {
+            background: #fff;
+            border: 1px solid var(--r-border);
+            border-radius: 24px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-card:hover {
+            border-color: var(--r-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(36, 130, 235, 0.08);
+        }
+
+        /* Bento Sizes */
+        .bento-large {
+            grid-column: span 8;
+        }
+
+        .bento-medium {
+            grid-column: span 4;
+        }
+
+        .bento-full {
+            grid-column: span 12;
+        }
+
+        .card-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--r-light);
+            color: var(--r-blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .impact-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .impact-list li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            font-size: 15px;
+            color: #475569;
+        }
+
+        .impact-list li::before {
+            content: "\f058";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: var(--r-teal);
+        }
+
+        .outcome-pill {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 15px;
+            background: var(--r-navy);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+        }
+
+        /* THE SHIFT: COMPARISON SECTION */
+        .shift-section {
+            background: var(--r-navy);
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        .shift-grid {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .shift-box {
+            flex: 1;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        .shift-box.reactive {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.2);
+        }
+
+        .shift-box.proactive {
+            background: linear-gradient(135deg, var(--r-blue), #1a6fd1);
+        }
+
+        /* CTA */
+        .cta-modern {
+            padding: 100px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        @media (max-width: 991px) {
+
+            .bento-large,
+            .bento-medium {
+                grid-column: span 12;
+            }
+
+            .shift-grid {
+                flex-direction: column;
+            }
+
+            .hero-precision {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+        <!-- HEADER (STANDARD) -->
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                 <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="TrainingDevelopment.html">Training &
+                                                    Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="active"><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="corprate-solution.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                            <li class="show-search">
+                                                <a href="#"><i class="icon_search"></i></a>
+                                            </li>
+                                        </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Risk and Audit</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="">Cybersecurity Advisory</a></li>
+                                        <li>Risk and Audit</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-precision">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="trust-chip"><i class="fa fa-shield"></i> GOVERNANCE & COMPLIANCE</div>
+                        <h1 class="title" style="font-size: 56px; line-height: 1.05; margin-bottom: 25px;">
+                            Transform Risk into <br><span class="gradient-text">Organizational Value.</span>
+                        </h1>
+                        <p style="font-size: 20px; color: #64748b; margin-bottom: 35px;">
+                            We move beyond "check-the-box" compliance to build analytical frameworks that protect your
+                            assets and drive smarter decisions.
+                        </p>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <a href="contact.html" class="flat-button"
+                                style="background: var(--r-blue); border:none; color:#fff;">Executive Briefing</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <img src="images/work/1.jpg" alt="Analytical Audit"
+                            style="border-radius: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BENTO CORE SERVICES -->
+        <section class="bento-section">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title">Our Governance <span class="gradient-text">Ecosystem</span></h2>
+                    <p>Modular solutions designed to strengthen control and ensure long-term stability.</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- Enterprise Risk -->
+                    <div class="bento-card bento-large">
+                        <div class="card-icon"><i class="fa fa-crosshairs"></i></div>
+                        <h3>Enterprise Risk Management (ERM)</h3>
+                        <p>Identifying key business risks across strategic, operational, and financial dimensions to
+                            ensure your preparedness matches your ambition.</p>
+                        <ul class="impact-list">
+                            <li>Comprehensive Business Risk Profiling</li>
+                            <li>Impact & Likelihood Assessment</li>
+                            <li>Custom Mitigation Blueprints</li>
+                        </ul>
+                        <div class="outcome-pill">Preparedness Driven</div>
+                    </div>
+
+                    <!-- Internal Audit -->
+                    <div class="bento-card bento-medium">
+                        <div class="card-icon"><i class="fa fa-search"></i></div>
+                        <h3>Internal Audit Systems</h3>
+                        <p>Enhancing transparency through rigorous process integrity and control evaluation.</p>
+                        <ul class="impact-list">
+                            <li>Control Gap Analysis</li>
+                            <li>Operational Efficiency Audits</li>
+                        </ul>
+                        <div class="outcome-pill">Accountability First</div>
+                    </div>
+
+                    <!-- Compliance -->
+                    <div class="bento-card bento-medium">
+                        <div class="card-icon"><i class="fa fa-balance-scale"></i></div>
+                        <h3>Compliance Design</h3>
+                        <p>Developing structured policies that align with global regulatory standards.</p>
+                        <ul class="impact-list">
+                            <li>Regulatory Alignment</li>
+                            <li>Monitoring & Reporting</li>
+                        </ul>
+                        <div class="outcome-pill">Trust Focused</div>
+                    </div>
+
+                    <!-- Culture -->
+                    <div class="bento-card bento-large">
+                        <div class="card-icon"><i class="fa fa-users"></i></div>
+                        <h3>Governance & Culture</h3>
+                        <p>Risk management is only as strong as the people behind it. We build a risk-aware mindset at
+                            every level of your organization.</p>
+                        <ul class="impact-list">
+                            <li>Leadership Governance Workshops</li>
+                            <li>Compliance Awareness Frameworks</li>
+                            <li>Transparency & Reporting Workflows</li>
+                        </ul>
+                        <div class="outcome-pill">Culture Integrated</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE SHIFT COMPARISON -->
+        <section class="shift-section">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title" style="color:#fff;">The <span class="gradient-text">CARE Advantage</span></h2>
+                    <p style="color:rgba(255,255,255,0.7);">Why proactive governance is no longer optional.</p>
+                </div>
+                <div class="shift-grid">
+                    <div class="shift-box reactive">
+                        <h4 style="color:#fff;"><i class="fa fa-warning"></i> Reactive Auditing</h4>
+                        <p style="opacity: 0.7;">Fixing problems after they occur, leading to higher recovery costs and
+                            reputational damage.</p>
+                    </div>
+                    <div class="col-md-1 text-center" style="font-size: 30px; opacity: 0.3;"><i
+                            class="fa fa-arrow-right"></i></div>
+                    <div class="shift-box proactive">
+                        <h4 style="color:#fff;"><i class="fa fa-bolt"></i> Proactive Resilience</h4>
+                        <p>Identifying vulnerabilities before they become threats, saving costs and building long-term
+                            stakeholder trust.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="cta-modern">
+            <div class="container">
+                <h2 class="title">Secure your organization's <span class="gradient-text">long-term stability.</span>
+                </h2>
+                <p style="font-size: 18px; margin-bottom: 40px; color: #64748b;">Ready to strengthen your controls and
+                    build a risk-aware culture?</p>
+                <a href="contact.html" class="flat-button"
+                    style="background: var(--r-navy); color: #fff; border:none; padding: 18px 45px;">Request a
+                    Consultation</a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-infomation">
+                            <!-- Logo instead of COACHING text -->
+                            <div id="logo" class="logo responsive-logo-container footer-logo">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                                <li class="address">
+                                    <a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near
+                                        Ashok Pillar, Hosur - 635 109. (TN).
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts & Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2017 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+
+        <div class="bottom">
+            <div class="container">
+                <p class="copyright">© 2025 CARE. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
+</html>

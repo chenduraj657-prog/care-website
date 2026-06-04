@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Corporate Training | CARE - Caring society EST . 2006</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* CORPORATE B2B DESIGN SYSTEM */
+        :root {
+            --corp-blue: #2482eb;
+            --corp-teal: #2dd4bf;
+            --corp-dark: #16213e;
+            --corp-soft: #f8fbff;
+        }
+
+        .corp-gradient-text {
+            background: linear-gradient(90deg, var(--corp-blue), var(--corp-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* HERO B2B */
+        .hero-corp {
+            padding: 100px 0 80px;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('images/parallax/bg-parallax1.jpg');
+            background-size: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .audience-pill-corp {
+            display: inline-block;
+            padding: 8px 20px;
+            background: var(--corp-soft);
+            color: var(--corp-blue);
+            border-left: 3px solid var(--corp-blue);
+            margin: 5px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        /* TRAINING GRID */
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 60px 0;
+        }
+
+        .training-card {
+            background: #fff;
+            border: 1px solid #eef2f6;
+            padding: 40px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border-top: 4px solid transparent;
+        }
+
+        .training-card:hover {
+            border-top-color: var(--corp-blue);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .training-card i {
+            font-size: 35px;
+            color: var(--corp-blue);
+            margin-bottom: 25px;
+        }
+
+        .training-card h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .training-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .training-card ul li {
+            padding: 6px 0 6px 20px;
+            position: relative;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .training-card ul li::before {
+            content: "\f105";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: var(--corp-teal);
+            font-weight: bold;
+        }
+
+        .outcome-tag-corp {
+            background: #eef6ff;
+            color: var(--corp-blue);
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* DELIVERY SECTION */
+        .delivery-wrap {
+            background: var(--corp-dark);
+            color: #fff;
+            padding: 80px 0;
+            border-radius: 40px;
+            margin: 40px 0;
+        }
+
+        .delivery-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .delivery-item i {
+            font-size: 40px;
+            color: var(--corp-teal);
+            margin-bottom: 20px;
+        }
+
+        /* WHY CHOOSE US */
+        .why-us-corp {
+            padding: 80px 0;
+        }
+
+        .why-check {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .why-check i {
+            width: 30px;
+            height: 30px;
+            background: var(--corp-blue);
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .training-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .training-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-corp {
+                text-align: center;
+            }
+
+            .delivery-item {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+        <!-- HEADER -->
+         <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                 <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li ><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="active"><a href="TrainingDevelopment.html">Training & Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="corprate-solution.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                            <li class="show-search">
+                                                <a href="#"><i class="icon_search"></i></a>
+                                            </li>
+                                        </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Corporate Training</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="TrainingDevelopment.html">Training & Development</a></li>
+                                        <li>Corporate Training</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <style>
+    /* REUSING THE FAMILY & LIFE DESIGN SYSTEM */
+    .hero-premium-corp {
+        padding: 120px 0 160px; /* Extra bottom padding for the wave */
+        background: radial-gradient(circle at top right, #eef6ff 0%, #ffffff 50%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Organic Image Shape like the Family Section */
+    .hero-organic-img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 60% 40% 70% 30% / 40% 50% 60% 70%; /* Organic Blob Shape */
+        box-shadow: 0 30px 60px rgba(36, 130, 235, 0.15);
+        border: 12px solid #fff;
+        transition: 0.5s ease-in-out;
+    }
+    .hero-organic-img:hover {
+        border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; /* Subtle morph on hover */
+    }
+
+    /* Floating Audience Badges */
+    .corp-badge-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .corp-life-badge {
+        background: #fff;
+        color: #2482eb;
+        padding: 10px 22px;
+        border-radius: 100px;
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid #eef6ff;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+        transition: 0.3s;
+    }
+    .corp-life-badge:hover {
+        transform: translateY(-3px);
+        border-color: #2482eb;
+        background: #2482eb;
+        color: #fff;
+    }
+
+    .corp-tag {
+        display: inline-block;
+        background: #2482eb;
+        color: #fff;
+        padding: 6px 20px;
+        border-radius: 50px;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .blue-gradient-text {
+        background: linear-gradient(90deg, #2482eb, #2dd4bf);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    /* Wave Bottom Divider */
+    .wave-divider {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        line-height: 0;
+    }
+
+    @media (max-width: 991px) {
+        .hero-premium-corp { text-align: center; padding-top: 80px; }
+        .hero-organic-img { margin-top: 50px; }
+        .corp-badge-container { justify-content: center; }
+    }
+</style>
+
+<!-- HERO SECTION -->
+<section class="hero-premium-corp">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-md-7">
+                <div class="hero-content">
+                    <span class="corp-tag">Capability Building</span>
+                    <h1 class="title" style="font-size: 48px; margin-bottom: 25px;">
+                        Building Capability. <br>
+                        <span class="blue-gradient-text">Driving Performance.</span>
+                    </h1>
+                    <p class="section-intro-text" style="font-size: 19px; color: #555; max-width: 600px;">
+                        Organizations need more than skilled employees—they need agile, capable, and future-ready
+                        teams. We partner with you to deliver impactful learning aligned with your business goals.
+                    </p>
+                    
+                    <div class="corp-badge-container">
+                        <div class="corp-life-badge">Upskilling Organizations</div>
+                        <div class="corp-life-badge">HR Development</div>
+                        <div class="corp-life-badge">Team Performance</div>
+                        <div class="corp-life-badge">Growth Transformation</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Side -->
+            <div class="col-md-5 text-center">
+                <!-- Replace this image path with your corporate image -->
+                <img src="images/work/1.jpg" alt="Corporate Training performance" class="hero-organic-img">
+            </div>
+        </div>
+    </div>
+
+    <!-- The Wave Effect from Family & Life -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" style="height: 100px; width: 100%;">
+            <path fill="#ffffff" fill-opacity="1" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,186.7C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+    </div>
+</section>
+
+        
+
+        <!-- TRAINING AREAS GRID -->
+        <section class="flat-row bg-gray">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title">Our Training <span class="corp-gradient-text">Areas</span></h2>
+                </div>
+
+                <div class="training-grid">
+                    <!-- Area 1 -->
+                    <div class="training-card">
+                        <i class="fa fa-briefcase"></i>
+                        <h4>Business & Management</h4>
+                        <p>Strengthen core business capabilities for high-level performance.</p>
+                        <ul>
+                            <li>Business communication</li>
+                            <li>Finance for non-finance</li>
+                            <li>Negotiation skills</li>
+                            <li>Strategic thinking</li>
+                            <li>Project & Ops management</li>
+                        </ul>
+                        <div class="outcome-tag-corp">Outcome: Business Acumen</div>
+                    </div>
+
+                    <!-- Area 2 -->
+                    <div class="training-card">
+                        <i class="fa fa-trophy"></i>
+                        <h4>Leadership & Behavioral</h4>
+                        <p>Develop effective leaders who inspire and manage for growth.</p>
+                        <ul>
+                            <li>Leadership mindset & presence</li>
+                            <li>Team management & motivation</li>
+                            <li>Interpersonal communication</li>
+                            <li>Conflict resolution</li>
+                            <li>Collaboration driving</li>
+                        </ul>
+                        <div class="outcome-tag-corp">Outcome: Results-Driven Leaders</div>
+                    </div>
+
+                    <!-- Area 3 -->
+                    <div class="training-card">
+                        <i class="fa fa-line-chart"></i>
+                        <h4>Productivity & Effectiveness</h4>
+                        <p>Maximize output with absolute clarity and workplace focus.</p>
+                        <ul>
+                            <li>Time & priority management</li>
+                            <li>Goal setting & execution</li>
+                            <li>Problem-solving & decision-making</li>
+                            <li>Workplace accountability</li>
+                        </ul>
+                        <div class="outcome-tag-corp">Outcome: Higher Team Output</div>
+                    </div>
+
+                    <!-- Area 4 -->
+                    <div class="training-card">
+                        <i class="fa fa-lightbulb-o"></i>
+                        <h4>Creativity & Innovation</h4>
+                        <p>Encourage new thinking beyond daily routine operations.</p>
+                        <ul>
+                            <li>Creative problem-solving</li>
+                            <li>Innovation culture building</li>
+                            <li>Implementing new ideas</li>
+                            <li>Adaptability skills</li>
+                        </ul>
+                        <div class="outcome-tag-corp">Outcome: Forward-Thinking Workforce</div>
+                    </div>
+
+                    <!-- Area 5 -->
+                    <div class="training-card">
+                        <i class="fa fa-heartbeat"></i>
+                        <h4>Health, Safety & Wellbeing</h4>
+                        <p>Create a safe, healthy workplace that impacts performance.</p>
+                        <ul>
+                            <li>Workplace safety practices</li>
+                            <li>Stress management & Mental health</li>
+                            <li>Ergonomics awareness</li>
+                            <li>Positive work environment</li>
+                        </ul>
+                        <div class="outcome-tag-corp">Outcome: Engaged Workforce</div>
+                    </div>
+
+                    <!-- Area 6 -->
+                    <div class="training-card">
+                        <i class="fa fa-sitemap"></i>
+                        <h4>HR & Organizational Dev</h4>
+                        <p>Strengthen people practices and long-term success systems.</p>
+                        <ul>
+                            <li>Competency & Performance mgmt</li>
+                            <li>Employee engagement strategies</li>
+                            <li>Change management & culture</li>
+                            <li>L&D frameworks</li>
+                        </ul>
+                        <div class="outcome-tag-corp">Outcome: Stronger Structure</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW WE DELIVER -->
+        <section class="container">
+            <div class="delivery-wrap">
+                <div class="title-section center">
+                    <h2 class="title" style="color:#fff;">How We <span class="corp-gradient-text">Deliver</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 delivery-item">
+                        <i class="fa fa-cogs"></i>
+                        <h5>Customized</h5>
+                        <p>Based on your specific business needs</p>
+                    </div>
+                    <div class="col-md-3 delivery-item">
+                        <i class="fa fa-globe"></i>
+                        <h5>Flexible Format</h5>
+                        <p>Online, Offline, or Hybrid delivery</p>
+                    </div>
+                    <div class="col-md-3 delivery-item">
+                        <i class="fa fa-flask"></i>
+                        <h5>Practical</h5>
+                        <p>Real-world applications & sessions</p>
+                    </div>
+                    <div class="col-md-3 delivery-item">
+                        <i class="fa fa-calendar-check-o"></i>
+                        <h5>Scalable</h5>
+                        <p>Workshops to long-term programs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="why-us-corp">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="images/work/2.jpg" alt="Training" style="border-radius: 20px; width:100%;">
+                    </div>
+                    <div class="col-md-6">
+                        <div style="padding-left: 30px;">
+                            <h2 class="title">Why Choose <span class="corp-gradient-text">CARE Training?</span></h2>
+                            <br>
+                            <div class="why-check">
+                                <i class="fa fa-check"></i>
+                                <div><strong>Industry-relevant content</strong>
+                                    <p>Curriculum designed for current market challenges.</p>
+                                </div>
+                            </div>
+                            <div class="why-check">
+                                <i class="fa fa-check"></i>
+                                <div><strong>Experienced Experts</strong>
+                                    <p>Led by veteran trainers and business consultants.</p>
+                                </div>
+                            </div>
+                            <div class="why-check">
+                                <i class="fa fa-check"></i>
+                                <div><strong>Measurable Business Impact</strong>
+                                    <p>We focus on outcomes that show up in your results.</p>
+                                </div>
+                            </div>
+                            <div class="why-check">
+                                <i class="fa fa-check"></i>
+                                <div><strong>Tailored Solutions</strong>
+                                    <p>No generic slides. Only solutions built for your team.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+      
+
+      <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-infomation">
+                            <div id="logo" class="logo responsive-logo-container">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+                            <ul class="flat-information">
+                                <li class="phone">
+                                    <a href="tel:+919865223321">+91 98652 23321</a>
+                                </li>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                                <li class="address">
+                                    <a href="#">
+                                        CARE HRD – Chidambaram Academy of Refinement & Enrichment, Hosur, Tamil Nadu,
+                                        India
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts & Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2025 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascript/imagesloaded.min.js"></script>
+    <script type="text/javascript" src="javascript/switcher.js"></script>
+    <script type="text/javascript" src="javascript/jquery.event.move.js"></script>
+    <script type="text/javascript" src="javascript/jquery.twentytwenty.js"></script>
+
+    <script type="text/javascript" src="javascript/jquery-waypoints.js"></script>
+    <script type="text/javascript" src="javascript/jquery.cookie.js"></script>
+    <script type="text/javascript" src="javascript/parallax.js"></script>
+    <script type="text/javascript" src="javascript/jquery.magnific-popup.min.js"></script>
+
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
+</html>

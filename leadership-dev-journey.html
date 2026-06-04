@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Leadership Development | CARE - Consulting & Advisory</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* COMMAND & PATH: EXECUTIVE DESIGN SYSTEM */
+        :root {
+            --brand-blue: #2482eb;
+            --brand-teal: #2dd4bf;
+            --deep-navy: #0b1423;
+            /* Stronger dark anchor */
+            --slate-light: #f1f5f9;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* HERO: COMMANDER VIEW */
+        .hero-lead-strong {
+            padding: 160px 0 120px;
+            background: linear-gradient(rgba(11, 20, 35, 0.95), rgba(11, 20, 35, 0.95)), url('images/work/1.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .lead-line {
+            width: 80px;
+            height: 4px;
+            background: var(--brand-teal);
+            margin: 20px auto;
+        }
+
+        /* THE STAIRWAY TO MASTERY */
+        .path-section {
+            padding: 100px 0;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .path-item {
+            position: relative;
+            margin-bottom: 120px;
+        }
+
+        .path-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .path-bg-text {
+            font-size: 250px;
+            font-weight: 900;
+            color: rgba(11, 20, 35, 0.03);
+            position: absolute;
+            top: -100px;
+            left: -50px;
+            z-index: 0;
+            line-height: 1;
+        }
+
+        .path-item.reverse .path-bg-text {
+            left: auto;
+            right: -50px;
+        }
+
+        .path-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .path-label {
+            display: inline-block;
+            padding: 6px 15px;
+            background: var(--brand-blue);
+            color: #fff;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .path-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .path-list li {
+            padding: 15px 0 15px 40px;
+            position: relative;
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--deep-navy);
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .path-list li::before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: var(--brand-teal);
+            font-size: 20px;
+        }
+
+        .track-outcome {
+            margin-top: 30px;
+            padding: 20px;
+            background: var(--slate-light);
+            border-left: 5px solid var(--brand-teal);
+            font-weight: 700;
+        }
+
+        /* METHODOLOGY: THE GRID */
+        .method-section {
+            background: var(--deep-navy);
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        .method-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 4px;
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .method-box:hover {
+            background: var(--brand-blue);
+            border-color: var(--brand-blue);
+        }
+
+        .method-box i {
+            font-size: 30px;
+            color: var(--brand-teal);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .method-box:hover i {
+            color: #fff;
+        }
+
+        /* RESULT PILLARS */
+        .pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .pillar-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .pillar-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            border: 2px solid var(--brand-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--brand-blue);
+        }
+
+        /* CTA: DARK THEME */
+        .cta-strong {
+            background: var(--deep-navy);
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        @media (max-width: 991px) {
+            .path-bg-text {
+                display: none;
+            }
+
+            .path-item {
+                text-align: center;
+            }
+
+            .path-list li {
+                text-align: left;
+            }
+
+            .pillar-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .method-box {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+        <!-- HEADER (Consolidated Site Nav) -->
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li ><a href=" life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="TrainingDevelopment.html">Training & Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="active"><a href="corprate-solution.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce
+                                                            Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                            <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                        <li class="show-search">
+                                            <a href="#"><i class="icon_search"></i></a>
+                                        </li>
+                                    </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Leadership Development Journey</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="#">Consulting & Advisory</a></li>
+                                        <li>Leadership Development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-lead-strong">
+            <div class="container">
+                <h1 style="color: #fff; font-size: 62px; font-weight: 900; line-height: 1;">Commanding <br><span
+                        class="gradient-text">Leadership Excellence.</span></h1>
+                <div class="lead-line"></div>
+                <p style="font-size: 22px; max-width: 800px; margin: 0 auto 40px; opacity: 0.9;">
+                    Developing leaders at every level of the organization through strategic development tracks that
+                    translate potential into measurable performance.
+                </p>
+                <a href="contact.html" class="flat-button"
+                    style="background: var(--brand-teal); border:none; color: var(--deep-navy); font-weight: 800; padding: 18px 45px;">Initiate
+                    Strategy Visit</a>
+            </div>
+        </section>
+
+        <!-- THE PROGRESSION PATHWAY -->
+        <section class="path-section">
+            <div class="container">
+
+                <!-- LEVEL 1 -->
+                <div class="row path-item align-items-center">
+                    <div class="path-bg-text">01</div>
+                    <div class="col-md-6 path-content">
+                        <span class="path-label">Emerging Talent</span>
+                        <h2 class="title" style="font-size: 42px; margin-bottom: 20px;">First-Time Managers</h2>
+                        <p style="font-size: 18px; color: #64748b;">The transition from individual contributor to
+                            manager is the most critical shift in a career path.</p>
+                        <ul class="path-list">
+                            <li>Foundational Leadership Mindset</li>
+                            <li>Team Motivation & Dynamics</li>
+                            <li>High-Clarity Communication</li>
+                            <li>Performance Coaching Basics</li>
+                        </ul>
+                        <div class="track-outcome">RESULT: Confident managers who lead teams to delivery.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/work/1.jpg" alt="First Time Manager"
+                            style="width: 100%; box-shadow: 0 40px 80px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+
+                <!-- LEVEL 2 -->
+                <div class="row path-item reverse align-items-center">
+                    <div class="path-bg-text">02</div>
+                    <div class="col-md-6 col-md-push-6 path-content">
+                        <span class="path-label">Core Execution</span>
+                        <h2 class="title" style="font-size: 42px; margin-bottom: 20px;">Mid-Level Leaders</h2>
+                        <p style="font-size: 18px; color: #64748b;">Strengthening the bridge between high-level strategy
+                            and daily operational action.</p>
+                        <ul class="path-list">
+                            <li>Complex Problem Solving</li>
+                            <li>Cross-Functional Influence</li>
+                            <li>Driving Systemic Accountability</li>
+                            <li>Operational Strategic Alignment</li>
+                        </ul>
+                        <div class="track-outcome">RESULT: Strategic executors who manage complexity.</div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6">
+                        <img src="images/work/2.jpg" alt="Mid Level Leadership"
+                            style="width: 100%; box-shadow: 0 40px 80px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+
+                <!-- LEVEL 3 -->
+                <div class="row path-item align-items-center">
+                    <div class="path-bg-text">03</div>
+                    <div class="col-md-6 path-content">
+                        <span class="path-label">Visionary Command</span>
+                        <h2 class="title" style="font-size: 42px; margin-bottom: 20px;">Senior Leadership</h2>
+                        <p style="font-size: 18px; color: #64748b;">Architecting the future through organizational
+                            transformation and visionary culture building.</p>
+                        <ul class="path-list">
+                            <li>Strategic Transformation Leadership</li>
+                            <li>High-Performance Culture Design</li>
+                            <li>Long-Term Growth Innovation</li>
+                            <li>Inspirational Visionary Impact</li>
+                        </ul>
+                        <div class="track-outcome">RESULT: Visionary leaders who inspire and transform.</div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/work/1.jpg" alt="Senior Leadership"
+                            style="width: 100%; box-shadow: 0 40px 80px rgba(0,0,0,0.12);">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- METHODOLOGY: DARK GRID -->
+        <section class="method-section">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title" style="color:#fff;">The Journey <span class="gradient-text">Structure</span></h2>
+                    <p style="color: rgba(255,255,255,0.6);">A multi-modal approach to permanent behavioral change.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="method-box">
+                            <i class="fa fa-map-signs"></i>
+                            <h5>Structured Paths</h5>
+                            <p style="opacity: 0.7; font-size: 14px;">Tiered learning levels for every manager stage.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="method-box">
+                            <i class="fa fa-cubes"></i>
+                            <h5>Blended Learning</h5>
+                            <p style="opacity: 0.7; font-size: 14px;">Mixing workshops, coaching, and application.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="method-box">
+                            <i class="fa fa-sliders"></i>
+                            <h5>Custom Content</h5>
+                            <p style="opacity: 0.7; font-size: 14px;">Content designed for your specific industry.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="method-box">
+                            <i class="fa fa-line-chart"></i>
+                            <h5>Continuous Dev</h5>
+                            <p style="opacity: 0.7; font-size: 14px;">Mindset shifts for ongoing excellence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PILLARS OF PERFORMANCE -->
+        <section class="path-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2 class="title">Strategic <br><span class="gradient-text">Leadership Advantage.</span></h2>
+                        <p style="font-size: 18px; margin-top: 20px;">Building pipelines that deliver long-term
+                            organizational stability and high-impact performance.</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="pillar-grid">
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa fa-link"></i></div>
+                                <div>
+                                    <h6>End-to-End Pipelines</h6>
+                                    <p>Bridging growth from manager to senior leader.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa fa-briefcase"></i></div>
+                                <div>
+                                    <h6>Real-World Solutions</h6>
+                                    <p>Tackling current business and functional issues.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa fa-puzzle-piece"></i></div>
+                                <div>
+                                    <h6>Level-Specific Design</h6>
+                                    <p>Custom training for each management tier.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa fa-check-circle"></i></div>
+                                <div>
+                                    <h6>Documented Impact</h6>
+                                    <p>Measurable gains in leadership effectiveness.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-strong">
+            <div class="container">
+                <h2 style="color: #fff; margin-bottom: 25px;">Build your leadership pipeline.</h2>
+                <p style="font-size: 21px; opacity: 0.8; margin-bottom: 40px;">Ready to create visionary leaders who can
+                    lead your organization into the future?</p>
+                <a href="contact.html" class="flat-button"
+                    style="background: var(--brand-teal); color: var(--deep-navy); border:none; font-weight: 800; padding: 18px 50px;">Initiate
+                    Executive Review</a>
+            </div>
+        </section>
+
+        <!-- FOOTER (Standard) -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="widget">
+                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                style="max-width: 140px; margin-bottom: 20px;">
+                            <ul class="flat-information">
+                                <li><i class="fa fa-phone"></i> +91 98652 23321</li>
+                                <li><i class="fa fa-envelope"></i> carehrdindia@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="bottom">
+            <div class="container">
+                <p class="copyright">© 2025 CARE. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
+</html>

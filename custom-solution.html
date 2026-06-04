@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Custom Solutions | CARE - Consulting & Advisory</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* BESPOKE CANVAS: FLEXIBLE DESIGN SYSTEM */
+        :root {
+            --c-blue: #2482eb;
+            --c-teal: #2dd4bf;
+            --c-navy: #0f172a;
+            --c-soft: #fcfdfe;
+            --c-border: #eef2f6;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--c-blue), var(--c-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* HERO: THE BLANK CANVAS */
+        .hero-custom {
+            padding: 150px 0 100px;
+            background: var(--c-soft);
+            text-align: center;
+            position: relative;
+        }
+        .hero-custom::before {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(var(--c-blue) 0.5px, transparent 0.5px);
+            background-size: 40px 40px; opacity: 0.1;
+        }
+
+        .custom-label {
+            font-size: 12px; font-weight: 900; color: var(--c-blue);
+            text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px; display: block;
+        }
+
+        /* TARGET AUDIENCE: CHIPS */
+        .chip-wrap { display: flex; justify-content: center; gap: 15px; margin-top: 40px; flex-wrap: wrap; }
+        .audience-chip {
+            padding: 10px 25px; border: 1px solid var(--c-blue); border-radius: 4px;
+            font-size: 13px; font-weight: 700; color: var(--c-blue); background: #fff;
+        }
+
+        /* FOCUS AREAS: DIAMOND GRID */
+        .bespoke-section { padding: 120px 0; background: #fff; }
+        
+        .bespoke-card {
+            background: #fff;
+            padding: 50px;
+            border: 1px solid var(--c-border);
+            position: relative;
+            transition: 0.4s;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        .bespoke-card:hover {
+            border-color: var(--c-teal);
+            box-shadow: 25px 25px 0px var(--c-soft);
+            transform: translate(-5px, -5px);
+        }
+
+        .bespoke-icon {
+            font-size: 35px; color: var(--c-blue); margin-bottom: 25px; display: block;
+        }
+
+        .bespoke-list { list-style: none; padding: 0; margin: 25px 0; }
+        .bespoke-list li {
+            padding: 12px 0 12px 25px; position: relative;
+            font-weight: 600; color: #475569; border-bottom: 1px solid var(--c-soft);
+        }
+        .bespoke-list li::before {
+            content: "\f06d"; font-family: FontAwesome; /* Flame/Spark icon */
+            position: absolute; left: 0; color: var(--c-teal); font-size: 14px;
+        }
+
+        .bespoke-outcome {
+            font-size: 14px; font-weight: 800; color: var(--c-navy); border-top: 2px solid var(--c-teal);
+            padding-top: 15px; margin-top: 20px; display: inline-block;
+        }
+
+        /* THE CRAFTING PROCESS (VERTICAL LOOP) */
+        .process-canvas { background: var(--c-navy); color: #fff; padding: 100px 0; }
+        .craft-step {
+            display: flex; gap: 40px; margin-bottom: 60px; align-items: flex-start;
+        }
+        .craft-num {
+            flex-shrink: 0; font-size: 48px; font-weight: 900; color: var(--c-teal); opacity: 0.3;
+            line-height: 1; font-style: italic;
+        }
+        .craft-content h4 { color: #fff; margin-bottom: 10px; }
+        .craft-content p { color: rgba(255,255,255,0.6); }
+
+        /* WHY US: THE SPECIFICATION */
+        .spec-wrap { border-left: 2px solid var(--c-blue); padding-left: 40px; }
+        .spec-item { margin-bottom: 40px; }
+        .spec-item i { font-size: 20px; color: var(--c-teal); margin-bottom: 10px; display: block; }
+        .spec-item h6 { font-weight: 800; color: var(--c-navy); }
+
+        /* CTA */
+        .cta-custom {
+            padding: 120px 0; background: #fff; text-align: center;
+        }
+
+        @media (max-width: 991px) {
+            .hero-custom h1 { font-size: 38px; }
+            .bespoke-card { padding: 30px; }
+            .craft-step { flex-direction: column; gap: 10px; }
+            .spec-wrap { padding-left: 20px; }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+        <!-- HEADER (Standard Nav Integration) -->
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container1">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.col-md-6 -->
+                        <!-- <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                            <div class="flat-dropdown flat-sign-in">
+                                <ul class="unstyled">
+                                    <li class="current"><a href="#">Sign In</a>
+                                        <ul class="unstyled">
+                                            <li class="en"><a href="#">Profile</a></li>
+                                            <li class="ge"><a href="#">Sign Out</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="flat-dropdown flat-language">
+                                <ul class="unstyled">
+                                    <li class="current"><a href="#">English</a>
+                                        <ul class="unstyled">
+                                            <li class="en"><a href="#">French</a></li>
+                                            <li class="ge"><a href="#">German</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.top -->
+
+            <!-- Header -->
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                 <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="TrainingDevelopment.html">Training & Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="active"><a href="services.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce
+                                                            Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                        <li class="show-search">
+                                            <a href="#"><i class="icon_search"></i></a>
+                                        </li>
+                                    </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Custom solution </h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="#">Corporate solution</a></li>
+                                        <li>Custom solution</li>
+                                    </ul>
+                                </div><!-- breadcrumb -->
+                            </div><!-- page-title -->
+                        </div>
+                    </div>
+                </div><!-- container -->
+            </div><!-- wrap-slider -->
+        </div><!-- /.site-wrapper -->
+        <!-- HERO SECTION -->
+        <section class="hero-custom">
+            <div class="container">
+                <span class="custom-label">Bespoke Advisory</span>
+                <h1 style="font-size: 56px; font-weight: 900; line-height: 1.1; margin-bottom: 25px;">Designed Around Your <br><span class="gradient-text">Unique Business Needs.</span></h1>
+                <p style="font-size: 21px; color: #64748b; max-width: 800px; margin: 0 auto;">
+                    Every organization is different—and so are its challenges. We design, develop, and deliver solutions tailored specifically to your goals and industry context.
+                </p>
+                <div class="chip-wrap">
+                    <div class="audience-chip">Complex Challenges</div>
+                    <div class="audience-chip">Industry-Specific Needs</div>
+                    <div class="audience-chip">End-to-End Capability</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOCUS AREAS: BESPOKE CARDS -->
+        <section class="bespoke-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Area 1 -->
+                    <div class="col-md-4">
+                        <div class="bespoke-card">
+                            <i class="fa fa-pencil-square-o bespoke-icon"></i>
+                            <h3>Tailor-Made Training</h3>
+                            <p>Training programs that align with your exact operational context and people requirements.</p>
+                            <ul class="bespoke-list">
+                                <li>Role-based Custom Content</li>
+                                <li>Skill Gap Identification</li>
+                                <li>Sector-Specific Context</li>
+                                <li>Goal-Aligned Outcomes</li>
+                            </ul>
+                            <div class="bespoke-outcome">Outcome: Performance Improvement</div>
+                        </div>
+                    </div>
+                    <!-- Area 2 -->
+                    <div class="col-md-4">
+                        <div class="bespoke-card">
+                            <i class="fa fa-industry bespoke-icon"></i>
+                            <h3>Industry Interventions</h3>
+                            <p>Deep-dive problem solving tailored to the unique hurdles of your specific market sector.</p>
+                            <ul class="bespoke-list">
+                                <li>Sector Best Practices</li>
+                                <li>Operational Need Alignment</li>
+                                <li>Real-world Problem Solving</li>
+                                <li>Unique Market Context</li>
+                            </ul>
+                            <div class="bespoke-outcome">Outcome: Targeted Solutions</div>
+                        </div>
+                    </div>
+                    <!-- Area 3 -->
+                    <div class="col-md-4">
+                        <div class="bespoke-card">
+                            <i class="fa fa-cubes bespoke-icon"></i>
+                            <h3>End-to-End Building</h3>
+                            <p>From high-level strategy to shop-floor execution, we build capability across all levels.</p>
+                            <ul class="bespoke-list">
+                                <li>Gap Assessment Strategy</li>
+                                <li>Structured Development</li>
+                                <li>Cross-functional Implementation</li>
+                                <li>Sustainability Tracking</li>
+                            </ul>
+                            <div class="bespoke-outcome">Outcome: Sustainable Growth</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- THE CRAFTING PROCESS -->
+        <section class="process-canvas">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2 class="title" style="color:#fff; font-size: 48px; margin-bottom: 30px;">The Crafting <br><span class="gradient-text">Process.</span></h2>
+                        <p style="color:rgba(255,255,255,0.5); font-size: 18px;">We believe in deep partnership. Our process ensures that the final delivery is a perfect fit for your culture.</p>
+                    </div>
+                    <div class="col-md-6 col-md-offset-1">
+                        <div class="craft-step">
+                            <div class="craft-num">01</div>
+                            <div class="craft-content">
+                                <h4>Understand Needs</h4>
+                                <p>Deep dive into your business challenges and cultural nuances.</p>
+                            </div>
+                        </div>
+                        <div class="craft-step">
+                            <div class="craft-num">02</div>
+                            <div class="craft-content">
+                                <h4>Design Solutions</h4>
+                                <p>Create tailored programs and frameworks from scratch.</p>
+                            </div>
+                        </div>
+                        <div class="craft-step">
+                            <div class="craft-num">03</div>
+                            <div class="craft-content">
+                                <h4>Deliver & Implement</h4>
+                                <p>Execution with a practical focus on adoption and results.</p>
+                            </div>
+                        </div>
+                        <div class="craft-step">
+                            <div class="craft-num">04</div>
+                            <div class="craft-content">
+                                <h4>Measure Impact</h4>
+                                <p>Tracking outcomes and ensuring the solution delivers value.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY US -->
+        <section class="bespoke-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2 class="title">The Precision <br><span class="gradient-text">Advantage.</span></h2>
+                        <p style="font-size: 18px; margin-top: 20px;">We move beyond templates to partner in your organization's specific journey.</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="spec-wrap">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="spec-item">
+                                        <i class="fa fa-sliders"></i>
+                                        <h6>Fully Flexible</h6>
+                                        <p style="font-size: 14px; opacity: 0.7;">Adaptable approaches for diverse industries.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="spec-item">
+                                        <i class="fa fa-bullseye"></i>
+                                        <h6>Outcome Obsessed</h6>
+                                        <p style="font-size: 14px; opacity: 0.7;">Focus on measurable business results.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="spec-item">
+                                        <i class="fa fa-handshake-o"></i>
+                                        <h6>End-to-End Partner</h6>
+                                        <p style="font-size: 14px; opacity: 0.7;">From initial design to final execution.</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="spec-item">
+                                        <i class="fa fa-search"></i>
+                                        <h6>Deep Insights</h6>
+                                        <p style="font-size: 14px; opacity: 0.7;">Understanding the 'why' before the 'how'.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-custom">
+            <div class="container">
+                <h2 style="font-size: 42px; font-weight: 900; margin-bottom: 20px;">Your challenge is <span class="gradient-text">unique.</span></h2>
+                <p style="font-size: 20px; color: #64748b; margin-bottom: 45px;">Your solution should be too. Let's design an intervention that works for you.</p>
+                <a href="contact.html" class="flat-button" style="background: var(--c-blue); color: #fff; border:none; font-weight: 800; padding: 18px 50px;">Initiate Custom Design</a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="widget">
+                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo" style="max-width: 140px; margin-bottom: 20px;">
+                            <ul class="flat-information">
+                                <li><i class="fa fa-phone"></i> +91 98652 23321</li>
+                                <li><i class="fa fa-envelope"></i> carehrdindia@gmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="bottom">
+            <div class="container">
+                <p class="copyright">© 2025 CARE. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+</html>

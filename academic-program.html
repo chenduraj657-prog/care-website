@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Academic Programs | CARE - Caring society EST . 2006</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* COLOR SYSTEM */
+        :root {
+            --edu-blue: #2482eb;
+            --edu-teal: #2dd4bf;
+            --edu-soft: #f0f7ff;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--edu-blue), var(--edu-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* NEW HERO: ASYMMETRIC SCHOLAR */
+        .hero-edu {
+            padding: 120px 0 100px;
+            background: #fff;
+            position: relative;
+        }
+
+        .hero-edu::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30%;
+            height: 100%;
+            background: var(--edu-soft);
+            z-index: 0;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-img-wrap {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-img-wrap img {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            /* Organic Shape */
+            box-shadow: 0 30px 60px rgba(36, 130, 235, 0.15);
+            border: 8px solid #fff;
+        }
+
+        /* AUDIENCE BAR: HORIZONTAL STRIP */
+        .audience-strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .audience-chip {
+            background: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-bottom: 3px solid var(--edu-blue);
+            font-weight: 700;
+            color: #333;
+            font-size: 14px;
+        }
+
+        /* PROGRAM CARDS: LEFT ACCENT STYLE */
+        .edu-card-section {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+
+        .edu-program-card {
+            background: #fff;
+            padding: 50px 40px;
+            margin-bottom: 30px;
+            border-left: 6px solid var(--edu-blue);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+            transition: 0.4s;
+            height: 100%;
+        }
+
+        .edu-program-card:hover {
+            transform: scale(1.02);
+            border-left-color: var(--edu-teal);
+            box-shadow: 0 20px 40px rgba(36, 130, 235, 0.1);
+        }
+
+        .edu-program-card i {
+            font-size: 30px;
+            color: var(--edu-blue);
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .edu-program-card h4 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .edu-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .edu-list li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            color: #555;
+            font-size: 15px;
+        }
+
+        .edu-list li::before {
+            content: "\f105";
+            font-family: FontAwesome;
+            position: absolute;
+            left: 0;
+            color: var(--edu-teal);
+            font-weight: bold;
+        }
+
+        .outcome-tag {
+            display: inline-block;
+            background: var(--edu-soft);
+            color: var(--edu-blue);
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        /* DELIVERY GRID: CLEAN ICONS */
+        .delivery-item-edu {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #eee;
+            background: #fff;
+            transition: 0.3s;
+        }
+
+        .delivery-item-edu:hover {
+            background: var(--edu-blue);
+            color: #fff;
+        }
+
+        .delivery-item-edu:hover i {
+            color: #fff;
+        }
+
+        .delivery-item-edu i {
+            font-size: 32px;
+            color: var(--edu-blue);
+            margin-bottom: 15px;
+        }
+
+        /* CTA: PREMIUM OVERLAY */
+        .cta-edu {
+            background: linear-gradient(rgba(36, 130, 235, 0.9), rgba(36, 130, 235, 0.9)), url('images/parallax/bg-parallax1.jpg');
+            background-size: cover;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+            border-radius: 50px 0 50px 0;
+            margin: 60px 0;
+        }
+
+        @media (max-width: 991px) {
+            .hero-edu::before {
+                width: 100%;
+                height: 40%;
+            }
+
+            .hero-edu {
+                text-align: center;
+            }
+
+            .hero-img-wrap {
+                margin-top: 50px;
+            }
+
+            .audience-strip {
+                justify-content: center;
+            }
+        }
+    </style>
+
+    <!-- CARE: Scroll Animations + Responsive Fixes -->
+    <style>
+    /* ── 1. ANIMATION BASE ──────────────────────────────────────────── */
+    .care-animate {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .care-animate.care-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* Stagger delays for sibling cards */
+    .care-animate:nth-child(1) { transition-delay: 0s;   }
+    .care-animate:nth-child(2) { transition-delay: 0.12s; }
+    .care-animate:nth-child(3) { transition-delay: 0.24s; }
+    .care-animate:nth-child(4) { transition-delay: 0.36s; }
+    .care-animate:nth-child(5) { transition-delay: 0.48s; }
+    .care-animate:nth-child(6) { transition-delay: 0.60s; }
+
+    /* Fade-in from left */
+    .care-fade-left {
+        opacity: 0;
+        transform: translateX(-40px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .care-fade-left.care-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Fade-in from right */
+    .care-fade-right {
+        opacity: 0;
+        transform: translateX(40px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .care-fade-right.care-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* Scale pop for chips / pills / tags */
+    .care-pop {
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.45s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);
+    }
+    .care-pop.care-visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    /* ── 2. RESPONSIVE FIXES ────────────────────────────────────────── */
+    /* Ensure hero images never overflow on small screens */
+    .hero-img-wrap img,
+    .hero-image img,
+    img { max-width: 100%; height: auto; }
+
+    /* Delivery grids: stack on mobile */
+    @media (max-width: 767px) {
+        .no-gutters .col-md-3,
+        .no-gutters .col-md-4 {
+            width: 100%;
+            padding: 0;
+        }
+        /* Full-width cards on mobile */
+        .col-md-6,
+        .col-md-4,
+        .col-md-3 {
+            width: 100%;
+        }
+        /* Hero text sizes */
+        .hero-edu h1,
+        .hero-corp h1,
+        .hero-coaching h1,
+        section h1 {
+            font-size: 28px !important;
+            line-height: 1.3 !important;
+        }
+        /* CTA section border-radius */
+        .cta-edu,
+        .cta-section,
+        [class*="cta-"] {
+            border-radius: 16px !important;
+            margin: 30px 15px !important;
+        }
+        /* Navigation: full-width on small */
+        .mainnav { width: 100%; }
+        /* Padding resets */
+        section,
+        .flat-row {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+        }
+        /* Fix audience / chip strips */
+        .audience-strip,
+        .audience-bar,
+        .chip-bar {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .audience-chip,
+        .audience-pill,
+        .audience-tag {
+            text-align: center;
+        }
+        /* Hero background pseudo-element */
+        .hero-edu::before,
+        .hero-corp::before,
+        [class*="hero-"]::before {
+            display: none;
+        }
+        /* Why-us blocks */
+        .why-us-box,
+        .check-item,
+        .iconbox,
+        .box-icon { margin-bottom: 20px; }
+    }
+
+    @media (max-width: 991px) {
+        /* Tablet: hero images below text */
+        [class*="hero-"] .col-md-5,
+        [class*="hero-"] .col-md-6 {
+            text-align: center;
+        }
+        [class*="hero-"] .hero-img-wrap {
+            margin-top: 40px;
+        }
+        /* Delivery rows */
+        .delivery-item-edu,
+        .delivery-step,
+        .delivery-node,
+        .method-item {
+            border-right: none;
+            border-bottom: 1px solid #eee;
+        }
+        /* Grid overrides */
+        .training-grid,
+        .tech-grid,
+        .program-grid {
+            grid-template-columns: 1fr 1fr !important;
+        }
+    }
+    </style>
+</head>
+
+<body class="header-sticky v3">
+    <div class="boxed">
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="/cdn-cgi/l/email-protection#2f4c4e5d4a475d4b46414b464e6f48424e4643014c4042"><span class="__cf_email__" data-cfemail="9efdffecfbf6ecfaf7f0faf7ffdef9f3fff7f2b0fdf1f3">[email&#160;protected]</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu">
+                                    <span></span>
+                                </div><!-- //mobile menu button -->
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li>
+                                                <a href="index.html">Home</a>
+                                                <!-- <ul class="submenu">
+                                                        <li><a href="index-2.html">Home LifeCoach 01</a></li>
+                                                        <li><a href="index2.html">Home LifeCoach 02</a></li>
+                                                        <li><a href="index3.html">Home HealthCoach 01</a></li>
+                                                        <li><a href="index4.html">Home HealthCoach 02</a></li>
+                                                    </ul> -->
+                                            </li>
+                                            <!-- <li><a href="about.html">About</a></li> -->
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                 <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+
+                                            </li>
+                                            <li><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a>
+                                                    </li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a>
+                                                    </li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a>
+                                                    </li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li class="active"><a href="TrainingDevelopment.html">Training &
+                                                    Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a>
+                                                    </li>
+                                                    <li><a href="technical-training.html">Technical Training</a>
+                                                    </li>
+                                                    <li><a href="academic-program.html">Academic Programs</a>
+                                                    </li>
+                                                    <li><a href="student-development.html">Student Development</a>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a>
+                                                    </li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a>
+                                                    </li>
+                                                    <li><a href="it-governance.html">IT Governance</a>
+                                                    </li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="corprate-solution.html">Corporate Solutions</a>
+
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                    </li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development
+                                                            Journeys</a>
+                                                    </li>
+                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a>
+                                                    </li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a>
+
+                                            </li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul><!-- /.menu -->
+                                    </nav><!-- /.mainnav -->
+
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div><!-- /top-search -->
+
+                                    <!-- <ul class="menu menu-extra">
+                                            <li class="show-search">
+                                                <a href="#"><i class="icon_search"></i></a>
+                                            </li>
+                                        </ul> -->
+                                </div><!-- /.nav-wrap -->
+
+                            </div>
+                        </div><!-- /.header-inner -->
+                    </div><!-- /.row -->
+                </div>
+            </header><!-- /.header -->
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Academic Program</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="TrainingDevelopment.html">Training and Departmant</a></li>
+                                        <li>Academic Program</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-edu">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7 hero-content">
+                        <h1 class="title" style="font-size: 45px; margin-bottom: 25px;">Empowering Educators. <br><span
+                                class="gradient-text">Enabling Future Learning.</span></h1>
+                        <p class="section-intro-text" style="font-size: 19px; max-width: 600px;">
+                            We collaborate with institutions and faculty to build engaging, innovative, and
+                            outcome-driven education environments.
+                        </p>
+                        <div class="audience-strip">
+                            <div class="audience-chip">Colleges & Universities</div>
+                            <div class="audience-chip">Professors & Lecturers</div>
+                            <div class="audience-chip">Administrators</div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 hero-img-wrap text-center">
+                        <img src="images/work/2.jpg" alt="Educator Support">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO SECTION -->
+        <section class="flat-row bg-gray">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="title-section left">
+                            <h2 class="title">Evolving <span class="gradient-text">Academic Excellence</span></h2>
+                        </div>
+                        <p class="section-intro-text">
+                            Education is evolving rapidly, and educators play a critical role in shaping future
+                            professionals. Our programs enhance teaching effectiveness and research capability.
+                        </p>
+                        <p class="section-intro-text">
+                            We bridge the gap between academic theory and practical modern pedagogy, ensuring
+                            institutions stay at the forefront of educational standards.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/work/1.jpg" alt="Modern Learning"
+                            style="border-radius: 20px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAM AREA CARDS -->
+        <section class="edu-card-section">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title">Our Program <span class="gradient-text">Areas</span></h2>
+                </div>
+                <div class="row">
+                    <!-- Card 1 -->
+                    <div class="col-md-6">
+                        <div class="edu-program-card">
+                            <i class="fa fa-graduation-cap"></i>
+                            <h4>Faculty Development (FDP)</h4>
+                            <p>Support faculty in improving teaching methodologies and professional academic
+                                capabilities.</p>
+                            <ul class="edu-list">
+                                <li>Enhancing delivery methodologies</li>
+                                <li>Student engagement strategies</li>
+                                <li>Building academic leadership</li>
+                                <li>Aligning with modern standards</li>
+                            </ul>
+                            <div class="outcome-tag">Outcome: Effective Educators</div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-6">
+                        <div class="edu-program-card">
+                            <i class="fa fa-flask"></i>
+                            <h4>Research Methodology</h4>
+                            <p>Build strong foundations for high-quality research and institutional credibility.</p>
+                            <ul class="edu-list">
+                                <li>Research design & methodology</li>
+                                <li>Data collection & analysis</li>
+                                <li>Research paper structuring</li>
+                                <li>Ethical academic standards</li>
+                            </ul>
+                            <div class="outcome-tag">Outcome: Quality Publications</div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-6">
+                        <div class="edu-program-card" style="margin-top: 30px;">
+                            <i class="fa fa-pencil"></i>
+                            <h4>Teaching Excellence</h4>
+                            <p>Deliver impactful experiences that go beyond simple content delivery.</p>
+                            <ul class="edu-list">
+                                <li>Classroom communication clarity</li>
+                                <li>Student-centered approaches</li>
+                                <li>Handling diverse learning styles</li>
+                                <li>Engaging learning environments</li>
+                            </ul>
+                            <div class="outcome-tag">Outcome: Better Student Results</div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-md-6">
+                        <div class="edu-program-card" style="margin-top: 30px;">
+                            <i class="fa fa-laptop"></i>
+                            <h4>EdTech Integration</h4>
+                            <p>Leverage technology tools to meet the needs of today's digital learners.</p>
+                            <ul class="edu-list">
+                                <li>Digital tool & platform usage</li>
+                                <li>Blended learning models</li>
+                                <li>Interactive technologies</li>
+                                <li>Modern educational trends</li>
+                            </ul>
+                            <div class="outcome-badge outcome-tag">Outcome: Tech-Enabled Campus</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DELIVERY METHODS -->
+        <section class="container" style="padding: 80px 0;">
+            <div class="title-section center">
+                <h2 class="title">How We <span class="gradient-text">Deliver</span></h2>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-md-3">
+                    <div class="delivery-item-edu">
+                        <i class="fa fa-calendar"></i>
+                        <h6>Workshops & Seminars</h6>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="delivery-item-edu">
+                        <i class="fa fa-globe"></i>
+                        <h6>Hybrid Delivery Modes</h6>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="delivery-item-edu">
+                        <i class="fa fa-sliders"></i>
+                        <h6>Institutional Customization</h6>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="delivery-item-edu">
+                        <i class="fa fa-flask"></i>
+                        <h6>Application Focused</h6>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US -->
+        <section class="flat-row bg-gray">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center">
+                        <div style="background: var(--edu-blue); padding: 50px; border-radius: 30px; color: #fff;">
+                            <h2 style="color:#fff; font-weight: 800;">Why Choose <br>CARE Academia?</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div style="padding-left: 30px;">
+                            <p><i class="fa fa-check-circle" style="color:var(--edu-blue); margin-right: 10px;"></i>
+                                Academic & industry-aligned expertise</p>
+                            <hr>
+                            <p><i class="fa fa-check-circle" style="color:var(--edu-blue); margin-right: 10px;"></i>
+                                Focus on practical classroom implementation</p>
+                            <hr>
+                            <p><i class="fa fa-check-circle" style="color:var(--edu-blue); margin-right: 10px;"></i>
+                                Tailored to your institutional goals</p>
+                            <hr>
+                            <p><i class="fa fa-check-circle" style="color:var(--edu-blue); margin-right: 10px;"></i>
+                                Enhancing both teaching & research</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-infomation">
+                            <div id="logo" class="logo responsive-logo-container">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+                            <ul class="flat-information">
+                                <li class="phone">
+                                    <a href="tel:+919865223321">+91 98652 23321</a>
+                                </li>
+                                <li class="email">
+                                    <a href="/cdn-cgi/l/email-protection#f7949685929f85939e99939e96b7909a969e9bd994989a"><span class="__cf_email__" data-cfemail="e98a889b8c819b8d80878d8088a98e84888085c78a8684">[email&#160;protected]</span></a>
+                                </li>
+                                <li class="address">
+                                    <a href="#">
+                                        CARE HRD – Chidambaram Academy of Refinement & Enrichment, Hosur, Tamil Nadu,
+                                        India
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts & Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2025 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.easing.js"></script>
+    <script type="text/javascript" src="javascript/owl.carousel.js"></script>
+    <script type="text/javascript" src="javascript/jquery-waypoints.js"></script>
+    <script type="text/javascript" src="javascript/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.twentytwenty.js"></script>
+    <script type="text/javascript" src="javascript/jquery.event.move.js"></script>
+    <script type="text/javascript" src="javascript/parallax.js"></script>
+
+    <!-- Revolution Slider Scripts -->
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="revolution/js/slider3.js"></script>
+
+    <!-- Revolution Extensions -->
+    <script type="text/javascript" src="revo

@@ -1,0 +1,2583 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Internships & Career Opportunities | CARE - Caring Society EST. 2006</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        :root {
+            --wf-blue: #2482eb;
+            --wf-teal: #2dd4bf;
+            --wf-navy: #1a2a44;
+            --wf-soft: #f0f7ff;
+            --wf-slate: #64748b;
+            --careers-orange: #f97316;
+            --careers-dark: #0f172a;
+        }
+
+        body {
+            font-family: 'Barlow', sans-serif;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--wf-blue), var(--wf-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* ══════════════════════════════════════
+           HERO — matches workforce prism style
+        ══════════════════════════════════════ */
+        .hero-workforce {
+            padding: 140px 0 100px;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-workforce::before {
+            content: "";
+            position: absolute;
+            top: -10%;
+            left: -5%;
+            width: 40%;
+            height: 120%;
+            background: var(--wf-soft);
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+            z-index: 0;
+        }
+
+        /* Subtle grid pattern overlay */
+        .hero-workforce::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(36, 130, 235, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(36, 130, 235, 0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .wf-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--wf-blue);
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero-workforce h1 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 64px;
+            line-height: 1.0;
+            margin-bottom: 25px;
+            color: var(--careers-dark);
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .hero-stat-item {
+            text-align: center;
+        }
+
+        .hero-stat-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--wf-blue);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--wf-slate);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .hero-stat-sep {
+            width: 1px;
+            background: #e2e8f0;
+            align-self: stretch;
+        }
+
+        /* Hero right — live openings ticker */
+        .hero-openings-card {
+            background: var(--careers-dark);
+            border-radius: 24px;
+            padding: 32px;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-openings-card::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle, rgba(36, 130, 235, 0.25) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hoc-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--wf-teal);
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hoc-label::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: var(--wf-teal);
+            border-radius: 50%;
+            animation: blink 1.5s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+        }
+
+        .hoc-job-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            gap: 12px;
+        }
+
+        .hoc-job-item:last-child {
+            border-bottom: none;
+        }
+
+        .hoc-job-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.3;
+        }
+
+        .hoc-job-dept {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.45);
+            margin-top: 2px;
+        }
+
+        .hoc-positions {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--wf-teal);
+            flex-shrink: 0;
+        }
+
+        .hoc-positions span {
+            font-size: 10px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.4);
+            display: block;
+            text-align: right;
+        }
+
+        /* ══════════════════════════════════════
+           FILTER BAR
+        ══════════════════════════════════════ */
+        .filter-bar {
+            background: #fff;
+            border-bottom: 1px solid #e8edf3;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .filter-inner {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .filter-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .filter-btn {
+            flex-shrink: 0;
+            padding: 18px 24px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--wf-slate);
+            border: none;
+            background: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: 'Barlow', sans-serif;
+            white-space: nowrap;
+        }
+
+        .filter-btn:hover {
+            color: var(--wf-blue);
+        }
+
+        .filter-btn.active {
+            color: var(--wf-blue);
+            border-bottom-color: var(--wf-blue);
+        }
+
+        .filter-count {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            background: var(--wf-blue);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 10px;
+            font-weight: 700;
+            margin-left: 6px;
+        }
+
+        /* ══════════════════════════════════════
+           JOBS SECTION
+        ══════════════════════════════════════ */
+        .jobs-section {
+            padding: 80px 0;
+            background: var(--wf-soft);
+            min-height: 60vh;
+        }
+
+        .jobs-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        /* ── JOB CARD ── */
+        .job-card {
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid rgba(36, 130, 235, 0.08);
+            overflow: hidden;
+            transition: all 0.35s ease;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+        }
+
+        .job-card:hover {
+            border-color: var(--wf-blue);
+            box-shadow: 0 12px 40px rgba(36, 130, 235, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .job-card-top {
+            display: flex;
+            align-items: flex-start;
+            padding: 28px 32px;
+            gap: 20px;
+        }
+
+        /* Role icon */
+        .job-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+
+        .job-card:hover .job-icon {
+            transform: scale(1.08);
+        }
+
+        .job-icon.blue {
+            background: rgba(36, 130, 235, 0.1);
+            color: var(--wf-blue);
+        }
+
+        .job-icon.teal {
+            background: rgba(45, 212, 191, 0.12);
+            color: #0d9488;
+        }
+
+        .job-icon.orange {
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--careers-orange);
+        }
+
+        .job-icon.navy {
+            background: rgba(26, 42, 68, 0.08);
+            color: var(--wf-navy);
+        }
+
+        .job-main {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+
+        .job-tag {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 100px;
+        }
+
+        .job-tag.dept {
+            background: var(--wf-soft);
+            color: var(--wf-blue);
+            border: 1px solid rgba(36, 130, 235, 0.18);
+        }
+
+        .job-tag.type {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid rgba(22, 163, 74, 0.2);
+        }
+
+        .job-tag.exp {
+            background: #fff7ed;
+            color: #c2410c;
+            border: 1px solid rgba(194, 65, 12, 0.2);
+        }
+
+        .job-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--careers-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            line-height: 1.15;
+            margin: 0 0 6px;
+        }
+
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 10px;
+        }
+
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: var(--wf-slate);
+            font-weight: 500;
+        }
+
+        .job-meta-item i {
+            font-size: 12px;
+            color: var(--wf-blue);
+        }
+
+        .job-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .positions-badge {
+            text-align: center;
+            background: var(--wf-navy);
+            color: #fff;
+            border-radius: 12px;
+            padding: 10px 16px;
+            min-width: 72px;
+        }
+
+        .positions-badge .pb-num {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--wf-teal);
+        }
+
+        .positions-badge .pb-label {
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.55);
+            margin-top: 2px;
+        }
+
+        .apply-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--wf-blue);
+            color: #fff;
+            border: none;
+            padding: 10px 22px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Barlow', sans-serif;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+
+        .apply-btn:hover {
+            background: var(--wf-navy);
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(36, 130, 235, 0.35);
+        }
+
+        .apply-btn i {
+            font-size: 11px;
+        }
+
+        /* Expandable JD panel */
+        .job-jd {
+            border-top: 1px solid #f1f5f9;
+            padding: 0 32px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s ease, padding 0.3s ease;
+        }
+
+        .job-jd.open {
+            max-height: 700px;
+            padding: 24px 32px 28px;
+        }
+
+        .jd-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .jd-col-title {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--wf-blue);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .jd-col-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(36, 130, 235, 0.15);
+        }
+
+        .jd-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .jd-list li {
+            padding: 7px 0 7px 20px;
+            position: relative;
+            font-size: 14px;
+            color: var(--wf-slate);
+            border-bottom: 1px solid #f8fafc;
+            line-height: 1.5;
+        }
+
+        .jd-list li:last-child {
+            border-bottom: none;
+        }
+
+        .jd-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            background: var(--wf-teal);
+            border-radius: 50%;
+        }
+
+        .jd-qual-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--wf-soft);
+            border: 1px solid rgba(36, 130, 235, 0.2);
+            color: var(--wf-blue);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .toggle-jd-btn {
+            background: none;
+            border: 1px solid #e2e8f0;
+            color: var(--wf-slate);
+            font-size: 12px;
+            font-weight: 600;
+            font-family: 'Barlow', sans-serif;
+            padding: 6px 14px;
+            border-radius: 100px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.2s ease;
+        }
+
+        .toggle-jd-btn:hover {
+            border-color: var(--wf-blue);
+            color: var(--wf-blue);
+        }
+
+        .toggle-jd-btn .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            font-size: 10px;
+        }
+
+        .toggle-jd-btn.open .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* ══════════════════════════════════════
+           APPLY POPUP MODAL
+        ══════════════════════════════════════ */
+        .apply-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 18, 35, 0.72);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .apply-modal-overlay.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .apply-modal {
+            background: #fff;
+            border-radius: 24px;
+            width: 100%;
+            max-width: 520px;
+            box-shadow: 0 32px 80px rgba(0, 0, 0, 0.2), 0 4px 20px rgba(36, 130, 235, 0.08);
+            overflow: hidden;
+            transform: translateY(30px) scale(0.97);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        .apply-modal-overlay.open .apply-modal {
+            transform: translateY(0) scale(1);
+        }
+
+        /* Modal top accent */
+        .apply-modal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--wf-blue), var(--wf-teal));
+        }
+
+        .modal-header {
+            padding: 32px 32px 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        .modal-header-left {}
+
+        .modal-role-label {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--wf-blue);
+            margin-bottom: 6px;
+        }
+
+        .modal-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--careers-dark);
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin: 0 0 4px;
+        }
+
+        .modal-subtitle {
+            font-size: 13px;
+            color: var(--wf-slate);
+        }
+
+        .modal-close-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 16px;
+            color: var(--wf-slate);
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            line-height: 1;
+        }
+
+        .modal-close-btn:hover {
+            background: #fee2e2;
+            border-color: #fca5a5;
+            color: #dc2626;
+        }
+
+        .modal-body {
+            padding: 24px 32px 32px;
+        }
+
+        /* Form fields */
+        .form-field {
+            margin-bottom: 18px;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            color: var(--careers-dark);
+            margin-bottom: 7px;
+        }
+
+        .form-label span {
+            color: #ef4444;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 14px;
+            font-family: 'Barlow', sans-serif;
+            color: var(--careers-dark);
+            background: #fafbfc;
+            transition: all 0.2s ease;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        .form-input:focus {
+            border-color: var(--wf-blue);
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(36, 130, 235, 0.1);
+        }
+
+        .form-input::placeholder {
+            color: #b0bec5;
+        }
+
+        /* Upload zone */
+        .upload-zone {
+            border: 2px dashed #e2e8f0;
+            border-radius: 14px;
+            padding: 28px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            background: #fafbfc;
+            position: relative;
+        }
+
+        .upload-zone:hover,
+        .upload-zone.dragover {
+            border-color: var(--wf-blue);
+            background: var(--wf-soft);
+        }
+
+        .upload-zone input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+        }
+
+        .upload-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(36, 130, 235, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-size: 20px;
+            color: var(--wf-blue);
+        }
+
+        .upload-zone .uz-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--careers-dark);
+            margin-bottom: 4px;
+        }
+
+        .upload-zone .uz-sub {
+            font-size: 12px;
+            color: var(--wf-slate);
+        }
+
+        .upload-zone .uz-sub strong {
+            color: var(--wf-blue);
+        }
+
+        /* File selected state */
+        .upload-zone.has-file {
+            border-color: #16a34a;
+            background: #f0fdf4;
+        }
+
+        .upload-zone.has-file .upload-icon {
+            background: rgba(22, 163, 74, 0.1);
+            color: #16a34a;
+        }
+
+        .file-name-display {
+            font-size: 12px;
+            font-weight: 600;
+            color: #16a34a;
+            margin-top: 6px;
+            word-break: break-all;
+        }
+
+        /* Submit button */
+        .modal-submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, var(--wf-blue), #1a6fd4);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 700;
+            font-family: 'Barlow', sans-serif;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 22px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 16px rgba(36, 130, 235, 0.3);
+            letter-spacing: 0.3px;
+        }
+
+        .modal-submit-btn:hover {
+            background: linear-gradient(135deg, #1a6fd4, var(--wf-navy));
+            box-shadow: 0 8px 24px rgba(36, 130, 235, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .modal-submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Privacy note */
+        .modal-privacy {
+            text-align: center;
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        /* Success state */
+        .modal-success {
+            display: none;
+            text-align: center;
+            padding: 20px 32px 36px;
+        }
+
+        .modal-success.show {
+            display: block;
+        }
+
+        .modal-body.hide {
+            display: none;
+        }
+
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background: #f0fdf4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 32px;
+            color: #16a34a;
+            border: 3px solid #bbf7d0;
+        }
+
+        .success-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--careers-dark);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .success-msg {
+            font-size: 14px;
+            color: var(--wf-slate);
+            line-height: 1.6;
+            max-width: 320px;
+            margin: 0 auto 24px;
+        }
+
+        .success-close-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--wf-soft);
+            color: var(--wf-blue);
+            border: 1px solid rgba(36, 130, 235, 0.2);
+            padding: 10px 24px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Barlow', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .success-close-btn:hover {
+            background: var(--wf-blue);
+            color: #fff;
+        }
+
+        /* ══════════════════════════════════════
+           SECTION TITLE
+        ══════════════════════════════════════ */
+        .jobs-section-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .jsh-title {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--careers-dark);
+            text-transform: uppercase;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .jsh-sub {
+            font-size: 14px;
+            color: var(--wf-slate);
+            margin: 6px 0 0;
+        }
+
+        .total-count {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--wf-blue);
+            background: rgba(36, 130, 235, 0.08);
+            border: 1px solid rgba(36, 130, 235, 0.18);
+            padding: 8px 18px;
+            border-radius: 100px;
+        }
+
+        /* ══════════════════════════════════════
+           HOW TO APPLY STRIP
+        ══════════════════════════════════════ */
+        .apply-strip {
+            background: var(--wf-navy);
+            padding: 60px 0;
+            color: #fff;
+        }
+
+        .apply-strip-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .as-steps {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .as-step {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .as-step-num {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid var(--wf-teal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--wf-teal);
+            flex-shrink: 0;
+        }
+
+        .as-step-text {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.4;
+        }
+
+        .as-step-text strong {
+            color: #fff;
+            display: block;
+            font-size: 14px;
+        }
+
+        .apply-cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--wf-teal);
+            color: var(--wf-navy);
+            padding: 16px 36px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 800;
+            font-family: 'Barlow', sans-serif;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            flex-shrink: 0;
+        }
+
+        .apply-cta-btn:hover {
+            background: #fff;
+            color: var(--wf-navy);
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* ══════════════════════════════════════
+           RESPONSIVE
+        ══════════════════════════════════════ */
+        @media (max-width: 991px) {
+            .hero-workforce {
+                text-align: center;
+            }
+
+            .hero-workforce::before {
+                display: none;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .job-card-top {
+                flex-direction: column;
+            }
+
+            .job-actions {
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+            }
+
+            .jd-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .as-steps {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-workforce h1 {
+                font-size: 42px;
+            }
+
+            .job-card-top {
+                padding: 20px;
+            }
+
+            .job-jd.open {
+                padding: 18px 20px 22px;
+            }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+
+        <!-- ── SITE HEADER ── -->
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container1">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index-2.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                                class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu"><span></span></div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="aboutFounder.html">About Founder</a>
+                                                <ul class="submenu">
+                                                    <li><a href="directors.html">Our Directors</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html">Career Coaching</a></li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a></li>
+                                                    <li><a href="family&life.html">Family &amp; Life Programs</a></li>
+                                                    <li><a href="student&youth.html">Student &amp; Youth Coaching</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="TrainingDevelopment.html">Training &amp; Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a></li>
+                                                    <li><a href="technical-training.html">Technical Training</a></li>
+                                                    <li><a href="academic-program.html">Academic Programs</a></li>
+                                                    <li><a href="student-development.html">Student Development</a></li>
+                                                    <li><a href="open&family.html">Open &amp; Family Programs</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting &amp; Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a></li>
+                                                    <li><a href="cybersecurity.html">Cybersecurity Advisory</a></li>
+                                                    <li><a href="it-governance.html">IT Governance</a></li>
+                                                    <li><a href="risk-audit.html">Risk &amp; Audit</a></li>
+                                                    <li><a href="ESG-sustainablity.html">ESG &amp; Sustainability</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="corprate-solution.html">Corporate Solutions</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a></li>
+                                                    <li><a href="leadership-dev-journey.html">Leadership Development
+                                                            Journeys</a></li>
+                                                    <li><a href="workforce-transformation.html">Workforce
+                                                            Transformation</a></li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a>
+                                                    </li>
+                                                    <li><a href="custom-solution.html">Custom Solutions</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="active"><a href="carrers.html">Internships & Career
+                                                    Opportunities</a></li>
+                                            <li><a href="gallery.html">Gallery</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content">
+                                    <h2>Internships &amp; Career Opportunities</h2>
+                                </div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="index.html">Home</a></li>
+                                        <li>Careers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════
+             HERO
+        ══════════════════════════════════════ -->
+        <section class="hero-workforce">
+            <div class="container hero-content">
+                <div class="row align-items-center">
+
+                    <div class="col-md-7">
+                        <div class="wf-badge">&#9673;&nbsp; Now Hiring — 8 Open Positions</div>
+                        <h1>Shape the Future<br><span class="gradient-text">with Your Skills.</span></h1>
+                        <p style="font-size: 19px; color: #64748b; line-height: 1.65; max-width: 560px;">
+                            We connect skilled manufacturing professionals with leading industries.
+                            Precision, craftsmanship, and expertise — that's what we look for.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-num">8</div>
+                                <div class="hero-stat-label">Open Positions</div>
+                            </div>
+                            <div class="hero-stat-sep"></div>
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-num">4</div>
+                                <div class="hero-stat-label">Job Roles</div>
+                            </div>
+                            <div class="hero-stat-sep"></div>
+                            <div class="hero-stat-item">
+                                <div class="hero-stat-num">2–6</div>
+                                <div class="hero-stat-label">Yrs Experience</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="hero-openings-card">
+                            <div class="hoc-label">Live Openings</div>
+
+                            <div class="hoc-job-item">
+                                <div>
+                                    <div class="hoc-job-title">Lathe Machine Operator</div>
+                                    <div class="hoc-job-dept">Manufacturing · Diploma / ITI</div>
+                                </div>
+                                <div class="hoc-positions">2<span>positions</span></div>
+                            </div>
+                            <div class="hoc-job-item">
+                                <div>
+                                    <div class="hoc-job-title">Milling Operator</div>
+                                    <div class="hoc-job-dept">Manufacturing · DME / ITI</div>
+                                </div>
+                                <div class="hoc-positions">2<span>positions</span></div>
+                            </div>
+                            <div class="hoc-job-item">
+                                <div>
+                                    <div class="hoc-job-title">Tool Assembler</div>
+                                    <div class="hoc-job-dept">Tool & Die · DME Tool &amp; Die</div>
+                                </div>
+                                <div class="hoc-positions">2<span>positions</span></div>
+                            </div>
+                            <div class="hoc-job-item">
+                                <div>
+                                    <div class="hoc-job-title">CNC Turning Operator</div>
+                                    <div class="hoc-job-dept">CNC · 2–6 Yrs Experience</div>
+                                </div>
+                                <div class="hoc-positions">2<span>positions</span></div>
+                            </div>
+
+                            <div style="margin-top:18px;">
+                                <a href="javascript:void(0)" class="apply-btn"
+                                    style="width:100%;justify-content:center;"
+                                    onclick="openModal('General Application')">
+                                    <i class="fa fa-paper-plane"></i> Send Your Resume
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════
+             FILTER BAR
+        ══════════════════════════════════════ -->
+        <div class="filter-bar">
+            <div class="container">
+                <div class="filter-inner">
+                    <button class="filter-btn active" onclick="filterJobs('all', this)">
+                        All Jobs <span class="filter-count">4</span>
+                    </button>
+                    <button class="filter-btn" onclick="filterJobs('Full-ime', this)">Full time</button>
+                    <button class="filter-btn" onclick="filterJobs('Internship', this)">Internship</button>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════
+             JOB LISTINGS
+        ══════════════════════════════════════ -->
+        <section class="jobs-section">
+            <div class="container">
+                <div class="jobs-section-header">
+                    <div>
+                        <h2 class="jsh-title">Current Openings</h2>
+                        <p class="jsh-sub">All roles based in Tamil Nadu · Full-time · Immediate joining</p>
+                    </div>
+                    <div class="total-count">12 Total Positions</div>
+                </div>
+
+                <div class="jobs-grid">
+
+                    <!-- ── JOB 1: Lathe Machine Operator ── -->
+                    <div class="job-card" data-category="conventional" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon blue"><i class="fa fa-cog"></i></div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">Conventional Machining</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">2–6 Years</span>
+                                </div>
+                                <h3 class="job-title">Lathe Machine Operator</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> Diploma / ITI</div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">2</div>
+                                    <div class="pb-label">Positions</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Familiar with conventional Lathe Machine Operation – setting, operating and
+                                            maintaining the machine</li>
+                                        <li>Knowledge of machine drawings, blueprints and technical specifications, fits
+                                            and tolerances</li>
+                                        <li>Familiar with Boring, Drilling, Reaming, Threading and Tapping (both CGS
+                                            &amp; SI systems)</li>
+                                        <li>Knowledge of materials and measuring tools</li>
+                                        <li>Preparation of tools for machining</li>
+                                        <li>Ensuring accuracy &amp; quality of finished components</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> Diploma</span>
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> ITI</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>Lathe machine setup &amp; operation</li>
+                                        <li>Blueprint &amp; technical drawing reading</li>
+                                        <li>Precision measurement instruments</li>
+                                        <li>CGS &amp; SI systems knowledge</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── JOB 2: Milling Operator ── -->
+                    <div class="job-card" data-category="conventional" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon teal"><i class="fa fa-gear"></i></div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">Conventional Machining</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">2–6 Years</span>
+                                </div>
+                                <h3 class="job-title">Milling Operator</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> DME / ITI</div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">2</div>
+                                    <div class="pb-label">Positions</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Job setting and running experience in conventional milling machines</li>
+                                        <li>Selection of tools knowledge for different operations</li>
+                                        <li>Drawing reading knowledge for accurate component production</li>
+                                        <li>Reporting the production log accurately and on time</li>
+                                        <li>Completing the job within the planned time schedule</li>
+                                        <li>Machinery instrument and operation knowledge</li>
+                                        <li>Measurement of finished products for quality compliance</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> DME</span>
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> ITI</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>Conventional milling machine operations</li>
+                                        <li>Tool selection &amp; setup</li>
+                                        <li>Production log reporting</li>
+                                        <li>Precision measurement</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── JOB 3: Tool Assembler ── -->
+                    <div class="job-card" data-category="tooling" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon orange"><i class="fa fa-wrench"></i></div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">Tooling &amp; Die</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">2–6 Years</span>
+                                </div>
+                                <h3 class="job-title">Tool Assembler</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> DME – Tool &amp; Die
+                                    </div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">2</div>
+                                    <div class="pb-label">Positions</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Press tool assembly &amp; troubleshooting with exposure to sheet metal</li>
+                                        <li>Conventional machining operations</li>
+                                        <li>Press setting &amp; alignment</li>
+                                        <li>Tool knowledge – selection, maintenance, and care</li>
+                                        <li>Ensure quality using measuring instruments</li>
+                                        <li>Tool documentation and record keeping</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> DME Tool &amp;
+                                            Die</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>Press tool assembly &amp; troubleshooting</li>
+                                        <li>Sheet metal exposure</li>
+                                        <li>Measuring instrument usage</li>
+                                        <li>Tool documentation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── JOB 4: CNC Turning Operator ── -->
+                    <div class="job-card" data-category="cnc" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon navy"><i class="fa fa-microchip"></i><i class="fa fa-sliders"></i>
+                            </div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">CNC</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">2–6 Years</span>
+                                </div>
+                                <h3 class="job-title">CNC Turning Operator</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> Diploma / ITI / B.E.
+                                    </div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">2</div>
+                                    <div class="pb-label">Positions</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Set up, operate, and maintain CNC turning machines</li>
+                                        <li>Read technical drawings and specifications accurately</li>
+                                        <li>Create 2D programmes for CNC turning operations</li>
+                                        <li>Monitor machine operations to detect malfunctions or production issues</li>
+                                        <li>Perform routine maintenance and troubleshooting on machinery</li>
+                                        <li>Maintain a clean and organised workspace</li>
+                                        <li>Adhere to safety protocols and company policies</li>
+                                        <li>Ensure all finished products meet quality standards and specifications</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> Diploma / ITI /
+                                            B.E.</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>CNC turning machine setup &amp; operation</li>
+                                        <li>2D CNC programming</li>
+                                        <li>Technical drawing interpretation</li>
+                                        <li>Quality control &amp; inspection</li>
+                                        <li>Machine maintenance &amp; troubleshooting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== NEW FULL-TIME JOBS ADDED ========== -->
+
+                    <!-- ── JOB 5: Senior Production Supervisor ── -->
+                    <div class="job-card" data-category="production" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon blue"><i class="fa fa-tasks"></i></div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">Production Management</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">5–10 Years</span>
+                                </div>
+                                <h3 class="job-title">Senior Production Supervisor</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> B.E / Diploma</div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">1</div>
+                                    <div class="pb-label">Position</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Oversee daily production operations and ensure targets are met</li>
+                                        <li>Manage team of machine operators and assemblers</li>
+                                        <li>Implement quality control procedures and safety standards</li>
+                                        <li>Coordinate with maintenance team for machine upkeep</li>
+                                        <li>Prepare production reports and analyze performance metrics</li>
+                                        <li>Train new employees on production processes</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> B.E
+                                            Mechanical</span>
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> Diploma</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>Production planning &amp; control</li>
+                                        <li>Team leadership</li>
+                                        <li>Quality management</li>
+                                        <li>Lean manufacturing</li>
+                                        <li>SAP knowledge preferred</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── JOB 6: Quality Control Inspector ── -->
+                    <div class="job-card" data-category="quality" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon teal"><i class="fa fa-check-circle"></i></div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">Quality Assurance</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">3–7 Years</span>
+                                </div>
+                                <h3 class="job-title">Quality Control Inspector</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> Diploma / B.E</div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">2</div>
+                                    <div class="pb-label">Positions</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Inspect incoming materials, in-process components, and finished products
+                                        </li>
+                                        <li>Use precision measuring instruments (CMM, micrometers, gauges)</li>
+                                        <li>Document inspection results and maintain quality records</li>
+                                        <li>Identify non-conformances and initiate corrective actions</li>
+                                        <li>Collaborate with production team to resolve quality issues</li>
+                                        <li>Ensure compliance with ISO standards</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> Diploma in
+                                            Mech</span>
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> B.E</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>Precision measurement techniques</li>
+                                        <li>ISO 9001 knowledge</li>
+                                        <li>GD&amp;T understanding</li>
+                                        <li>Root cause analysis</li>
+                                        <li>Quality documentation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── JOB 7: Maintenance Engineer ── -->
+                    <div class="job-card" data-category="maintenance" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon orange"><i class="fa fa-wrench"></i><i class="fa fa-gear"></i></div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">Maintenance</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">4–8 Years</span>
+                                </div>
+                                <h3 class="job-title">Maintenance Engineer</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> B.E / Diploma</div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">1</div>
+                                    <div class="pb-label">Position</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Perform preventive and breakdown maintenance on machinery</li>
+                                        <li>Troubleshoot electrical, mechanical, and hydraulic systems</li>
+                                        <li>Maintain spare parts inventory and maintenance logs</li>
+                                        <li>Coordinate with production team to minimize downtime</li>
+                                        <li>Implement predictive maintenance techniques</li>
+                                        <li>Ensure all safety protocols during maintenance activities</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> B.E
+                                            Mechanical</span>
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> Diploma</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>CNC machine maintenance</li>
+                                        <li>PLC programming basics</li>
+                                        <li>Hydraulics &amp; pneumatics</li>
+                                        <li>Preventive maintenance scheduling</li>
+                                        <li>Root cause analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ── JOB 8: Supply Chain Coordinator ── -->
+                    <div class="job-card" data-category="logistics" data-job-type="fulltime">
+                        <div class="job-card-top">
+                            <div class="job-icon navy"><i class="fa fa-truck"></i></div>
+                            <div class="job-main">
+                                <div class="job-tags">
+                                    <span class="job-tag dept">Supply Chain</span>
+                                    <span class="job-tag type">Full-Time</span>
+                                    <span class="job-tag exp">3–6 Years</span>
+                                </div>
+                                <h3 class="job-title">Supply Chain Coordinator</h3>
+                                <div class="job-meta">
+                                    <div class="job-meta-item"><i class="fa fa-graduation-cap"></i> MBA / B.Com</div>
+                                    <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                                    <div class="job-meta-item"><i class="fa fa-clock-o"></i> Immediate Joining</div>
+                                </div>
+                            </div>
+                            <div class="job-actions">
+                                <div class="positions-badge">
+                                    <div class="pb-num">2</div>
+                                    <div class="pb-label">Positions</div>
+                                </div>
+                                <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                                    <a href="javascript:void(0)" class="apply-btn"
+                                        onclick="openModal(this.closest('.job-card').querySelector('.job-title').textContent)"><i
+                                            class="fa fa-paper-plane"></i> Apply Now</a>
+                                    <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                        View JD <span class="arrow">&#9660;</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="job-jd">
+                            <div class="jd-grid">
+                                <div>
+                                    <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                                    <ul class="jd-list">
+                                        <li>Coordinate with vendors for raw material procurement</li>
+                                        <li>Manage inventory levels and conduct stock audits</li>
+                                        <li>Plan and track shipments to ensure timely delivery</li>
+                                        <li>Maintain supplier relationships and negotiate pricing</li>
+                                        <li>Prepare purchase orders and supply chain reports</li>
+                                        <li>Implement inventory optimization strategies</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <div class="jd-col-title">Qualification &amp; Experience</div>
+                                    <div style="margin-bottom:16px;">
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> MBA Supply
+                                            Chain</span>
+                                        <span class="jd-qual-pill"><i class="fa fa-certificate"></i> B.Com</span>
+                                    </div>
+                                    <div class="jd-col-title">Key Skills</div>
+                                    <ul class="jd-list">
+                                        <li>Vendor management</li>
+                                        <li>Inventory control</li>
+                                        <li>ERP systems</li>
+                                        <li>Logistics coordination</li>
+                                        <li>Negotiation skills</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.jobs-grid -->
+            </div>
+        </section>
+
+
+        <!-- ══════════════════════════════════════
+             HOW TO APPLY
+        ══════════════════════════════════════ -->
+        <div class="apply-strip">
+            <div class="container">
+                <div class="apply-strip-inner">
+                    <div>
+                        <div
+                            style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--wf-teal);margin-bottom:10px;">
+                            How to Apply</div>
+                        <div class="as-steps">
+                            <div class="as-step">
+                                <div class="as-step-num">1</div>
+                                <div class="as-step-text"><strong>Choose a Role</strong>Browse openings above</div>
+                            </div>
+                            <div class="as-step">
+                                <div class="as-step-num">2</div>
+                                <div class="as-step-text"><strong>Send Resume</strong>Email or use contact form</div>
+                            </div>
+                            <div class="as-step">
+                                <div class="as-step-num">3</div>
+                                <div class="as-step-text"><strong>Interview</strong>We'll reach out within 3 days</div>
+                            </div>
+                            <div class="as-step">
+                                <div class="as-step-num">4</div>
+                                <div class="as-step-text"><strong>Join the Team</strong>Immediate joining preferred
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="apply-cta-btn" onclick="openModal('General Application')">
+                        <i class="fa fa-envelope"></i> Send Your Resume
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-infomation">
+                            <div id="logo" class="logo responsive-logo-container">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                                <li class="address"><a href="#">CARE HRD – Chidambaram Academy of Refinement &amp;
+                                        Enrichment, Hosur, Tamil Nadu, India</a></li>
+                            </ul>
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts &amp; Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2025 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a class="go-top"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+
+    </script>
+
+    <!-- APPLY POPUP MODAL -->
+    <div class="apply-modal-overlay" id="applyModalOverlay" onclick="handleOverlayClick(event)">
+        <div class="apply-modal" id="applyModal">
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <div class="modal-role-label">Apply for Position</div>
+                    <div class="modal-title" id="modalJobTitle">Position</div>
+                    <div class="modal-subtitle">CARE HRD &middot; Tamil Nadu &middot; Full-Time</div>
+                </div>
+                <button class="modal-close-btn" onclick="closeModal()">&#10005;</button>
+            </div>
+            <div class="modal-body" id="modalFormBody">
+                <form id="applyForm" onsubmit="handleSubmit(event)">
+                    <div class="form-field">
+                        <label class="form-label" for="applicantName">Full Name <span>*</span></label>
+                        <input type="text" id="applicantName" class="form-input" placeholder="e.g. Ramesh Kumar"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="applicantPhone">Phone Number <span>*</span></label>
+                        <input type="tel" id="applicantPhone" class="form-input" placeholder="+91 98XXX XXXXX" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Upload Resume <span>*</span></label>
+                        <div class="upload-zone" id="uploadZone">
+                            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx"
+                                onchange="handleFileSelect(this)" required>
+                            <div class="upload-icon" id="uploadIcon"><i class="fa fa-cloud-upload"></i></div>
+                            <div class="uz-title" id="uploadTitle">Click or drag &amp; drop your resume</div>
+                            <div class="uz-sub" id="uploadSub">Supports <strong>PDF, DOC, DOCX</strong> &middot; Max 5MB
+                            </div>
+                            <div class="file-name-display" id="fileNameDisplay"></div>
+                        </div>
+                    </div>
+                    <button type="submit" class="modal-submit-btn">
+                        <i class="fa fa-paper-plane"></i> Submit Application
+                    </button>
+                </form>
+                <div class="modal-privacy"><i class="fa fa-lock" style="font-size:10px;"></i> Your details are kept
+                    confidential.</div>
+            </div>
+            <div class="modal-success" id="modalSuccess">
+                <div class="success-icon">&#10003;</div>
+                <div class="success-title">Application Sent!</div>
+                <p class="success-msg">Thank you! Your application for <strong id="successJobName"></strong> has been
+                    received. Our team will reach out within <strong>3 working days</strong>.</p>
+                <button class="success-close-btn" onclick="closeModal()"><i class="fa fa-check"></i> Done</button>
+            </div>
+        </div>
+    </div>
+
+   <script>
+    // ========== COMPLETE DYNAMIC FILTER & TAB SYSTEM ==========
+    // All counts are calculated dynamically from existing DOM elements - NO HARDCODED NUMBERS
+    
+    // Function to update all counts dynamically
+    function updateAllCounts() {
+        // Get all job cards
+        const allJobCards = document.querySelectorAll('.job-card');
+        const totalJobs = allJobCards.length;
+        
+        // Count jobs by type (Full-Time vs Internship)
+        let fullTimeCount = 0;
+        let internshipCount = 0;
+        
+        allJobCards.forEach(card => {
+            const typeTag = card.querySelector('.job-tag.type');
+            if (typeTag) {
+                const typeText = typeTag.textContent.trim();
+                if (typeText === 'Full-Time') {
+                    fullTimeCount++;
+                } else if (typeText === 'Internship') {
+                    internshipCount++;
+                }
+            }
+        });
+        
+        // Calculate total positions (sum of all positions-badge numbers)
+        let totalPositions = 0;
+        const positionBadges = document.querySelectorAll('.positions-badge .pb-num');
+        positionBadges.forEach(badge => {
+            totalPositions += parseInt(badge.textContent) || 0;
+        });
+        
+        // Update filter buttons counts
+        const allJobsBtn = document.querySelector('.filter-btn:first-child');
+        const fullTimeBtn = document.querySelector('.filter-btn:nth-child(2)');
+        const internshipBtn = document.querySelector('.filter-btn:nth-child(3)');
+        
+        if (allJobsBtn) {
+            let countSpan = allJobsBtn.querySelector('.filter-count');
+            if (!countSpan) {
+                countSpan = document.createElement('span');
+                countSpan.className = 'filter-count';
+                allJobsBtn.appendChild(countSpan);
+            }
+            countSpan.textContent = totalJobs;
+        }
+        
+        if (fullTimeBtn) {
+            let countSpan = fullTimeBtn.querySelector('.filter-count');
+            if (!countSpan) {
+                countSpan = document.createElement('span');
+                countSpan.className = 'filter-count';
+                fullTimeBtn.appendChild(countSpan);
+            }
+            countSpan.textContent = fullTimeCount;
+        }
+        
+        if (internshipBtn) {
+            let countSpan = internshipBtn.querySelector('.filter-count');
+            if (!countSpan) {
+                countSpan = document.createElement('span');
+                countSpan.className = 'filter-count';
+                internshipBtn.appendChild(countSpan);
+            }
+            countSpan.textContent = internshipCount;
+        }
+        
+        // Update total positions count in header
+        const totalCountElement = document.querySelector('.total-count');
+        if (totalCountElement) {
+            totalCountElement.textContent = totalPositions + ' Total Positions';
+        }
+        
+        // Update hero stats dynamically
+        const heroOpenPositions = document.querySelector('.hero-stat-item:first-child .hero-stat-num');
+        if (heroOpenPositions) {
+            heroOpenPositions.textContent = totalPositions;
+        }
+        
+        const heroJobRoles = document.querySelector('.hero-stat-item:nth-child(3) .hero-stat-num');
+        if (heroJobRoles) {
+            heroJobRoles.textContent = totalJobs;
+        }
+        
+        // Update the "Now Hiring" badge
+        const wfBadge = document.querySelector('.wf-badge');
+        if (wfBadge) {
+            wfBadge.innerHTML = `&#9673;&nbsp; Now Hiring — ${totalPositions} Open Positions`;
+        }
+        
+        return { totalJobs, fullTimeCount, internshipCount, totalPositions };
+    }
+    
+    // Filter jobs function - handles tab switching
+    function filterJobs(filterType, buttonElement) {
+        // Fix the filter type if needed (handle typo in onclick)
+        if (filterType === 'Full-ime') {
+            filterType = 'Full-time';
+        }
+        
+        // Update active button styling
+        const allFilterBtns = document.querySelectorAll('.filter-btn');
+        allFilterBtns.forEach(btn => btn.classList.remove('active'));
+        buttonElement.classList.add('active');
+        
+        // Get all job cards
+        const jobCards = document.querySelectorAll('.job-card');
+        let visibleCount = 0;
+        let totalPositionsVisible = 0;
+        
+        jobCards.forEach(card => {
+            const typeTag = card.querySelector('.job-tag.type');
+            let shouldShow = false;
+            
+            if (filterType === 'all') {
+                shouldShow = true;
+            } else if (filterType === 'Full-time') {
+                if (typeTag && typeTag.textContent.trim() === 'Full-Time') {
+                    shouldShow = true;
+                }
+            } else if (filterType === 'Internship') {
+                if (typeTag && typeTag.textContent.trim() === 'Internship') {
+                    shouldShow = true;
+                }
+            }
+            
+            if (shouldShow) {
+                card.style.display = '';
+                visibleCount++;
+                const positionNum = card.querySelector('.positions-badge .pb-num');
+                if (positionNum) {
+                    totalPositionsVisible += parseInt(positionNum.textContent) || 0;
+                }
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Update total positions count in header based on filter
+        const totalCountElement = document.querySelector('.total-count');
+        if (totalCountElement) {
+            if (filterType === 'all') {
+                // Calculate all positions from all cards
+                let allPositions = 0;
+                document.querySelectorAll('.job-card .positions-badge .pb-num').forEach(badge => {
+                    allPositions += parseInt(badge.textContent) || 0;
+                });
+                totalCountElement.textContent = allPositions + ' Total Positions';
+            } else {
+                totalCountElement.textContent = totalPositionsVisible + ' Positions';
+            }
+        }
+        
+        // Update section header subtitle based on active filter
+        const jshSub = document.querySelector('.jsh-sub');
+        if (jshSub) {
+            if (filterType === 'Full-time') {
+                jshSub.innerHTML = 'All roles based in Tamil Nadu · Full-time positions · Immediate joining';
+            } else if (filterType === 'Internship') {
+                jshSub.innerHTML = 'Internship opportunities · Learn & earn · Hands-on experience';
+            } else {
+                jshSub.innerHTML = 'All roles based in Tamil Nadu · Full-time & Internship · Immediate joining';
+            }
+        }
+        
+        // Show/hide no results message
+        let noResultsMsg = document.getElementById('noResultsMsg');
+        if (!noResultsMsg) {
+            noResultsMsg = document.createElement('div');
+            noResultsMsg.id = 'noResultsMsg';
+            noResultsMsg.style.cssText = 'display: none; text-align: center; padding: 60px; background: #fff; border-radius: 24px; margin-top: 40px;';
+            noResultsMsg.innerHTML = '<i class="fa fa-search" style="font-size: 48px; color: #cbd5e1;"></i><h3 style="margin-top: 16px;">No positions found</h3><p style="color: #64748b;">Try changing your filter to see more opportunities.</p>';
+            const jobsGrid = document.querySelector('.jobs-grid');
+            if (jobsGrid && jobsGrid.parentNode) {
+                jobsGrid.parentNode.appendChild(noResultsMsg);
+            }
+        }
+        
+        const jobsGrid = document.querySelector('.jobs-grid');
+        if (jobsGrid) {
+            if (visibleCount === 0) {
+                noResultsMsg.style.display = 'block';
+                jobsGrid.style.display = 'none';
+            } else {
+                noResultsMsg.style.display = 'none';
+                jobsGrid.style.display = 'flex';
+            }
+        }
+    }
+    
+    // Toggle JD (Job Description) expand/collapse
+    function toggleJD(btn) {
+        const jobCard = btn.closest('.job-card');
+        const jdDiv = jobCard.querySelector('.job-jd');
+        if (jdDiv) {
+            jdDiv.classList.toggle('open');
+            const arrow = btn.querySelector('.arrow');
+            if (arrow) {
+                arrow.style.transform = jdDiv.classList.contains('open') ? 'rotate(180deg)' : '';
+            }
+            btn.innerHTML = jdDiv.classList.contains('open') ? 'View JD ▲' : 'View JD ▼';
+        }
+    }
+    
+    // Function to add sample internship jobs (since there are none in your HTML)
+    function addSampleInternships() {
+        const jobsGrid = document.querySelector('.jobs-grid');
+        if (!jobsGrid) return;
+        
+        // Check if internships already exist
+        const existingInternships = document.querySelectorAll('.job-tag.type');
+        let hasInternship = false;
+        existingInternships.forEach(tag => {
+            if (tag.textContent.trim() === 'Internship') {
+                hasInternship = true;
+            }
+        });
+        
+        if (hasInternship) return; // Don't add duplicates
+        
+        // Sample internship jobs
+        const internships = [
+            {
+                title: "HR Internship",
+                dept: "Human Resources",
+                duration: "3-6 months",
+                stipend: "₹10,000/month",
+                positions: 2,
+                icon: "👥",
+                duties: [
+                    "Assist in recruitment and onboarding processes",
+                    "Maintain employee records and HR documentation",
+                    "Coordinate interviews and candidate communication",
+                    "Support HR team in day-to-day operations"
+                ]
+            },
+            {
+                title: "Digital Marketing Intern",
+                dept: "Marketing",
+                duration: "3 months",
+                stipend: "₹8,000/month",
+                positions: 2,
+                icon: "📢",
+                duties: [
+                    "Create social media content and schedule posts",
+                    "Assist in SEO and website content optimization",
+                    "Monitor analytics and prepare performance reports",
+                    "Support email marketing campaigns"
+                ]
+            },
+            {
+                title: "Training & Development Intern",
+                dept: "Learning & Development",
+                duration: "4 months",
+                stipend: "₹8,000/month",
+                positions: 1,
+                icon: "📚",
+                duties: [
+                    "Assist in organizing training sessions and workshops",
+                    "Prepare training materials and presentations",
+                    "Coordinate with trainers and participants",
+                    "Collect feedback and prepare training reports"
+                ]
+            }
+        ];
+        
+        internships.forEach(intern => {
+            const jobCard = document.createElement('div');
+            jobCard.className = 'job-card';
+            jobCard.setAttribute('data-category', 'internship');
+            jobCard.setAttribute('data-job-type', 'internship');
+            
+            jobCard.innerHTML = `
+                <div class="job-card-top">
+                    <div class="job-icon blue">${intern.icon}</div>
+                    <div class="job-main">
+                        <div class="job-tags">
+                            <span class="job-tag dept">${intern.dept}</span>
+                            <span class="job-tag type">Internship</span>
+                            <span class="job-tag exp">${intern.duration}</span>
+                        </div>
+                        <h3 class="job-title">${intern.title}</h3>
+                        <div class="job-meta">
+                            <div class="job-meta-item"><i class="fa fa-map-marker"></i> Tamil Nadu</div>
+                            <div class="job-meta-item"><i class="fa fa-inr"></i> ${intern.stipend}</div>
+                            <div class="job-meta-item"><i class="fa fa-calendar"></i> ${intern.duration}</div>
+                        </div>
+                    </div>
+                    <div class="job-actions">
+                        <div class="positions-badge">
+                            <div class="pb-num">${intern.positions}</div>
+                            <div class="pb-label">${intern.positions === 1 ? 'Position' : 'Positions'}</div>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+                            <a href="javascript:void(0)" class="apply-btn" onclick="openModal('${intern.title.replace(/'/g, "\\'")}')"><i class="fa fa-paper-plane"></i> Apply Now</a>
+                            <button class="toggle-jd-btn" onclick="toggleJD(this)">
+                                View JD <span class="arrow">&#9660;</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="job-jd">
+                    <div class="jd-grid">
+                        <div>
+                            <div class="jd-col-title">Duties &amp; Responsibilities</div>
+                            <ul class="jd-list">
+                                ${intern.duties.map(duty => `<li>${duty}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="jd-col-title">What You'll Gain</div>
+                            <ul class="jd-list">
+                                <li>Certificate of completion</li>
+                                <li>Letter of recommendation</li>
+                                <li>Hands-on industry experience</li>
+                                <li>Mentorship from experts</li>
+                                <li>Potential for full-time conversion</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+            jobsGrid.appendChild(jobCard);
+        });
+    }
+    
+    // Initialize everything when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add sample internship jobs
+        addSampleInternships();
+        
+        // Update all counts dynamically
+        updateAllCounts();
+        
+        // Fix the onclick attributes for filter buttons
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        if (filterBtns.length >= 3) {
+            // Update first button (All Jobs) - fix if needed
+            const allBtn = filterBtns[0];
+            const allOnclick = allBtn.getAttribute('onclick');
+            if (!allOnclick || !allOnclick.includes("filterJobs('all'")) {
+                allBtn.setAttribute('onclick', "filterJobs('all', this)");
+            }
+            
+            // Update second button (Full time)
+            const fullTimeBtn = filterBtns[1];
+            fullTimeBtn.setAttribute('onclick', "filterJobs('Full-time', this)");
+            
+            // Update third button (Internship)
+            const internshipBtn = filterBtns[2];
+            internshipBtn.setAttribute('onclick', "filterJobs('Internship', this)");
+        }
+        
+        // Add mutation observer to watch for dynamic changes
+        const observer = new MutationObserver(function(mutations) {
+            updateAllCounts();
+        });
+        
+        // Observe the jobs grid for changes
+        const jobsGrid = document.querySelector('.jobs-grid');
+        if (jobsGrid) {
+            observer.observe(jobsGrid, { childList: true, subtree: true });
+        }
+        
+        // Style internship tags differently
+        const allCards = document.querySelectorAll('.job-card');
+        allCards.forEach(card => {
+            const typeSpan = card.querySelector('.job-tag.type');
+            if (typeSpan && typeSpan.textContent.includes('Internship')) {
+                typeSpan.style.background = '#fef3c7';
+                typeSpan.style.color = '#b45309';
+                typeSpan.style.border = '1px solid #fed7aa';
+            }
+        });
+    });
+    
+    // ========== MODAL FUNCTIONS ==========
+    function openModal(jobTitle) {
+        const form = document.getElementById('applyForm');
+        if (form) form.reset();
+        const modalFormBody = document.getElementById('modalFormBody');
+        const modalSuccess = document.getElementById('modalSuccess');
+        if (modalFormBody) modalFormBody.classList.remove('hide');
+        if (modalSuccess) modalSuccess.classList.remove('show');
+        resetUploadZone();
+        const modalJobTitle = document.getElementById('modalJobTitle');
+        const successJobName = document.getElementById('successJobName');
+        if (modalJobTitle) modalJobTitle.textContent = jobTitle || 'General Application';
+        if (successJobName) successJobName.textContent = jobTitle || 'this position';
+        const overlay = document.getElementById('applyModalOverlay');
+        if (overlay) overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+        const overlay = document.getElementById('applyModalOverlay');
+        if (overlay) overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+    
+    function handleOverlayClick(e) { 
+        if (e.target === document.getElementById('applyModalOverlay')) closeModal(); 
+    }
+    
+    document.addEventListener('keydown', function(e) { 
+        if (e.key === 'Escape') closeModal(); 
+    });
+    
+    function handleFileSelect(input) {
+        if (input.files && input.files[0]) {
+            var file = input.files[0]; 
+            var sizeMB = (file.size/(1024*1024)).toFixed(1);
+            var uploadZone = document.getElementById('uploadZone');
+            if (uploadZone) {
+                uploadZone.classList.add('has-file');
+                var uploadIcon = document.getElementById('uploadIcon');
+                var uploadTitle = document.getElementById('uploadTitle');
+                var uploadSub = document.getElementById('uploadSub');
+                var fileNameDisplay = document.getElementById('fileNameDisplay');
+                if (uploadIcon) uploadIcon.innerHTML = '<i class="fa fa-file-text-o"></i>';
+                if (uploadTitle) uploadTitle.textContent = 'Resume attached!';
+                if (uploadSub) uploadSub.innerHTML = '<strong>' + file.name + '</strong>';
+                if (fileNameDisplay) fileNameDisplay.textContent = sizeMB + ' MB';
+            }
+        } else { 
+            resetUploadZone(); 
+        }
+    }
+    
+    function resetUploadZone() {
+        var uploadZone = document.getElementById('uploadZone');
+        if (uploadZone) {
+            uploadZone.classList.remove('has-file');
+            var uploadIcon = document.getElementById('uploadIcon');
+            var uploadTitle = document.getElementById('uploadTitle');
+            var uploadSub = document.getElementById('uploadSub');
+            var fileNameDisplay = document.getElementById('fileNameDisplay');
+            if (uploadIcon) uploadIcon.innerHTML = '<i class="fa fa-cloud-upload"></i>';
+            if (uploadTitle) uploadTitle.innerHTML = 'Click or drag &amp; drop your resume';
+            if (uploadSub) uploadSub.innerHTML = 'Supports <strong>PDF, DOC, DOCX</strong> &middot; Max 5MB';
+            if (fileNameDisplay) fileNameDisplay.textContent = '';
+        }
+    }
+    
+    var uz = document.getElementById('uploadZone');
+    if (uz) {
+        uz.addEventListener('dragover', function(e) { 
+            e.preventDefault(); 
+            this.classList.add('dragover'); 
+        });
+        uz.addEventListener('dragleave', function() { 
+            this.classList.remove('dragover'); 
+        });
+        uz.addEventListener('drop', function(e) { 
+            e.preventDefault(); 
+            this.classList.remove('dragover'); 
+            var fi = document.getElementById('resumeFile'); 
+            if (fi) {
+                fi.files = e.dataTransfer.files; 
+                handleFileSelect(fi);
+            }
+        });
+    }
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        var btn = document.querySelector('.modal-submit-btn');
+        if (btn) {
+            btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending...';
+            btn.disabled = true;
+            setTimeout(function() {
+                var modalFormBody = document.getElementById('modalFormBody');
+                var modalSuccess = document.getElementById('modalSuccess');
+                if (modalFormBody) modalFormBody.classList.add('hide');
+                if (modalSuccess) modalSuccess.classList.add('show');
+                btn.innerHTML = '<i class="fa fa-paper-plane"></i> Submit Application';
+                btn.disabled = false;
+            }, 1600);
+        }
+    }
+</script>
+
+    <!-- Optional: Add a no results message element if not present -->
+    <div id="noResultsMsg"
+        style="display: none; text-align: center; padding: 60px; background: #fff; border-radius: 24px;">
+        <i class="fa fa-search" style="font-size: 48px; color: #cbd5e1;"></i>
+        <h3>No positions found</h3>
+        <p>Try changing your filter to see more opportunities.</p>
+    </div>
+</body>
+
+</html>

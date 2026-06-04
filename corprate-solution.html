@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Corporate Solutions | CARE - Consulting & Advisory</title>
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <!-- Responsive -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <!-- Colors -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
+    <!-- Animation Style -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
+    <link href="icon/favicon.png" rel="shortcut icon">
+
+    <style>
+        /* CORPORATE SOLUTIONS: MODERN ENTERPRISE SYSTEM */
+        :root {
+            --brand-blue: #2482eb;
+            --brand-teal: #2dd4bf;
+            --deep-navy: #0f172a;
+            --soft-slate: #f8fafc;
+            --glass-border: rgba(226, 232, 240, 0.8);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* HERO: PERFORMANCE ARC */
+        .hero-corp-new {
+            padding: 120px 0 160px;
+            background: radial-gradient(circle at bottom right, #f0f7ff 0%, #ffffff 50%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-corp-new::after {
+            content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 100px;
+            background: #fff; clip-path: ellipse(60% 100% at 50% 100%);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--soft-slate);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 13px;
+            color: var(--brand-blue);
+            margin-bottom: 25px;
+            border: 1px solid var(--glass-border);
+        }
+
+        /* METRIC RIBBON */
+        .metric-ribbon {
+            margin-top: -60px;
+            position: relative;
+            z-index: 10;
+        }
+        .metric-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            text-align: center;
+            border-bottom: 4px solid var(--brand-teal);
+        }
+        .metric-box i { font-size: 24px; color: var(--brand-blue); margin-bottom: 10px; display: block; }
+        .metric-box h6 { font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* PILLAR SOLUTIONS: Z-PATTERN */
+        .solution-pillar { padding: 100px 0; }
+        .solution-card {
+            background: #fff;
+            border-radius: 30px;
+            padding: 50px;
+            box-shadow: 0 10px 50px rgba(15, 23, 42, 0.03);
+            border: 1px solid var(--glass-border);
+            transition: 0.4s;
+        }
+        .solution-card:hover {
+            box-shadow: 0 30px 60px rgba(36, 130, 235, 0.1);
+            border-color: var(--brand-teal);
+        }
+
+        .feature-icon {
+            width: 70px; height: 70px;
+            background: var(--brand-blue);
+            color: #fff;
+            border-radius: 20px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px; margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(36, 130, 235, 0.2);
+        }
+
+        .checklist-modern { list-style: none; padding: 0; margin: 30px 0; }
+        .checklist-modern li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            font-weight: 600;
+            color: #475569;
+        }
+        .checklist-modern li::before {
+            content: "\f058"; font-family: FontAwesome;
+            position: absolute; left: 0; color: var(--brand-teal); font-size: 20px;
+        }
+
+        .impact-ribbon {
+            background: var(--deep-navy);
+            color: #fff;
+            padding: 15px 25px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* FRONTLINE MASTERY */
+        .frontline-section { padding: 100px 0; background: var(--soft-slate); border-radius: 60px; }
+        .step-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            height: 100%;
+            position: relative;
+            border-left: 6px solid var(--brand-blue);
+        }
+        .step-label {
+            font-size: 11px; font-weight: 900; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--brand-teal); margin-bottom: 10px; display: block;
+        }
+
+        /* CTA: EXECUTIVE SESSION */
+        .cta-enterprise {
+            background: var(--deep-navy);
+            padding: 100px 0;
+            color: #fff;
+            text-align: center;
+            border-radius: 60px 60px 0 0;
+        }
+
+        @media (max-width: 991px) {
+            .hero-corp-new { text-align: center; padding: 80px 0 120px; }
+            .metric-ribbon { margin-top: 20px; }
+            .metric-box { margin-bottom: 20px; }
+            .solution-card { padding: 30px; margin-bottom: 40px; }
+            .step-box { margin-bottom: 30px; }
+        }
+    </style>
+</head>
+
+<body class="header-sticky">
+    <div class="boxed">
+        <!-- HEADER -->
+        <div class="site-wrapper parallax parallax1">
+            <div class="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6 top-reponsive">
+                            <ul class="flat-information">
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header id="header" class="header clearfix">
+                <div class="container1">
+                    <div class="row">
+                        <div class="header-wrap clearfix">
+                            <div class="col-md-3">
+                                <div id="logo" class="logo responsive-logo-container">
+                                    <h1 class="responsive-logo-heading">
+                                        <a href="index.html" rel="home">
+                                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo" class="logo-img responsive-logo">
+                                        </a>
+                                    </h1>
+                                </div>
+                                <div class="btn-menu"><span></span></div>
+                            </div>
+                            <div class="col-md-10">
+                                <div class="nav-wrap">
+                                    <nav id="mainnav" class="mainnav">
+                                        <ul class="menu">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="aboutFounder.html">About Founder</a></li>
+                                             <ul class="submenu">
+                                                    <li><a href="directors.html">Our directors</a>
+                                                    </li>
+
+                                                </ul>
+                                            <li><a href="life-coaching.html">Life Coaching</a>
+                                                <ul class="submenu">
+                                                    <li><a href="Career-coaching.html"> Career Coaching</a></li>
+                                                    <li><a href="Personal-growth.html">Personal Growth</a></li>
+                                                    <li><a href="family&life.html">Family & Life Programs</a></li>
+                                                    <li><a href="student&youth.html">Student & Youth Coaching</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="TrainingDevelopment.html">Training & Development</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-traning.html">Corporate Training</a></li>
+                                                    <li><a href="technical-training.html">Technical Training</a></li>
+                                                    <li><a href="academic-program.html">Academic Programs</a></li>
+                                                    <li><a href="student-development.html">Student Development</a></li>
+                                                    <li><a href="open&family.html"> Open & Family Programs</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="services.html">Consulting & Advisory</a>
+                                                <ul class="submenu">
+                                                    <li><a href="AI-governace.html">AI Governance</a></li>
+                                                    <li><a href="cybersecurity.html"> Cybersecurity Advisory</a></li>
+                                                    <li><a href="it-governance.html">IT Governance</a></li>
+                                                    <li><a href="risk-audit.html">Risk & Audit</a></li>
+                                                    <li><a href="ESG-sustainablity.html"> ESG & Sustainability</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="active"><a href="corprate-solution.html">Corporate Solutions</a>
+                                                <ul class="submenu">
+                                                    <li><a href="corprate-solution.html">Corporate Solutions</a></li>
+                                                    <li><a href="leadership-dev-journey.html"> Leadership Development Journeys</a></li>
+                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a></li>
+                                                    <li><a href="hr-implementation.html">HR Implementation Support</a></li>
+                                                    <li><a href="custom-solution.html"> Custom Solutions</a></li>
+                                                </ul>
+                                            </li>
+                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="gallery.html">gallery</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="top-search">
+                                        <form action="#" id="searchform-all" method="get">
+                                            <div>
+                                                <input type="text" id="s" class="sss" placeholder="Search...">
+                                                <input type="submit" value="" id="searchsubmit">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="wrap-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="page-title">
+                                <div class="page-content"><h2>Corporate Solution</h2></div>
+                                <div class="breadcrumbs">
+                                    <ul>
+                                        <li><a href="#">Consulting & Advisory</a></li>
+                                        <li>Corporate Solution</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERO SECTION -->
+        <section class="hero-corp-new">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-7">
+                        <div class="hero-badge">OPERATIONAL EXCELLENCE</div>
+                        <h1 class="title" style="font-size: 54px; line-height: 1.1; margin-bottom: 25px;">Practical Solutions for <br><span class="gradient-text">Real Business Challenges.</span></h1>
+                        <p style="font-size: 20px; color: #64748b; line-height: 1.6;">
+                            Empowering the backbone of industry. We deliver high-impact programs designed for the unique operational demands of the Manufacturing and MSME sectors.
+                        </p>
+                        <div style="margin-top: 35px;">
+                            <a href="contact.html" class="flat-button" style="background: var(--brand-blue); border:none; color:#fff; font-weight: 700;">Initiate Solution Design</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="images/work/1.jpg" alt="Corporate Excellence" style="border-radius: 40px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); border: 8px solid #fff;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- METRIC RIBBON -->
+        <div class="container metric-ribbon">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="metric-box">
+                        <i class="fa fa-line-chart"></i>
+                        <h6>Productivity Driven</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric-box">
+                        <i class="fa fa-users"></i>
+                        <h6>Frontline Empowered</h6>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric-box">
+                        <i class="fa fa-shield"></i>
+                        <h6>Compliance Secured</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOLUTION PILLARS -->
+        <section class="solution-pillar">
+            <div class="container">
+                <!-- Area 1: Manufacturing -->
+                <div class="row align-items-center" style="margin-bottom: 100px;">
+                    <div class="col-md-6">
+                        <div class="solution-card">
+                            <div class="feature-icon"><i class="fa fa-industry"></i></div>
+                            <h3>Manufacturing & MSME Solutions</h3>
+                            <p>Strategic operational support designed to optimize production processes and build scalability for growing industrial units.</p>
+                            <ul class="checklist-modern">
+                                <li>Workflow & Process Optimization</li>
+                                <li>Quality Enhancement & Waste Reduction</li>
+                                <li>Structured Scalability Systems</li>
+                                <li>Workforce Capability Development</li>
+                            </ul>
+                            <div class="impact-ribbon"><i class="fa fa-star" style="color:var(--brand-teal); margin-right:10px;"></i> Sustainable Growth & Efficiency</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="images/work/2.jpg" alt="Manufacturing Growth" style="width: 80%; border-radius: 30px;">
+                    </div>
+                </div>
+
+                <!-- Area 2: Shopfloor -->
+                <div class="row align-items-center" style="margin-bottom: 100px;">
+                    <div class="col-md-6 col-md-push-6">
+                        <div class="solution-card">
+                            <div class="feature-icon"><i class="fa fa-cogs"></i></div>
+                            <h3>Shopfloor Productivity Programs</h3>
+                            <p>Drive peak performance where it matters most. We focus on workplace discipline and coordination to maximize effectiveness.</p>
+                            <ul class="checklist-modern">
+                                <li>Workplace Discipline Protocols</li>
+                                <li>Downtime & Inefficiency Reduction</li>
+                                <li>Accountability & Coordination Systems</li>
+                                <li>Continuous Improvement Culture</li>
+                            </ul>
+                            <div class="impact-ribbon"><i class="fa fa-star" style="color:var(--brand-teal); margin-right:10px;"></i> Higher Shopfloor Output</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-pull-6 text-center">
+                        <img src="images/work/1.jpg" alt="Shopfloor Productivity" style="width: 80%; border-radius: 30px;">
+                    </div>
+                </div>
+
+                <!-- NEW Area 3: Lean Transformation -->
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="solution-card">
+                            <div class="feature-icon"><i class="fa fa-rocket"></i></div>
+                            <h3>Lean Transformation Basics</h3>
+                            <p>Start your journey towards operational excellence. Lean principles help organizations continuously improve by eliminating inefficiencies.</p>
+                            <ul class="checklist-modern">
+                                <li>Understand Lean concepts and tools</li>
+                                <li>Identify waste and inefficiencies</li>
+                                <li>Implement basic Lean practices</li>
+                                <li>Build a culture of continuous improvement</li>
+                            </ul>
+                            <div class="impact-ribbon"><i class="fa fa-star" style="color:var(--brand-teal); margin-right:10px;"></i> Sustainable Efficiency Gains</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="images/work/2.jpg" alt="Lean Transformation" style="width: 80%; border-radius: 30px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FRONTLINE & SAFETY -->
+        <section class="frontline-section">
+            <div class="container">
+                <div class="title-section center">
+                    <h2 class="title">Frontline <span class="gradient-text">Mastery</span></h2>
+                    <p>Securing the daily operations through leadership and safety excellence.</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="step-box">
+                            <span class="step-label">Leadership</span>
+                            <h4>Supervisor Development</h4>
+                            <p>Building strong frontline leaders who can handle people management, conflict resolution, and performance monitoring with precision.</p>
+                            <ul class="checklist-modern">
+                                <li>People Management mastery</li>
+                                <li>Accountability Monitoring</li>
+                                <li>Conflict Resolution Skillsets</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="step-box" style="border-left-color: var(--brand-teal);">
+                            <span class="step-label">Operations</span>
+                            <h4>Safety & Compliance</h4>
+                            <p>Ensuring sustainable operations through strict safety practices and regulatory adherence to reduce operational risks.</p>
+                            <ul class="checklist-modern">
+                                <li>Workplace Safety Practices</li>
+                                <li>Regulatory Requirement Adherence</li>
+                                <li>Risk & Accident Reduction</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY US -->
+        <section class="solution-pillar">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        <h2 class="title">Why Choose <br><span class="gradient-text">Our Solutions?</span></h2>
+                        <p style="font-size: 18px; margin-top: 20px;">We translate industrial challenges into actionable productivity gains.</p>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-sm-6" style="margin-bottom: 30px;">
+                                <h6 style="font-weight: 800; color: var(--brand-blue);">Sector Expertise</h6>
+                                <p>Deep focus on the Manufacturing and MSME landscape.</p>
+                            </div>
+                            <div class="col-sm-6" style="margin-bottom: 30px;">
+                                <h6 style="font-weight: 800; color: var(--brand-blue);">Practical Delivery</h6>
+                                <p>Hands-on sessions tailored for real operational challenges.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6 style="font-weight: 800; color: var(--brand-blue);">Measurable Gains</h6>
+                                <p>Documented improvements in productivity and safety.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <h6 style="font-weight: 800; color: var(--brand-blue);">Custom Fit</h6>
+                                <p>Programs designed for your specific plant and plant-floor needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="cta-enterprise">
+            <div class="container">
+                <h2 style="color: #fff; margin-bottom: 25px;">Ready to optimize your workforce?</h2>
+                <p style="font-size: 20px; opacity: 0.8; margin-bottom: 45px;">Connect with our industry specialists to design a solution that drives your productivity.</p>
+                <a href="contact.html" class="flat-button" style="background: var(--brand-teal); border:none; color: var(--deep-navy); font-weight: 800; padding: 18px 45px;">Request a Diagnostic Meeting</a>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                       <div class="widget widget-infomation">
+                            <!-- Logo instead of COACHING text -->
+                            <div id="logo" class="logo responsive-logo-container footer-logo">
+                                <h1 class="responsive-logo-heading">
+                                    <a href="index-2.html" rel="home">
+                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
+                                            class="logo-img responsive-logo">
+                                    </a>
+                                </h1>
+                            </div>
+
+                            <ul class="flat-information">
+                                  <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                 <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                </li>
+                                <li class="address">
+                                    <a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).
+</a>
+                                </li>
+                            </ul>
+
+                            <ul class="social-links style2">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-feature">
+                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Starting Soon</a></li>
+                                <li><a href="#">Just Added</a></li>
+                                <li><a href="#">Most Viewed</a></li>
+                                <li><a href="#">Top Paid</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-2 col-sm-6">
+                        <div class="widget widget-categories">
+                            <h4 class="widget-title">CATEGORIES</h4>
+                            <ul class="feature">
+                                <li><a href="#">Arts & Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Computer Science</a></li>
+                                <li><a href="#">Data Science</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="widget widget-useful">
+                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <ul class="one-half">
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                            </ul>
+                            <ul class="one-half">
+                                <li><a href="#">Contact search</a></li>
+                                <li><a href="#">Jobs and vacancies</a></li>
+                                <li><a href="#">Term dates</a></li>
+                                <li><a href="#">Map</a></li>
+                            </ul>
+                        </div>
+                    </div><!-- /.col-md-3 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </footer>
+
+        <!-- Bottom -->
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-sm-6 bottom-reponsive">
+                        <div class="copyright">
+                            <p>© 2017 <a href="#">CARE</a>. All rights reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 bottom-reponsive">
+                        <ul class="link-bottom">
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- /.container -->
+        </div><!-- bottom -->
+
+        <!-- Go Top -->
+        <a class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+
+    <!-- JS -->
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+</html>
