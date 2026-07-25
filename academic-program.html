@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><!--<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
@@ -217,148 +218,191 @@
 
     <!-- CARE: Scroll Animations + Responsive Fixes -->
     <style>
-    /* ── 1. ANIMATION BASE ──────────────────────────────────────────── */
-    .care-animate {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .care-animate.care-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    /* Stagger delays for sibling cards */
-    .care-animate:nth-child(1) { transition-delay: 0s;   }
-    .care-animate:nth-child(2) { transition-delay: 0.12s; }
-    .care-animate:nth-child(3) { transition-delay: 0.24s; }
-    .care-animate:nth-child(4) { transition-delay: 0.36s; }
-    .care-animate:nth-child(5) { transition-delay: 0.48s; }
-    .care-animate:nth-child(6) { transition-delay: 0.60s; }
+        /* ── 1. ANIMATION BASE ──────────────────────────────────────────── */
+        .care-animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
 
-    /* Fade-in from left */
-    .care-fade-left {
-        opacity: 0;
-        transform: translateX(-40px);
-        transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .care-fade-left.care-visible {
-        opacity: 1;
-        transform: translateX(0);
-    }
+        .care-animate.care-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    /* Fade-in from right */
-    .care-fade-right {
-        opacity: 0;
-        transform: translateX(40px);
-        transition: opacity 0.65s ease, transform 0.65s ease;
-    }
-    .care-fade-right.care-visible {
-        opacity: 1;
-        transform: translateX(0);
-    }
+        /* Stagger delays for sibling cards */
+        .care-animate:nth-child(1) {
+            transition-delay: 0s;
+        }
 
-    /* Scale pop for chips / pills / tags */
-    .care-pop {
-        opacity: 0;
-        transform: scale(0.8);
-        transition: opacity 0.45s ease, transform 0.45s cubic-bezier(.34,1.56,.64,1);
-    }
-    .care-pop.care-visible {
-        opacity: 1;
-        transform: scale(1);
-    }
+        .care-animate:nth-child(2) {
+            transition-delay: 0.12s;
+        }
 
-    /* ── 2. RESPONSIVE FIXES ────────────────────────────────────────── */
-    /* Ensure hero images never overflow on small screens */
-    .hero-img-wrap img,
-    .hero-image img,
-    img { max-width: 100%; height: auto; }
+        .care-animate:nth-child(3) {
+            transition-delay: 0.24s;
+        }
 
-    /* Delivery grids: stack on mobile */
-    @media (max-width: 767px) {
-        .no-gutters .col-md-3,
-        .no-gutters .col-md-4 {
-            width: 100%;
-            padding: 0;
+        .care-animate:nth-child(4) {
+            transition-delay: 0.36s;
         }
-        /* Full-width cards on mobile */
-        .col-md-6,
-        .col-md-4,
-        .col-md-3 {
-            width: 100%;
-        }
-        /* Hero text sizes */
-        .hero-edu h1,
-        .hero-corp h1,
-        .hero-coaching h1,
-        section h1 {
-            font-size: 28px !important;
-            line-height: 1.3 !important;
-        }
-        /* CTA section border-radius */
-        .cta-edu,
-        .cta-section,
-        [class*="cta-"] {
-            border-radius: 16px !important;
-            margin: 30px 15px !important;
-        }
-        /* Navigation: full-width on small */
-        .mainnav { width: 100%; }
-        /* Padding resets */
-        section,
-        .flat-row {
-            padding-left: 15px !important;
-            padding-right: 15px !important;
-        }
-        /* Fix audience / chip strips */
-        .audience-strip,
-        .audience-bar,
-        .chip-bar {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .audience-chip,
-        .audience-pill,
-        .audience-tag {
-            text-align: center;
-        }
-        /* Hero background pseudo-element */
-        .hero-edu::before,
-        .hero-corp::before,
-        [class*="hero-"]::before {
-            display: none;
-        }
-        /* Why-us blocks */
-        .why-us-box,
-        .check-item,
-        .iconbox,
-        .box-icon { margin-bottom: 20px; }
-    }
 
-    @media (max-width: 991px) {
-        /* Tablet: hero images below text */
-        [class*="hero-"] .col-md-5,
-        [class*="hero-"] .col-md-6 {
-            text-align: center;
+        .care-animate:nth-child(5) {
+            transition-delay: 0.48s;
         }
-        [class*="hero-"] .hero-img-wrap {
-            margin-top: 40px;
+
+        .care-animate:nth-child(6) {
+            transition-delay: 0.60s;
         }
-        /* Delivery rows */
-        .delivery-item-edu,
-        .delivery-step,
-        .delivery-node,
-        .method-item {
-            border-right: none;
-            border-bottom: 1px solid #eee;
+
+        /* Fade-in from left */
+        .care-fade-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
         }
-        /* Grid overrides */
-        .training-grid,
-        .tech-grid,
-        .program-grid {
-            grid-template-columns: 1fr 1fr !important;
+
+        .care-fade-left.care-visible {
+            opacity: 1;
+            transform: translateX(0);
         }
-    }
+
+        /* Fade-in from right */
+        .care-fade-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .care-fade-right.care-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Scale pop for chips / pills / tags */
+        .care-pop {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.45s ease, transform 0.45s cubic-bezier(.34, 1.56, .64, 1);
+        }
+
+        .care-pop.care-visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ── 2. RESPONSIVE FIXES ────────────────────────────────────────── */
+        /* Ensure hero images never overflow on small screens */
+        .hero-img-wrap img,
+        .hero-image img,
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Delivery grids: stack on mobile */
+        @media (max-width: 767px) {
+
+            .no-gutters .col-md-3,
+            .no-gutters .col-md-4 {
+                width: 100%;
+                padding: 0;
+            }
+
+            /* Full-width cards on mobile */
+            .col-md-6,
+            .col-md-4,
+            .col-md-3 {
+                width: 100%;
+            }
+
+            /* Hero text sizes */
+            .hero-edu h1,
+            .hero-corp h1,
+            .hero-coaching h1,
+            section h1 {
+                font-size: 28px !important;
+                line-height: 1.3 !important;
+            }
+
+            /* CTA section border-radius */
+            .cta-edu,
+            .cta-section,
+            [class*="cta-"] {
+                border-radius: 16px !important;
+                margin: 30px 15px !important;
+            }
+
+            /* Navigation: full-width on small */
+            .mainnav {
+                width: 100%;
+            }
+
+            /* Padding resets */
+            section,
+            .flat-row {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            /* Fix audience / chip strips */
+            .audience-strip,
+            .audience-bar,
+            .chip-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .audience-chip,
+            .audience-pill,
+            .audience-tag {
+                text-align: center;
+            }
+
+            /* Hero background pseudo-element */
+            .hero-edu::before,
+            .hero-corp::before,
+            [class*="hero-"]::before {
+                display: none;
+            }
+
+            /* Why-us blocks */
+            .why-us-box,
+            .check-item,
+            .iconbox,
+            .box-icon {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            /* Tablet: hero images below text */
+            [class*="hero-"] .col-md-5,
+            [class*="hero-"] .col-md-6 {
+                text-align: center;
+            }
+
+            [class*="hero-"] .hero-img-wrap {
+                margin-top: 40px;
+            }
+
+            /* Delivery rows */
+            .delivery-item-edu,
+            .delivery-step,
+            .delivery-node,
+            .method-item {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            /* Grid overrides */
+            .training-grid,
+            .tech-grid,
+            .program-grid {
+                grid-template-columns: 1fr 1fr !important;
+            }
+        }
     </style>
 </head>
 
@@ -366,17 +410,19 @@
     <div class="boxed">
         <div class="site-wrapper parallax parallax1">
             <div class="top">
-                <div class="container">
+                <div class="container1">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 top-reponsive">
+                        <div class="col-md-6 top-reponsive">
                             <ul class="flat-information">
                                 <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                <li class="email"><a href="/cdn-cgi/l/email-protection#2f4c4e5d4a475d4b46414b464e6f48424e4643014c4042"><span class="__cf_email__" data-cfemail="9efdffecfbf6ecfaf7f0faf7ffdef9f3fff7f2b0fdf1f3">[email&#160;protected]</span></a>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
+                        </div><!-- /.col-md-6 -->
+
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
             </div>
             <header id="header" class="header clearfix">
                 <div class="container1">
@@ -385,7 +431,7 @@
                             <div class="col-md-3">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
-                                        <a href="index-2.html" rel="home">
+                                        <a href="index.html" rel="home">
                                             <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
                                                 class="logo-img responsive-logo">
                                         </a>
@@ -410,7 +456,7 @@
                                             </li>
                                             <!-- <li><a href="about.html">About</a></li> -->
                                             <li><a href="aboutFounder.html">About Founder</a>
-                                                 <ul class="submenu">
+                                                <ul class="submenu">
                                                     <li><a href="directors.html">Our directors</a>
                                                     </li>
 
@@ -466,7 +512,8 @@
                                                     <li><a href="leadership-dev-journey.html"> Leadership Development
                                                             Journeys</a>
                                                     </li>
-                                                    <li><a href="workforce-transformation.html"> Workforce Transformation</a>
+                                                    <li><a href="workforce-transformation.html"> Workforce
+                                                            Transformation</a>
                                                     </li>
                                                     <li><a href="hr-implementation.html">HR Implementation Support</a>
                                                     <li><a href="custom-solution.html"> Custom Solutions</a>
@@ -475,7 +522,7 @@
                                             </li>
 
                                             </li>
-                                               <li><a href="carrers.html">Internships & Career Opportunities</a>
+                                            <li><a href="carrers.html">Internships & Career Opportunities</a>
                                             <li><a href="gallery.html">gallery</a>
 
                                             </li>
@@ -709,32 +756,28 @@
         </section>
 
 
+        <!-- Footer -->
+        <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
                         <div class="widget widget-infomation">
-                            <div id="logo" class="logo responsive-logo-container">
+                            <div id="logo" class="logo responsive-logo-container footer-logo">
                                 <h1 class="responsive-logo-heading">
-                                    <a href="index-2.html" rel="home">
+                                    <a href="index.html" rel="home">
                                         <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
-                                            class="logo-img responsive-logo">
+                                            class="logo-img responsive-logo" />
                                     </a>
                                 </h1>
                             </div>
+
                             <ul class="flat-information">
-                                <li class="phone">
-                                    <a href="tel:+919865223321">+91 98652 23321</a>
+                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
                                 </li>
-                                <li class="email">
-                                    <a href="/cdn-cgi/l/email-protection#f7949685929f85939e99939e96b7909a969e9bd994989a"><span class="__cf_email__" data-cfemail="e98a889b8c819b8d80878d8088a98e84888085c78a8684">[email&#160;protected]</span></a>
-                                </li>
-                                <li class="address">
-                                    <a href="#">
-                                        CARE HRD – Chidambaram Academy of Refinement & Enrichment, Hosur, Tamil Nadu,
-                                        India
-                                    </a>
-                                </li>
+                                <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road
+                                        Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
                             </ul>
 
                             <ul class="social-links style2">
@@ -744,78 +787,75 @@
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
                         </div>
-                    </div><!-- /.col-md-3 -->
+                    </div>
 
                     <div class="col-md-2 col-sm-6">
                         <div class="widget widget-feature">
-                            <h4 class="widget-title">FEATURED COURSES</h4>
+                            <h4 class="widget-title">LIFE COACHING</h4>
                             <ul class="feature">
-                                <li><a href="#">Starting Soon</a></li>
-                                <li><a href="#">Just Added</a></li>
-                                <li><a href="#">Most Viewed</a></li>
-                                <li><a href="#">Top Paid</a></li>
+                                <li><a href="Career-coaching.html">Career Coaching</a></li>
+                                <li><a href="Personal-growth.html">Personal Growth</a></li>
+                                <li><a href="family&life.html">Family & Life Programs</a></li>
+                                <li><a href="student&youth.html">Student & Youth Coaching</a></li>
                             </ul>
                         </div>
-                    </div><!-- /.col-md-3 -->
+                    </div>
+
                     <div class="col-md-2 col-sm-6">
                         <div class="widget widget-categories">
-                            <h4 class="widget-title">CATEGORIES</h4>
+                            <h4 class="widget-title">TRAINING</h4>
                             <ul class="feature">
-                                <li><a href="#">Arts & Design</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Computer Science</a></li>
-                                <li><a href="#">Data Science</a></li>
+                                <li><a href="TrainingDevelopment.html">Training & Development</a></li>
+                                <li><a href="corprate-traning.html">Corporate Training</a></li>
+                                <li><a href="technical-training.html">Technical Training</a></li>
+                                <li><a href="academic-program.html">Academic Programs</a></li>
                             </ul>
                         </div>
-                    </div><!-- /.col-md-3 -->
+                    </div>
+
                     <div class="col-md-4 col-sm-6">
                         <div class="widget widget-useful">
-                            <h4 class="widget-title">USEFUL LINKS</h4>
+                            <h4 class="widget-title">CONSULTING & SOLUTIONS</h4>
                             <ul class="one-half">
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Success Stories</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="AI-governance.html">AI Governance</a></li>
+                                <li><a href="cybersecurity.html">Cybersecurity Advisory</a></li>
+                                <li><a href="it-governance.html">IT Governance</a></li>
+                                <li><a href="risk-audit.html">Risk & Audit</a></li>
                             </ul>
                             <ul class="one-half">
-                                <li><a href="#">Contact search</a></li>
-                                <li><a href="#">Jobs and vacancies</a></li>
-                                <li><a href="#">Term dates</a></li>
-                                <li><a href="#">Map</a></li>
+                                <li><a href="ESG-sustainablity.html">ESG & Sustainability</a></li>
+                                <li><a href="corprate-solution.html">Corporate Solutions</a></li>
+                                <li><a href="leadership-dev-journey.html">Leadership Development</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
                             </ul>
                         </div>
-                    </div><!-- /.col-md-3 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
+                    </div>
+                </div>
+            </div>
         </footer>
 
+        <!-- Bottom -->
         <!-- Bottom -->
         <div class="bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-md-9 col-sm-6 bottom-reponsive">
                         <div class="copyright">
-                            <p>© 2025 <a href="#">CARE</a>. All rights reserved.</p>
+                            <p>© 2026 <a href="#">CARE</a>. All rights reserved.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-6 bottom-reponsive">
-                        <ul class="link-bottom">
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Sitemap</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
+
                 </div>
-            </div><!-- /.container -->
-        </div><!-- bottom -->
+            </div>
+        </div>
+        <!-- bottom -->
 
         <!-- Go Top -->
         <a class="go-top">
             <i class="fa fa-angle-up"></i>
         </a>
     </div>
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascript/jquery.easing.js"></script>
     <script type="text/javascript" src="javascript/owl.carousel.js"></script>
@@ -831,4 +871,11 @@
     <script type="text/javascript" src="revolution/js/slider3.js"></script>
 
     <!-- Revolution Extensions -->
-    <script type="text/javascript" src="revo
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+    <script type="text/javascript" src="javascript/main.js"></script>
+</body>
+
+</html>

@@ -67,6 +67,15 @@
 
         /* PROGRAM AREA: GLASS CARDS */
         .launch-section { padding: 100px 0; background: #fff; }
+        .launch-section > .container > .row {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 30px;
+        }
+        .launch-section .col-md-6 {
+            display: flex;
+            flex-direction: column;
+        }
         .launch-card {
             background: var(--glass-bg);
             border: 1px solid #eef2f6;
@@ -77,6 +86,9 @@
             transition: 0.4s;
             overflow: hidden;
             height: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         .launch-card::before {
             content: ""; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
@@ -88,7 +100,13 @@
             box-shadow: 0 20px 40px rgba(36, 130, 235, 0.08);
             transform: translateY(-10px);
         }
-        .launch-card-content { position: relative; z-index: 1; }
+        .launch-card-content {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
         .launch-card i { font-size: 40px; color: var(--student-blue); margin-bottom: 25px; display: block; }
         
         .launch-list { list-style: none; padding: 0; margin-bottom: 30px; }
@@ -107,6 +125,7 @@
             font-weight: 700;
             display: flex;
             align-items: center;
+            margin-top: auto;
         }
         .launch-outcome i { font-size: 16px; margin-right: 10px; margin-bottom: 0; color: var(--student-teal); }
 
@@ -144,17 +163,19 @@
     <div class="boxed">
        <div class="site-wrapper parallax parallax1">
             <div class="top">
-                <div class="container">
+  <div class="container1">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 top-reponsive">
+                        <div class="col-md-6 top-reponsive">
                             <ul class="flat-information">
                                 <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
+                        </div><!-- /.col-md-6 -->
+
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
             </div>
             <header id="header" class="header clearfix">
                 <div class="container1">
@@ -163,7 +184,7 @@
                             <div class="col-md-3">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
-                                        <a href="index-2.html" rel="home">
+                                        <a href="index.html" rel="home">
                                             <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
                                                 class="logo-img responsive-logo">
                                         </a>
@@ -399,7 +420,7 @@
                     </div>
                     <!-- Area 3 -->
                     <div class="col-md-6">
-                        <div class="launch-card" style="margin-top: 30px;">
+                        <div class="launch-card">
                             <div class="launch-card-content">
                                 <i class="fa fa-comments"></i>
                                 <h4>Communication Skills</h4>
@@ -416,10 +437,10 @@
                     </div>
                     <!-- Area 4 -->
                     <div class="col-md-6">
-                        <div class="launch-card" style="margin-top: 30px;">
+                        <div class="launch-card">
                             <div class="launch-card-content">
-                                <i class="fa fa-address-card"></i>
-                                <h4>Personal Branding & Finance</h4>
+                             <i class="fas fa-address-card"></i>
+                                <i class="fa fa-rocket"></i>
                                 <p>Stand out with a strong identity and manage your early-career future with financial wisdom.</p>
                                 <ul class="launch-list">
                                     <li>Strong personal brand building</li>
@@ -440,7 +461,7 @@
             <div class="row no-gutters" style="background: #f9f9f9; border-radius: 20px;">
                 <div class="col-md-3">
                     <div class="delivery-node">
-                        <i class="fa fa-calendar-check-o"></i>
+                      <i class="fa fa-briefcase"></i>
                         <h6>Workshops & Bootcamps</h6>
                     </div>
                 </div>
@@ -458,7 +479,7 @@
                 </div>
                 <div class="col-md-3">
                     <div class="delivery-node">
-                        <i class="fa fa-industry"></i>
+                    <i class="fa fa-building"></i>
                         <h6>Industry-Relevant Content</h6>
                     </div>
                 </div>
@@ -467,12 +488,79 @@
 
     
         <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container text-center">
-                <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo" style="max-width: 140px; margin-bottom: 20px;">
-                <p>© 2025 CARE HRD. All rights reserved.</p>
+              <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="widget widget-infomation">
+                <div id="logo" class="logo responsive-logo-container footer-logo">
+                  <h1 class="responsive-logo-heading">
+                    <a href="index.html" rel="home">
+                      <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo" class="logo-img responsive-logo" />
+                    </a>
+                  </h1>
+                </div>
+
+                <ul class="flat-information">
+                  <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                  <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
+                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
+                </ul>
+
+                <ul class="social-links style2">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div>
             </div>
-        </footer>
+
+            <div class="col-md-2 col-sm-6">
+              <div class="widget widget-feature">
+                <h4 class="widget-title">LIFE COACHING</h4>
+                <ul class="feature">
+                  <li><a href="Career-coaching.html">Career Coaching</a></li>
+                  <li><a href="Personal-growth.html">Personal Growth</a></li>
+                  <li><a href="family&life.html">Family & Life Programs</a></li>
+                  <li><a href="student&youth.html">Student & Youth Coaching</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6">
+              <div class="widget widget-categories">
+                <h4 class="widget-title">TRAINING</h4>
+                <ul class="feature">
+                  <li><a href="TrainingDevelopment.html">Training & Development</a></li>
+                  <li><a href="corprate-traning.html">Corporate Training</a></li>
+                  <li><a href="technical-training.html">Technical Training</a></li>
+                  <li><a href="academic-program.html">Academic Programs</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="widget widget-useful">
+                <h4 class="widget-title">CONSULTING & SOLUTIONS</h4>
+                <ul class="one-half">
+                  <li><a href="AI-governance.html">AI Governance</a></li>
+                  <li><a href="cybersecurity.html">Cybersecurity Advisory</a></li>
+                  <li><a href="it-governance.html">IT Governance</a></li>
+                  <li><a href="risk-audit.html">Risk & Audit</a></li>
+                </ul>
+                <ul class="one-half">
+                  <li><a href="ESG-sustainablity.html">ESG & Sustainability</a></li>
+                  <li><a href="corprate-solution.html">Corporate Solutions</a></li>
+                  <li><a href="leadership-dev-journey.html">Leadership Development</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
         <a class="go-top"><i class="fa fa-angle-up"></i></a>
     </div>

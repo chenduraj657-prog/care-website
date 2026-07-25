@@ -21,197 +21,285 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
     <link href="icon/favicon.png" rel="shortcut icon">
 
-    <style>
-        /* IT GOVERNANCE BLUEPRINT DESIGN SYSTEM */
-        :root {
-            --gov-blue: #2482eb;
-            --gov-teal: #2dd4bf;
-            --gov-navy: #1e293b;
-            --gov-light: #f8fafc;
-            --gov-border: #e2e8f0;
-        }
+  <style>
+    /* IT GOVERNANCE BLUEPRINT DESIGN SYSTEM */
+    :root {
+        --gov-blue: #2482eb;
+        --gov-teal: #2dd4bf;
+        --gov-navy: #1e293b;
+        --gov-light: #f8fafc;
+        --gov-border: #e2e8f0;
+    }
 
-        .gradient-text {
-            background: linear-gradient(90deg, var(--gov-blue), var(--gov-teal));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-        }
+    .gradient-text {
+        background: linear-gradient(90deg, var(--gov-blue), var(--gov-teal));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 800;
+    }
 
-        /* HERO: ENTERPRISE STRUCTURE */
+    /* HERO: ENTERPRISE STRUCTURE */
+    .hero-gov {
+        padding: 120px 0 80px;
+        background: linear-gradient(135deg, #fff 0%, #f0f7ff 100%);
+        border-bottom: 1px solid var(--gov-border);
+    }
+
+    .audience-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 30px;
+    }
+
+    .audience-tag {
+        background: #fff;
+        border-left: 4px solid var(--gov-blue);
+        padding: 12px 15px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--gov-navy);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    /* PILLAR SECTIONS */
+    .pillar-section {
+        padding: 80px 0;
+    }
+
+    .pillar-bg {
+        background-color: var(--gov-light);
+    }
+
+    .pillar-card {
+        background: #fff;
+        border: 1px solid var(--gov-border);
+        padding: 50px;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    .pillar-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--gov-blue), var(--gov-teal));
+    }
+
+    .pillar-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--gov-blue);
+        font-weight: 800;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .gov-list {
+        list-style: none;
+        padding: 0;
+        margin: 25px 0;
+    }
+
+    .gov-list li {
+        padding: 12px 0 12px 30px;
+        position: relative;
+        border-bottom: 1px dashed var(--gov-border);
+        color: #475569;
+    }
+
+    .gov-list li::before {
+        content: "\f0a9";
+        font-family: FontAwesome;
+        position: absolute;
+        left: 0;
+        color: var(--gov-teal);
+    }
+
+    .outcome-box {
+        margin-top: 30px;
+        padding: 20px;
+        background: var(--gov-navy);
+        color: #fff;
+        border-radius: 4px;
+    }
+
+    .outcome-box span {
+        color: var(--gov-teal);
+        font-weight: 800;
+        margin-right: 10px;
+    }
+
+    /* DELIVERY METHODS: REDUCED WIDTH & EVEN SPACING */
+    .method-row {
+        margin-top: 40px;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .method-row > [class*="col-"] {
+        padding-left: 8px;
+        padding-right: 8px;
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    .method-item {
+        text-align: center;
+        padding: 25px 15px;
+        border: 1px solid var(--gov-border);
+        background: #fff;
+        border-radius: 14px;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+        width: 100%;
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .method-item::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--gov-blue), var(--gov-teal));
+        transition: width 0.3s ease;
+    }
+
+    .method-item:hover::after {
+        width: 80%;
+    }
+
+    .method-item:hover {
+        transform: translateY(-6px);
+        border-color: var(--gov-blue);
+        box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    .method-item i {
+        font-size: 30px;
+        color: var(--gov-blue);
+        margin-bottom: 14px;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .method-item:hover i {
+        transform: scale(1.1);
+    }
+
+    .method-item h6 {
+        font-weight: 700;
+        color: var(--gov-navy);
+        margin: 0;
+        font-size: 14px;
+        letter-spacing: 0.3px;
+    }
+
+    /* RESPONSIVE ADJUSTMENTS */
+    @media (max-width: 991px) {
+        .method-item {
+            padding: 20px 12px;
+        }
+        
+        .method-item i {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        
+        .method-item h6 {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .method-row {
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+        
+        .method-row > [class*="col-"] {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .method-item {
+            padding: 18px 10px;
+            border-radius: 10px;
+        }
+        
+        .method-item i {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+        
+        .method-item h6 {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .method-row > [class*="col-"] {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* WHY CHOOSE: DATA GRID */
+    .check-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .check-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid var(--gov-border);
+    }
+
+    .check-item i {
+        color: var(--gov-teal);
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+
+    /* CTA */
+    .cta-gov {
+        background: var(--gov-blue);
+        color: #fff;
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    @media (max-width: 991px) {
         .hero-gov {
-            padding: 120px 0 80px;
-            background: linear-gradient(135deg, #fff 0%, #f0f7ff 100%);
-            border-bottom: 1px solid var(--gov-border);
+            text-align: center;
         }
 
         .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-top: 30px;
+            grid-template-columns: 1fr;
         }
 
-        .audience-tag {
-            background: #fff;
-            border-left: 4px solid var(--gov-blue);
-            padding: 12px 15px;
-            font-size: 14px;
-            font-weight: 700;
-            color: var(--gov-navy);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
-        }
-
-        /* PILLAR SECTIONS */
-        .pillar-section {
-            padding: 100px 0;
-        }
-
-        .pillar-bg {
-            background-color: var(--gov-light);
+        .check-grid {
+            grid-template-columns: 1fr;
         }
 
         .pillar-card {
-            background: #fff;
-            border: 1px solid var(--gov-border);
-            padding: 50px;
-            position: relative;
-            transition: 0.3s;
-        }
-
-        .pillar-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--gov-blue), var(--gov-teal));
-        }
-
-        .pillar-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--gov-blue);
-            font-weight: 800;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .gov-list {
-            list-style: none;
-            padding: 0;
-            margin: 25px 0;
-        }
-
-        .gov-list li {
-            padding: 12px 0 12px 30px;
-            position: relative;
-            border-bottom: 1px dashed var(--gov-border);
-            color: #475569;
-        }
-
-        .gov-list li::before {
-            content: "\f0a9";
-            font-family: FontAwesome;
-            position: absolute;
-            left: 0;
-            color: var(--gov-teal);
-        }
-
-        .outcome-box {
-            margin-top: 30px;
-            padding: 20px;
-            background: var(--gov-navy);
-            color: #fff;
-            border-radius: 4px;
-        }
-
-        .outcome-box span {
-            color: var(--gov-teal);
-            font-weight: 800;
-            margin-right: 10px;
-        }
-
-        /* DELIVERY METHODS: STEPS */
-        .method-row {
-            margin-top: 50px;
-        }
-
-        .method-item {
-            text-align: center;
             padding: 30px;
-            border-right: 1px solid var(--gov-border);
         }
-
-        .method-item:last-child {
-            border-right: none;
-        }
-
-        .method-item i {
-            font-size: 36px;
-            color: var(--gov-blue);
-            margin-bottom: 20px;
-        }
-
-        .method-item h6 {
-            font-weight: 700;
-            color: var(--gov-navy);
-        }
-
-        /* WHY CHOOSE: DATA GRID */
-        .check-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        .check-item {
-            display: flex;
-            align-items: flex-start;
-            padding: 20px;
-            background: #fff;
-            border: 1px solid var(--gov-border);
-        }
-
-        .check-item i {
-            color: var(--gov-teal);
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-
-        /* CTA */
-        .cta-gov {
-            background: var(--gov-blue);
-            color: #fff;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        @media (max-width: 991px) {
-            .hero-gov {
-                text-align: center;
-            }
-
-            .audience-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .method-item {
-                border-right: none;
-                border-bottom: 1px solid var(--gov-border);
-            }
-
-            .check-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .pillar-card {
-                padding: 30px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body class="header-sticky">
@@ -219,17 +307,19 @@
         <!-- HEADER -->
         <div class="site-wrapper parallax parallax1">
             <div class="top">
-                <div class="container">
+                  <div class="container1">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 top-reponsive">
+                        <div class="col-md-6 top-reponsive">
                             <ul class="flat-information">
                                 <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
+                                <li class="email">
+                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
+                        </div><!-- /.col-md-6 -->
+
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
             </div>
             <header id="header" class="header clearfix">
                 <div class="container1">
@@ -238,7 +328,7 @@
                             <div class="col-md-3">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
-                                        <a href="index-2.html" rel="home">
+                                        <a href="index.html" rel="home">
                                             <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
                                                 class="logo-img responsive-logo">
                                         </a>
@@ -588,105 +678,96 @@
             </div>
         </section>
 
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="widget widget-infomation">
-                            <!-- Logo instead of COACHING text -->
-                            <div id="logo" class="logo responsive-logo-container footer-logo">
-                                <h1 class="responsive-logo-heading">
-                                    <a href="index-2.html" rel="home">
-                                        <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
-                                            class="logo-img responsive-logo">
-                                    </a>
-                                </h1>
-                            </div>
-
-                            <ul class="flat-information">
-                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                <li class="email">
-                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
-                                </li>
-                                <li class="address">
-                                    <a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near
-                                        Ashok Pillar, Hosur - 635 109. (TN).
-                                    </a>
-                                </li>
-                            </ul>
-
-                            <ul class="social-links style2">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div><!-- /.col-md-3 -->
-
-                    <div class="col-md-2 col-sm-6">
-                        <div class="widget widget-feature">
-                            <h4 class="widget-title">FEATURED COURSES</h4>
-                            <ul class="feature">
-                                <li><a href="#">Starting Soon</a></li>
-                                <li><a href="#">Just Added</a></li>
-                                <li><a href="#">Most Viewed</a></li>
-                                <li><a href="#">Top Paid</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-2 col-sm-6">
-                        <div class="widget widget-categories">
-                            <h4 class="widget-title">CATEGORIES</h4>
-                            <ul class="feature">
-                                <li><a href="#">Arts & Design</a></li>
-                                <li><a href="#">Business</a></li>
-                                <li><a href="#">Computer Science</a></li>
-                                <li><a href="#">Data Science</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- /.col-md-3 -->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="widget widget-useful">
-                            <h4 class="widget-title">USEFUL LINKS</h4>
-                            <ul class="one-half">
-                                <li><a href="#">FAQs</a></li>
-                                <li><a href="#">Success Stories</a></li>
-                                <li><a href="#">Shop</a></li>
-                                <li><a href="#">Privacy policy</a></li>
-                            </ul>
-                            <ul class="one-half">
-                                <li><a href="#">Contact search</a></li>
-                                <li><a href="#">Jobs and vacancies</a></li>
-                                <li><a href="#">Term dates</a></li>
-                                <li><a href="#">Map</a></li>
-                            </ul>
-                        </div>
-                    </div><!-- /.col-md-3 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </footer>
-
-        <!-- Bottom -->
-        <div class="bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-9 col-sm-6 bottom-reponsive">
-                        <div class="copyright">
-                            <p>© 2017 <a href="#">CARE</a>. All rights reserved.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 bottom-reponsive">
-                        <ul class="link-bottom">
-                            <li><a href="#">Privacy</a></li>
-                            <li><a href="#">Terms</a></li>
-                            <li><a href="#">Sitemap</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
+              <!-- Footer -->
+            <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="widget widget-infomation">
+                <div id="logo" class="logo responsive-logo-container footer-logo">
+                  <h1 class="responsive-logo-heading">
+                    <a href="index.html" rel="home">
+                      <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo" class="logo-img responsive-logo" />
+                    </a>
+                  </h1>
                 </div>
-            </div><!-- /.container -->
-        </div><!-- bottom -->
+
+                <ul class="flat-information">
+                  <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                  <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
+                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
+                </ul>
+
+                <ul class="social-links style2">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6">
+              <div class="widget widget-feature">
+                <h4 class="widget-title">LIFE COACHING</h4>
+                <ul class="feature">
+                  <li><a href="Career-coaching.html">Career Coaching</a></li>
+                  <li><a href="Personal-growth.html">Personal Growth</a></li>
+                  <li><a href="family&life.html">Family & Life Programs</a></li>
+                  <li><a href="student&youth.html">Student & Youth Coaching</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6">
+              <div class="widget widget-categories">
+                <h4 class="widget-title">TRAINING</h4>
+                <ul class="feature">
+                  <li><a href="TrainingDevelopment.html">Training & Development</a></li>
+                  <li><a href="corprate-traning.html">Corporate Training</a></li>
+                  <li><a href="technical-training.html">Technical Training</a></li>
+                  <li><a href="academic-program.html">Academic Programs</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="widget widget-useful">
+                <h4 class="widget-title">CONSULTING & SOLUTIONS</h4>
+                <ul class="one-half">
+                  <li><a href="AI-governance.html">AI Governance</a></li>
+                  <li><a href="cybersecurity.html">Cybersecurity Advisory</a></li>
+                  <li><a href="it-governance.html">IT Governance</a></li>
+                  <li><a href="risk-audit.html">Risk & Audit</a></li>
+                </ul>
+                <ul class="one-half">
+                  <li><a href="ESG-sustainablity.html">ESG & Sustainability</a></li>
+                  <li><a href="corprate-solution.html">Corporate Solutions</a></li>
+                  <li><a href="leadership-dev-journey.html">Leadership Development</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Bottom -->
+            <!-- Bottom -->
+      <div class="bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-sm-6 bottom-reponsive">
+              <div class="copyright">
+                <p>© 2026 <a href="#">CARE</a>. All rights reserved.</p>
+              </div>
+            </div>
+     
+          </div>
+        </div>
+      </div>
+      <!-- bottom -->
 
         <!-- Go Top -->
         <a class="go-top">

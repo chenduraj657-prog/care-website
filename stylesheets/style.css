@@ -502,7 +502,7 @@ h5 {
   line-height: 22px;
 }
 h6 {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 18px;
 }
 
@@ -574,7 +574,7 @@ h6 {
 /* Infomation top */
 .flat-information {
   margin: 0 0 0;
-  padding: 0;
+  padding: 4px 0px 0px 128px
 }
 
 .flat-information > li {
@@ -5704,7 +5704,7 @@ td.product-subtotal {
 /* Option 3 Styles */
 .elegant-mission {
   max-width: 1200px;
-  margin: 60px auto;
+  /* margin: 60px auto; */
   padding: 0 20px;
 }
 
@@ -6163,15 +6163,15 @@ td.product-subtotal {
 }
 
 .parallax1,
-.parallax9 {
+.parallax9,
+.parallax1Abt {
   background-size: inherit;
 }
 
 .parallax1Abt {
-  position: relative;
+ 
   background-image: url(../images/parallax/careImg.jpg);
-  background-size: cover;
-  background-position: center;
+
 }
 
 /* Black overlay */
@@ -6180,13 +6180,13 @@ td.product-subtotal {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.506); /* adjust darkness here */
-  z-index: 1;
+
 }
 
 /* Ensure content stays above overlay */
 .parallax1Abt > * {
   position: relative;
-  z-index: 2;
+
 }
 
 .parallax1 {

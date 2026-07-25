@@ -64,7 +64,15 @@
         }
 
         /* FOCUS AREAS: DIAMOND GRID */
-        .bespoke-section { padding: 120px 0; background: #fff; }
+        .bespoke-section { background: #fff; }
+        .bespoke-section > .container > .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .bespoke-section .col-md-4 {
+            display: flex;
+            flex-direction: column;
+        }
         
         .bespoke-card {
             background: #fff;
@@ -74,6 +82,9 @@
             transition: 0.4s;
             margin-bottom: 30px;
             height: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         .bespoke-card:hover {
             border-color: var(--c-teal);
@@ -97,7 +108,7 @@
 
         .bespoke-outcome {
             font-size: 14px; font-weight: 800; color: var(--c-navy); border-top: 2px solid var(--c-teal);
-            padding-top: 15px; margin-top: 20px; display: inline-block;
+            padding-top: 15px; margin-top: auto; display: inline-block;
         }
 
         /* THE CRAFTING PROCESS (VERTICAL LOOP) */
@@ -120,7 +131,7 @@
 
         /* CTA */
         .cta-custom {
-            padding: 120px 0; background: #fff; text-align: center;
+            background: #fff; text-align: center;
         }
 
         @media (max-width: 991px) {
@@ -186,7 +197,7 @@
                             <div class="col-md-3">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
-                                        <a href="index-2.html" rel="home">
+                                        <a href="index.html" rel="home">
                                             <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"
                                                 class="logo-img responsive-logo">
                                         </a>
@@ -438,11 +449,11 @@
         </section>
 
         <!-- WHY US -->
-        <section class="bespoke-section">
+        <section class="bespoke-section" style="padding:20px 0;">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-md-5">
-                        <h2 class="title">The Precision <br><span class="gradient-text">Advantage.</span></h2>
+                        <h2 class="title">The Prssecision <br><span class="gradient-text">Advantage.</span></h2>
                         <p style="font-size: 18px; margin-top: 20px;">We move beyond templates to partner in your organization's specific journey.</p>
                     </div>
                     <div class="col-md-7">
@@ -493,21 +504,79 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="widget">
-                            <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo" style="max-width: 140px; margin-bottom: 20px;">
-                            <ul class="flat-information">
-                                <li><i class="fa fa-phone"></i> +91 98652 23321</li>
-                                <li><i class="fa fa-envelope"></i> carehrdindia@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
+              <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="widget widget-infomation">
+                <div id="logo" class="logo responsive-logo-container footer-logo">
+                  <h1 class="responsive-logo-heading">
+                    <a href="index.html" rel="home">
+                      <img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo" class="logo-img responsive-logo" />
+                    </a>
+                  </h1>
                 </div>
+
+                <ul class="flat-information">
+                  <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
+                  <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
+                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
+                </ul>
+
+                <ul class="social-links style2">
+                  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div>
             </div>
-        </footer>
+
+            <div class="col-md-2 col-sm-6">
+              <div class="widget widget-feature">
+                <h4 class="widget-title">LIFE COACHING</h4>
+                <ul class="feature">
+                  <li><a href="Career-coaching.html">Career Coaching</a></li>
+                  <li><a href="Personal-growth.html">Personal Growth</a></li>
+                  <li><a href="family&life.html">Family & Life Programs</a></li>
+                  <li><a href="student&youth.html">Student & Youth Coaching</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-2 col-sm-6">
+              <div class="widget widget-categories">
+                <h4 class="widget-title">TRAINING</h4>
+                <ul class="feature">
+                  <li><a href="TrainingDevelopment.html">Training & Development</a></li>
+                  <li><a href="corprate-traning.html">Corporate Training</a></li>
+                  <li><a href="technical-training.html">Technical Training</a></li>
+                  <li><a href="academic-program.html">Academic Programs</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="widget widget-useful">
+                <h4 class="widget-title">CONSULTING & SOLUTIONS</h4>
+                <ul class="one-half">
+                  <li><a href="AI-governance.html">AI Governance</a></li>
+                  <li><a href="cybersecurity.html">Cybersecurity Advisory</a></li>
+                  <li><a href="it-governance.html">IT Governance</a></li>
+                  <li><a href="risk-audit.html">Risk & Audit</a></li>
+                </ul>
+                <ul class="one-half">
+                  <li><a href="ESG-sustainablity.html">ESG & Sustainability</a></li>
+                  <li><a href="corprate-solution.html">Corporate Solutions</a></li>
+                  <li><a href="leadership-dev-journey.html">Leadership Development</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
         <div class="bottom">
             <div class="container">
