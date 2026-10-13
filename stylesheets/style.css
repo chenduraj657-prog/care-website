@@ -548,6 +548,26 @@ h6 {
   content: none;
 }
 
+/* Hide phone/email top bar when sticky header is active */
+#header .top.top-bar-hidden,
+.header.upscrolled .top {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.2s ease, max-height 0.2s ease, padding 0.2s ease;
+  transition: opacity 0.2s ease, max-height 0.2s ease, padding 0.2s ease;
+}
+
+.top.top-bar-hidden::after,
+.header.upscrolled .top::after {
+  content: none;
+}
+
 .flat-information > li > a {
 }
 
@@ -622,6 +642,70 @@ h6 {
 .flat-information > li > a {
   color: #fff;
   font-size: 14px;
+}
+
+/* Top bar logo: logo first, then phone & email on one line (laptop & large)
+-------------------------------------------------------------- */
+.top-logo {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .top-logo-bar .top {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 6px 0;
+  }
+
+  .top-logo-bar .top > .container,
+  .top-logo-bar .top > .container1 {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .top-logo-bar .top .top-logo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    margin-right: 24px;
+  }
+
+  .top-logo-bar .top .top-logo img {
+    display: block;
+    width: 110px;
+    max-width: 100%;
+    max-height: 42px;
+    height: auto;
+    transition: all 0.3s ease;
+  }
+
+  .top-logo-bar .top .top-reponsive {
+    float: none;
+    width: 100%;
+  }
+
+  .top-logo-bar .top .flat-information {
+    padding-left: 0;
+    white-space: nowrap;
+  }
+
+  .top-logo-bar .top .flat-information > li {
+    white-space: nowrap;
+  }
+
+  /* Logo sits in the top bar, so the nav gets the whole header row */
+  .top-logo-bar .header:not(.upscrolled) .header-wrap > .col-md-2,
+  .top-logo-bar .header:not(.upscrolled) .header-wrap > .col-md-3 {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .top-logo-bar .top .top-logo img {
+    width: 125px;
+    max-height: 48px;
+  }
 }
 
 /* Flat-language
@@ -739,11 +823,11 @@ h6 {
   position: relative;
   width: 100%;
   background: rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: background-color 0.25s ease, opacity 0.25s ease;
+  -moz-transition: background-color 0.25s ease, opacity 0.25s ease;
+  -ms-transition: background-color 0.25s ease, opacity 0.25s ease;
+  -o-transition: background-color 0.25s ease, opacity 0.25s ease;
+  transition: background-color 0.25s ease, opacity 0.25s ease;
 }
 
 .header.plan {
@@ -759,20 +843,16 @@ h6 {
 }
 
 /* Header Fix */
-.header.downscrolled {
+.header.upscrolled {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 9999;
-  opacity: 0;
-  top: -60px;
-}
-
-.header.upscrolled {
   opacity: 1;
-  top: 0;
-  left: 0;
   background: rgba(0, 0, 0, 0.6);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .header .logo h1 {
@@ -789,8 +869,9 @@ h6 {
   padding: 20px 0;
 }
 
-.logo img {
-  max-height: 60px;
+.header .logo img,
+.header .logo-img {
+  max-height: 42px;
 }
 
 #logo {
@@ -932,17 +1013,17 @@ h6 {
   top: 34px;
 }
 
-/* headerscrolled2 */
+/* headerscrolled2 — keep same dimensions to avoid layout jump */
 .header.upscrolled .logo h1 {
-  padding: 32px 0px 28px;
+  padding: 38px 0px 33px;
 }
 
 .header.upscrolled #mainnav > ul > li > a {
-  padding: 32px 0px 31px;
+  padding: 37px 0px 36px 0px;
 }
 
 .header.upscrolled #mainnav > ul > li > a:after {
-  bottom: 28px;
+  bottom: 33px;
 }
 
 .header.upscrolled .menu.menu-extra li a {
@@ -6735,49 +6816,45 @@ td.product-subtotal {
     font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
 }
 
-/* Responsive logo image */
-.responsive-logo {
+/* Responsive logo image — header */
+.header .responsive-logo {
     max-width: 100%;
     height: auto;
     display: block;
-    
-    /* Adjust size as needed - example sizes */
-    width: 150px; /* Default size */
-    max-height: 60px; /* Maximum height */
-    
-    /* Smooth scaling */
+    width: 110px;
+    max-height: 42px;
     transition: all 0.3s ease;
 }
 
 /* Tablet screens */
 @media screen and (max-width: 768px) {
-    .responsive-logo {
-        width: 120px;
-        max-height: 50px;
+    .header .responsive-logo {
+        width: 88px;
+        max-height: 36px;
     }
 }
 
 /* Mobile screens */
 @media screen and (max-width: 480px) {
-    .responsive-logo {
-        width: 100px;
-        max-height: 40px;
+    .header .responsive-logo {
+        width: 72px;
+        max-height: 30px;
     }
 }
 
 /* Extra small screens */
 @media screen and (max-width: 320px) {
-    .responsive-logo {
-        width: 80px;
-        max-height: 35px;
+    .header .responsive-logo {
+        width: 60px;
+        max-height: 26px;
     }
 }
 
 /* For high-resolution screens */
 @media screen and (min-width: 1200px) {
-    .responsive-logo {
-        width: 180px;
-        max-height: 70px;
+    .header .responsive-logo {
+        width: 125px;
+        max-height: 48px;
     }
 }
 
@@ -6788,7 +6865,87 @@ td.product-subtotal {
 }
 
 /* Optional: If you want the logo to shrink on scroll */
-.responsive-logo.shrink {
-    width: 100px;
-    max-height: 40px;
+.header .responsive-logo.shrink {
+    width: 72px;
+    max-height: 30px;
+}
+
+/* Centered, fluid main navigation (logo lives in the top bar)
+-------------------------------------------------------------- */
+@media (min-width: 992px) {
+  .top-logo-bar .header-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .top-logo-bar .header-wrap::before,
+  .top-logo-bar .header-wrap::after {
+    display: none;
+  }
+
+  .top-logo-bar .header-wrap > .col-md-2,
+  .top-logo-bar .header-wrap > .col-md-3 {
+    flex: 0 0 auto;
+    width: auto;
+    float: none;
+  }
+
+  .top-logo-bar .header-wrap > .col-md-9,
+  .top-logo-bar .header-wrap > .col-md-10 {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+    float: none;
+  }
+
+  .top-logo-bar .nav-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    float: none;
+    width: 100%;
+  }
+
+  .top-logo-bar .nav-wrap .mainnav {
+    float: none;
+    max-width: 100%;
+  }
+
+  .top-logo-bar #mainnav > ul.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .top-logo-bar #mainnav > ul > li {
+    display: flex;
+    flex: 0 0 auto;
+  }
+
+  /* Fluid spacing so the items fit without crowding as the viewport narrows.
+     Vertical padding sets the header band height, so submenus still open
+     flush under it (they are positioned at top: 100% of the item). */
+  .top-logo-bar #mainnav > ul > li > a,
+  .top-logo-bar #mainnav > ul > li:nth-child(3) > a,
+  .top-logo-bar #mainnav > ul > li:last-child > a {
+    padding: clamp(14px, 1.6vw, 26px) 0;
+    margin: 0 clamp(7px, 0.95vw, 19px);
+    font-size: clamp(8px, 0.82vw, 12px);
+    line-height: 20px;
+    white-space: nowrap;
+  }
+
+  .top-logo-bar #mainnav > ul > li > a:after {
+    bottom: calc(clamp(14px, 1.6vw, 26px) - 3px);
+  }
+
+  /* Keep the sticky header the same height as the nav band */
+  .top-logo-bar .header.upscrolled .logo h1,
+  .top-logo-bar .header.upscrolled .logo .responsive-logo-heading {
+    padding: 10px 0;
+  }
 }

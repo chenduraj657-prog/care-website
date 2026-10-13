@@ -15,11 +15,14 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <!-- Responsive -->
     <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/overflow-fix.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
     <!-- Colors -->
     <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
     <!-- Animation Style -->
     <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
-    <link href="icon/favicon.png" rel="shortcut icon">
+    <link href="images/care-tab.png" rel="shortcut icon">
 
     <style>
         /* RISK & AUDIT: STRATEGIC BENTO SYSTEM */
@@ -139,7 +142,7 @@
 
         .impact-list li::before {
             content: "\f058";
-            font-family: FontAwesome;
+            font-family: "FontAwesome";
             position: absolute;
             left: 0;
             color: var(--r-teal);
@@ -211,30 +214,17 @@
     </style>
 </head>
 
-<body class="header-sticky">
+<body class="header-sticky top-logo-bar">
     <div class="boxed">
         <!-- HEADER (STANDARD) -->
         <div class="site-wrapper parallax parallax1">
-            <div class="top">
-                  <div class="container1">
-                    <div class="row">
-                        <div class="col-md-6 top-reponsive">
-                            <ul class="flat-information">
-                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                <li class="email">
-                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
-                                </li>
-                            </ul>
-                        </div><!-- /.col-md-6 -->
-
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </div>
-            <header id="header" class="header clearfix">
+<div class="top">
+<a href="index.html" class="top-logo" rel="home"><img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"></a>                   <div class="container1">                     <div class="row">                         <div class="col-md-6 top-reponsive">                             <ul class="flat-information">                                 <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>                                 <li class="email">                                     <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>                                 </li>                             </ul>                         </div><!-- /.col-md-6 -->                      </div><!-- /.row -->                 </div><!-- /.container -->             </div>
+<header id="header" class="header clearfix">
                 <div class="container1">
                     <div class="row">
                         <div class="header-wrap clearfix">
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
                                         <a href="index.html" rel="home">
@@ -339,7 +329,7 @@
                                         <form action="#" id="searchform-all" method="get">
                                             <div>
                                                 <input type="text" id="s" class="sss" placeholder="Search...">
-                                                <input type="submit" value="" id="searchsubmit">
+                                                <input type="submit" value="?" id="searchsubmit">
                                             </div>
                                         </form>
                                     </div><!-- /top-search -->
@@ -524,7 +514,7 @@
                 <ul class="flat-information">
                   <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
                   <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
-                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
+                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Rayakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
                 </ul>
 
                 <ul class="social-links style2">
@@ -611,6 +601,7 @@
 
     <!-- JS -->
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/site-header.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascript/main.js"></script>
 </body>

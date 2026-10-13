@@ -27,6 +27,8 @@
     <!-- Responsive -->
     <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/overflow-fix.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
 
     <!-- Colors -->
     <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
@@ -147,9 +149,9 @@
     </style>
 
     <!-- Favicon and touch icons  -->
-    <link href="icon/apple-touch-icon-48-precomposed.png" rel="apple-touch-icon-precomposed" sizes="48x48">
-    <link href="icon/apple-touch-icon-32-precomposed.html" rel="apple-touch-icon-precomposed">
-    <link href="icon/favicon.png" rel="shortcut icon">
+    <link href="images/care-tab.png" rel="apple-touch-icon-precomposed" sizes="48x48">
+    <link href="images/care-tab.png" rel="apple-touch-icon-precomposed">
+    <link href="images/care-tab.png" rel="shortcut icon">
 
     <!--[if lt IE 9]>
         <script src="javascript/html5shiv.js"></script>
@@ -157,7 +159,7 @@
     <![endif]-->
 </head>
 
-<body class="header-sticky">
+<body class="header-sticky top-logo-bar">
     <!-- Preloader -->
     <section class="loading-overlay">
         <div class="Loading-Page">
@@ -170,55 +172,14 @@
 
 
         <div class="site-wrapper parallax parallax1">
-            <div id="care-site-header-mount" class="care-site-header-mount"></div>
-            <div class="top">
-                <div class="container1">
-                    <div class="row">
-                        <div class="col-md-6 top-reponsive">
-                            <ul class="flat-information">
-                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                <li class="email">
-                                    <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
-                                </li>
-                            </ul>
-                        </div><!-- /.col-md-6 -->
-                        <!-- <div class="col-md-6 top-reponsive">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                                <div class="flat-dropdown flat-sign-in">                        
-                                    <ul class="unstyled">
-                                        <li class="current"><a href="#">Sign In</a>
-                                            <ul class="unstyled">
-                                                <li class="en"><a href="#">Profile</a></li>
-                                                <li class="ge"><a href="#">Sign Out</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div> 
-                                <div class="flat-dropdown flat-language">                        
-                                    <ul class="unstyled">
-                                        <li class="current"><a href="#">English</a>
-                                            <ul class="unstyled">
-                                                <li class="en"><a href="#">French</a></li>
-                                                <li class="ge"><a href="#">German</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>         -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
-            </div><!-- /.top -->
-
-            <!-- Header -->
+<div class="top">
+<a href="index.html" class="top-logo" rel="home"><img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"></a>                 <div class="container1">                     <div class="row">                         <div class="col-md-6 top-reponsive">                             <ul class="flat-information">                                 <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>                                 <li class="email">                                     <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>                                 </li>                             </ul>                         </div><!-- /.col-md-6 -->                         <!-- <div class="col-md-6 top-reponsive">                                 <ul class="social-links">                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>                                 </ul>                                 <div class="flat-dropdown flat-sign-in">                                                             <ul class="unstyled">                                         <li class="current"><a href="#">Sign In</a>                                             <ul class="unstyled">                                                 <li class="en"><a href="#">Profile</a></li>                                                 <li class="ge"><a href="#">Sign Out</a></li>                                             </ul>                                         </li>                                     </ul>                                 </div>                                  <div class="flat-dropdown flat-language">                                                             <ul class="unstyled">                                         <li class="current"><a href="#">English</a>                                             <ul class="unstyled">                                                 <li class="en"><a href="#">French</a></li>                                                 <li class="ge"><a href="#">German</a></li>                                             </ul>                                         </li>                                     </ul>                                 </div>                             </div>         -->                     </div><!-- /.row -->                 </div><!-- /.container -->             </div><!-- /.top -->              
+<!-- Header -->
             <header id="header" class="header clearfix">
                 <div class="container1">
                     <div class="row">
                         <div class="header-wrap clearfix">
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
                                         <a href="index.html" rel="home">
@@ -323,7 +284,7 @@
                                         <form action="#" id="searchform-all" method="get">
                                             <div>
                                                 <input type="text" id="s" class="sss" placeholder="Search...">
-                                                <input type="submit" value="" id="searchsubmit">
+                                                <input type="submit" value="?" id="searchsubmit">
                                             </div>
                                         </form>
                                     </div><!-- /top-search -->
@@ -394,7 +355,7 @@
                             <div class="box-content">
                                 <h4>REGISTERED OFFICE - HOSUR</h4>
                                 <p>7, Subramaniyasiva Nagar,<br>
-                                    Royakotta Road - Ring Road Junction,<br>
+                                    Rayakotta Road - Ring Road Junction,<br>
                                     Near Ashok Pillar,<br>
                                     Hosur - 635 109. (TN).</p>
                             </div>
@@ -633,8 +594,7 @@
                             <h2>Get in touch with us</h2>
                         </div>
                     </div>
-                    <form id="contactform" class="contactform" method="post"
-                        action="https://themesflat.co/html/coaching/contact/contact-process.php">
+                    <form id="care-contact-form" class="contactform" method="post" action="#" novalidate>
                         <div class="col-md-6">
                             <p class="contact-name">
                                 <input type="text" placeholder="Name" size="30" value="" name="name" id="name" required>
@@ -644,7 +604,7 @@
                                     required>
                             </p>
                             <p class="contact-form-url">
-                                <input type="url" placeholder="Website" size="30" value="" name="url" id="url" required>
+                                <input type="url" placeholder="Website" size="30" value="" name="website" id="website" required>
                             </p>
                         </div>
                         <div class="col-md-6">
@@ -655,9 +615,10 @@
                         </div>
                         <div class="divider h10"></div>
                         <div class="col-md-12">
+                            <div id="contact-msg"></div>
                             <div class="btn-contact">
                                 <p class="form-contact">
-                                    <button class="flat-button font-poppins">Send messages</button>
+                                    <button type="button" id="contact-submit" class="flat-button font-poppins">Send messages</button>
                                 </p>
                             </div>
                         </div>
@@ -685,7 +646,7 @@
                 <ul class="flat-information">
                   <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
                   <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
-                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
+                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Rayakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
                 </ul>
 
                 <ul class="social-links style2">
@@ -787,6 +748,84 @@
     <script type="text/javascript" src="javascript/gmap3.min.js"></script>
 
     <script type="text/javascript" src="javascript/main.js"></script>
+
+    <script type="text/javascript">
+        (function ($) {
+            var contactApi = 'https://7gx12p96i3.execute-api.ap-south-1.amazonaws.com/dev/get-in-touch';
+            var isSubmitting = false;
+
+            function showContactMessage(html, isSuccess) {
+                var cls = isSuccess ? 'notification_ok' : 'notification_error';
+                $('#contact-msg').html('<div class="' + cls + '">' + html + '</div>').fadeIn(300);
+            }
+
+            function submitContactForm() {
+                if (isSubmitting) return;
+
+                var payload = {
+                    name: $.trim($('#name').val()),
+                    email: $.trim($('#email').val()),
+                    website: $.trim($('#website').val()),
+                    message: $.trim($('#message-contact').val())
+                };
+
+                $('#contact-msg').html('').hide();
+
+                if (!payload.name || !payload.email || !payload.website || !payload.message) {
+                    showContactMessage('<strong>Please fill in all required fields.</strong>', false);
+                    return;
+                }
+
+                isSubmitting = true;
+                var $button = $('#contact-submit');
+                var $form = $('#care-contact-form');
+                var originalText = $button.text();
+                $button.prop('disabled', true).text('Sending...');
+
+                fetch(contactApi, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(function (response) {
+                    return response.text().then(function (text) {
+                        var data = {};
+                        try {
+                            data = JSON.parse(text);
+                        } catch (err) {}
+
+                        if (!response.ok) {
+                            throw new Error(data.message || text || response.statusText || 'Unable to send message');
+                        }
+
+                        return data;
+                    });
+                })
+                .then(function (data) {
+                    showContactMessage(data.message || 'Your message has been sent successfully', true);
+                    $form.find('input, textarea').val('');
+                })
+                .catch(function (error) {
+                    showContactMessage('<strong>' + (error.message || 'Unable to send message. Please try again.') + '</strong>', false);
+                })
+                .finally(function () {
+                    isSubmitting = false;
+                    $button.prop('disabled', false).text(originalText);
+                });
+            }
+
+            $(function () {
+                $('#contact-submit').on('click', submitContactForm);
+
+                $('#care-contact-form').on('submit', function (e) {
+                    e.preventDefault();
+                    submitContactForm();
+                });
+            });
+        })(jQuery);
+    </script>
 </body>
 
 <!-- Mirrored from themesflat.co/html/coaching/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Dec 2025 07:59:44 GMT -->

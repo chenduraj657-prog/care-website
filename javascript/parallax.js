@@ -64,9 +64,20 @@ http://www.gnu.org/licenses/gpl.html
 
 
 			});
-		}		
+		}
 
-		jQuerywindow.bind('scroll', update).resize(update);
+		var ticking = false;
+		function requestUpdate() {
+			if ( !ticking ) {
+				window.requestAnimationFrame(function() {
+					update();
+					ticking = false;
+				});
+				ticking = true;
+			}
+		}
+
+		jQuerywindow.bind('scroll', requestUpdate).resize(update);
 		update();
 	};
 })(jQuery);

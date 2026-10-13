@@ -6,8 +6,9 @@
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfonte0a5.eot?v=4.3.0');
-  src: url('../fonts/fontawesome-webfontd41d.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfonte0a5.html?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfonte0a5.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfonte0a5.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfonte0a5.svg?v=4.3.0#fontawesomeregular') format('svg');
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'),
+       url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
+       url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

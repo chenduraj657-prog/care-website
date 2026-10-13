@@ -959,3 +959,65 @@
 
 }
 
+/* Top bar phone & email: left-aligned single line on tablet & mobile */
+@media only screen and (max-width: 991px) {
+	.top .top-reponsive {
+		float: none;
+		width: 100% !important;
+		max-width: 100%;
+		text-align: left;
+	}
+
+	.top ul.flat-information {
+		text-align: left;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 4px 15px 0;
+		margin: 0;
+		width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.top .flat-information > li {
+		display: inline-flex;
+		align-items: center;
+		flex: 0 0 auto;
+		float: none;
+		padding: 0 10px 0 22px;
+		margin-right: 6px;
+		white-space: nowrap;
+	}
+
+	.top .flat-information > li:last-child {
+		padding: 0 0 0 22px;
+		margin-right: 0;
+	}
+
+	.top .flat-information > li > a {
+		font-size: 13px;
+		line-height: 1.2;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.top ul.flat-information {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.top .flat-information > li {
+		padding: 0 6px 0 18px;
+		margin-right: 4px;
+	}
+
+	.top .flat-information > li:last-child {
+		padding: 0 0 0 18px;
+	}
+
+	.top .flat-information > li > a {
+		font-size: 11px;
+	}
+}

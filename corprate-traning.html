@@ -15,11 +15,14 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <!-- Responsive -->
     <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/overflow-fix.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
     <!-- Colors -->
     <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
     <!-- Animation Style -->
     <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
-    <link href="icon/favicon.png" rel="shortcut icon">
+    <link href="images/care-tab.png" rel="shortcut icon">
 
     <style>
         /* CORPORATE B2B DESIGN SYSTEM */
@@ -108,7 +111,7 @@
 
         .training-card ul li::before {
             content: "\f105";
-            font-family: FontAwesome;
+            font-family: "FontAwesome";
             position: absolute;
             left: 0;
             color: var(--corp-teal);
@@ -193,56 +196,17 @@
     </style>
 </head>
 
-<body class="header-sticky">
+<body class="header-sticky top-logo-bar">
     <div class="boxed">
         <!-- HEADER -->
          <div class="site-wrapper parallax parallax1">
-            <div class="top">
-                <div class="container1">
-                        <div class="row">
-                            <div class="col-md-6 top-reponsive">
-                                <ul class="flat-information">
-                                    <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                    <li class="email">
-                                        <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
-                                    </li>
-                                </ul>
-                            </div><!-- /.col-md-6 -->
-                            <!-- <div class="col-md-6 top-reponsive">
-                                <ul class="social-links">
-                                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                </ul>
-                                <div class="flat-dropdown flat-sign-in">                        
-                                    <ul class="unstyled">
-                                        <li class="current"><a href="#">Sign In</a>
-                                            <ul class="unstyled">
-                                                <li class="en"><a href="#">Profile</a></li>
-                                                <li class="ge"><a href="#">Sign Out</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div> 
-                                <div class="flat-dropdown flat-language">                        
-                                    <ul class="unstyled">
-                                        <li class="current"><a href="#">English</a>
-                                            <ul class="unstyled">
-                                                <li class="en"><a href="#">French</a></li>
-                                                <li class="ge"><a href="#">German</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>         -->
-                        </div><!-- /.row -->
-                    </div><!-- /.container -->
-            </div>
-            <header id="header" class="header clearfix">
+<div class="top">
+<a href="index.html" class="top-logo" rel="home"><img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"></a>                 <div class="container1">                         <div class="row">                             <div class="col-md-6 top-reponsive">                                 <ul class="flat-information">                                     <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>                                     <li class="email">                                         <a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>                                     </li>                                 </ul>                             </div><!-- /.col-md-6 -->                             <!-- <div class="col-md-6 top-reponsive">                                 <ul class="social-links">                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>                                     <li><a href="#"><i class="fa fa-google-plus"></i></a></li>                                 </ul>                                 <div class="flat-dropdown flat-sign-in">                                                             <ul class="unstyled">                                         <li class="current"><a href="#">Sign In</a>                                             <ul class="unstyled">                                                 <li class="en"><a href="#">Profile</a></li>                                                 <li class="ge"><a href="#">Sign Out</a></li>                                             </ul>                                         </li>                                     </ul>                                 </div>                                  <div class="flat-dropdown flat-language">                                                             <ul class="unstyled">                                         <li class="current"><a href="#">English</a>                                             <ul class="unstyled">                                                 <li class="en"><a href="#">French</a></li>                                                 <li class="ge"><a href="#">German</a></li>                                             </ul>                                         </li>                                     </ul>                                 </div>                             </div>         -->                         </div><!-- /.row -->                     </div><!-- /.container -->             </div>
+<header id="header" class="header clearfix">
                 <div class="container1">
                     <div class="row">
                         <div class="header-wrap clearfix">
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
                                         <a href="index.html" rel="home">
@@ -346,7 +310,7 @@
                                         <form action="#" id="searchform-all" method="get">
                                             <div>
                                                 <input type="text" id="s" class="sss" placeholder="Search...">
-                                                <input type="submit" value="" id="searchsubmit">
+                                                <input type="submit" value="?" id="searchsubmit">
                                             </div>
                                         </form>
                                     </div><!-- /top-search -->
@@ -700,7 +664,7 @@
                 <ul class="flat-information">
                   <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
                   <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
-                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
+                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Rayakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
                 </ul>
 
                 <ul class="social-links style2">
@@ -780,6 +744,7 @@
     </div>
 
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/site-header.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascript/jquery.easing.js"></script>
     <script type="text/javascript" src="javascript/imagesloaded.min.js"></script>

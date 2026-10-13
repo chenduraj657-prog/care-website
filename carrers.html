@@ -6,15 +6,15 @@
     <title>Internships & Career Opportunities | CARE - Caring Society EST. 2006</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/responsive.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/overflow-fix.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/site-header.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/colors/color1.css" id="colors">
     <link rel="stylesheet" type="text/css" href="stylesheets/animate.css">
-    <link href="icon/favicon.png" rel="shortcut icon">
+    <link href="images/care-tab.png" rel="shortcut icon">
 
     <style>
         :root {
@@ -27,10 +27,6 @@
             --careers-dark: #0f172a;
         }
 
-        body {
-            font-family: 'Barlow', sans-serif;
-        }
-
         .gradient-text {
             background: linear-gradient(135deg, var(--wf-blue), var(--wf-teal));
             -webkit-background-clip: text;
@@ -38,9 +34,9 @@
             font-weight: 800;
         }
 
-        /* ══════════════════════════════════════
-           HERO — matches workforce prism style
-        ══════════════════════════════════════ */
+        /* --------------------------------------
+           HERO – matches workforce prism style
+        -------------------------------------- */
         .hero-workforce {
             padding: 140px 0 100px;
             background: #fff;
@@ -93,7 +89,7 @@
         }
 
         .hero-workforce h1 {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 64px;
             line-height: 1.0;
             margin-bottom: 25px;
@@ -114,7 +110,7 @@
         }
 
         .hero-stat-num {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 40px;
             font-weight: 800;
             color: var(--wf-blue);
@@ -136,7 +132,7 @@
             align-self: stretch;
         }
 
-        /* Hero right — live openings ticker */
+        /* Hero right – live openings ticker */
         .hero-openings-card {
             background: var(--careers-dark);
             border-radius: 24px;
@@ -218,7 +214,7 @@
         }
 
         .hoc-positions {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 22px;
             font-weight: 700;
             color: var(--wf-teal);
@@ -233,9 +229,9 @@
             text-align: right;
         }
 
-        /* ══════════════════════════════════════
+        /* --------------------------------------
            FILTER BAR
-        ══════════════════════════════════════ */
+        -------------------------------------- */
         .filter-bar {
             background: #fff;
             border-bottom: 1px solid #e8edf3;
@@ -269,7 +265,7 @@
             border-bottom: 3px solid transparent;
             cursor: pointer;
             transition: all 0.2s ease;
-            font-family: 'Barlow', sans-serif;
+            font-family: "Roboto", sans-serif;
             white-space: nowrap;
         }
 
@@ -296,9 +292,9 @@
             margin-left: 6px;
         }
 
-        /* ══════════════════════════════════════
+        /* --------------------------------------
            JOBS SECTION
-        ══════════════════════════════════════ */
+        -------------------------------------- */
         .jobs-section {
             padding: 80px 0;
             background: var(--wf-soft);
@@ -311,7 +307,7 @@
             gap: 24px;
         }
 
-        /* ── JOB CARD ── */
+        /* -- JOB CARD -- */
         .job-card {
             background: #fff;
             border-radius: 20px;
@@ -411,7 +407,7 @@
         }
 
         .job-title {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 24px;
             font-weight: 700;
             color: var(--careers-dark);
@@ -460,7 +456,7 @@
         }
 
         .positions-badge .pb-num {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 28px;
             font-weight: 800;
             line-height: 1;
@@ -487,7 +483,7 @@
             border-radius: 100px;
             font-size: 13px;
             font-weight: 700;
-            font-family: 'Barlow', sans-serif;
+            font-family: "Roboto", sans-serif;
             cursor: pointer;
             text-decoration: none;
             transition: all 0.25s ease;
@@ -596,7 +592,7 @@
             color: var(--wf-slate);
             font-size: 12px;
             font-weight: 600;
-            font-family: 'Barlow', sans-serif;
+            font-family: "Roboto", sans-serif;
             padding: 6px 14px;
             border-radius: 100px;
             cursor: pointer;
@@ -621,9 +617,9 @@
             transform: rotate(180deg);
         }
 
-        /* ══════════════════════════════════════
+        /* --------------------------------------
            APPLY POPUP MODAL
-        ══════════════════════════════════════ */
+        -------------------------------------- */
         .apply-modal-overlay {
             position: fixed;
             inset: 0;
@@ -692,7 +688,7 @@
         }
 
         .modal-title {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 26px;
             font-weight: 800;
             color: var(--careers-dark);
@@ -758,7 +754,7 @@
             border: 1.5px solid #e2e8f0;
             border-radius: 12px;
             font-size: 14px;
-            font-family: 'Barlow', sans-serif;
+            font-family: "Roboto", sans-serif;
             color: var(--careers-dark);
             background: #fafbfc;
             transition: all 0.2s ease;
@@ -861,7 +857,7 @@
             border-radius: 14px;
             font-size: 15px;
             font-weight: 700;
-            font-family: 'Barlow', sans-serif;
+            font-family: "Roboto", sans-serif;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -925,7 +921,7 @@
         }
 
         .success-title {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 26px;
             font-weight: 800;
             color: var(--careers-dark);
@@ -952,7 +948,7 @@
             border-radius: 100px;
             font-size: 13px;
             font-weight: 700;
-            font-family: 'Barlow', sans-serif;
+            font-family: "Roboto", sans-serif;
             cursor: pointer;
             transition: all 0.2s ease;
         }
@@ -962,9 +958,9 @@
             color: #fff;
         }
 
-        /* ══════════════════════════════════════
+        /* --------------------------------------
            SECTION TITLE
-        ══════════════════════════════════════ */
+        -------------------------------------- */
         .jobs-section-header {
             display: flex;
             align-items: flex-end;
@@ -975,7 +971,7 @@
         }
 
         .jsh-title {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 38px;
             font-weight: 800;
             color: var(--careers-dark);
@@ -991,7 +987,7 @@
         }
 
         .total-count {
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 16px;
             font-weight: 700;
             color: var(--wf-blue);
@@ -1001,9 +997,9 @@
             border-radius: 100px;
         }
 
-        /* ══════════════════════════════════════
+        /* --------------------------------------
            HOW TO APPLY STRIP
-        ══════════════════════════════════════ */
+        -------------------------------------- */
         .apply-strip {
             background: var(--wf-navy);
             padding: 60px 0;
@@ -1038,7 +1034,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Barlow Condensed', sans-serif;
+            font-family: "Roboto", sans-serif;
             font-size: 16px;
             font-weight: 700;
             color: var(--wf-teal);
@@ -1067,7 +1063,7 @@
             border-radius: 100px;
             font-size: 14px;
             font-weight: 800;
-            font-family: 'Barlow', sans-serif;
+            font-family: "Roboto", sans-serif;
             text-decoration: none;
             transition: all 0.25s ease;
             flex-shrink: 0;
@@ -1080,9 +1076,9 @@
             transform: translateY(-2px);
         }
 
-        /* ══════════════════════════════════════
+        /* --------------------------------------
            RESPONSIVE
-        ══════════════════════════════════════ */
+        -------------------------------------- */
         @media (max-width: 991px) {
             .hero-workforce {
                 text-align: center;
@@ -1132,30 +1128,18 @@
     </style>
 </head>
 
-<body class="header-sticky">
+<body class="header-sticky top-logo-bar">
     <div class="boxed">
 
-        <!-- ── SITE HEADER ── -->
+        <!-- -- SITE HEADER -- -->
         <div class="site-wrapper parallax parallax1">
-            <div class="top">
-                <div class="container1">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 top-reponsive">
-                            <ul class="flat-information">
-                                <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
-                                <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <header id="header" class="header clearfix">
+<div class="top">
+<a href="index.html" class="top-logo" rel="home"><img src="images/parallax/Logo-Care-.jpg" alt="CARE Logo"></a>                 <div class="container1">                     <div class="row">                         <div class="col-md-6 col-sm-6 top-reponsive">                             <ul class="flat-information">                                 <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>                                 <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a>                                 </li>                             </ul>                         </div>                     </div>                 </div>             </div>
+<header id="header" class="header clearfix">
                 <div class="container1">
                     <div class="row">
                         <div class="header-wrap clearfix">
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                                 <div id="logo" class="logo responsive-logo-container">
                                     <h1 class="responsive-logo-heading">
                                         <a href="index.html" rel="home">
@@ -1258,19 +1242,19 @@
             </div>
         </div>
 
-        <!-- ══════════════════════════════════════
+        <!-- --------------------------------------
              HERO
-        ══════════════════════════════════════ -->
+        -------------------------------------- -->
         <section class="hero-workforce">
             <div class="container hero-content">
                 <div class="row align-items-center">
 
                     <div class="col-md-7">
-                        <div class="wf-badge">&#9673;&nbsp; Now Hiring — 8 Open Positions</div>
+                        <div class="wf-badge">&#9673;&nbsp; Now Hiring – 8 Open Positions</div>
                         <h1>Shape the Future<br><span class="gradient-text">with Your Skills.</span></h1>
                         <p style="font-size: 19px; color: #64748b; line-height: 1.65; max-width: 560px;">
                             We connect skilled manufacturing professionals with leading industries.
-                            Precision, craftsmanship, and expertise — that's what we look for.
+                            Precision, craftsmanship, and expertise – that's what we look for.
                         </p>
                         <div class="hero-stats">
                             <div class="hero-stat-item">
@@ -1297,28 +1281,28 @@
                             <div class="hoc-job-item">
                                 <div>
                                     <div class="hoc-job-title">Lathe Machine Operator</div>
-                                    <div class="hoc-job-dept">Manufacturing · Diploma / ITI</div>
+                                    <div class="hoc-job-dept">Manufacturing – Diploma / ITI</div>
                                 </div>
                                 <div class="hoc-positions">2<span>positions</span></div>
                             </div>
                             <div class="hoc-job-item">
                                 <div>
                                     <div class="hoc-job-title">Milling Operator</div>
-                                    <div class="hoc-job-dept">Manufacturing · DME / ITI</div>
+                                    <div class="hoc-job-dept">Manufacturing – DME / ITI</div>
                                 </div>
                                 <div class="hoc-positions">2<span>positions</span></div>
                             </div>
                             <div class="hoc-job-item">
                                 <div>
                                     <div class="hoc-job-title">Tool Assembler</div>
-                                    <div class="hoc-job-dept">Tool & Die · DME Tool &amp; Die</div>
+                                    <div class="hoc-job-dept">Tool & Die – DME Tool &amp; Die</div>
                                 </div>
                                 <div class="hoc-positions">2<span>positions</span></div>
                             </div>
                             <div class="hoc-job-item">
                                 <div>
                                     <div class="hoc-job-title">CNC Turning Operator</div>
-                                    <div class="hoc-job-dept">CNC · 2–6 Yrs Experience</div>
+                                    <div class="hoc-job-dept">CNC – 2–6 Yrs Experience</div>
                                 </div>
                                 <div class="hoc-positions">2<span>positions</span></div>
                             </div>
@@ -1337,9 +1321,9 @@
             </div>
         </section>
 
-        <!-- ══════════════════════════════════════
+        <!-- --------------------------------------
              FILTER BAR
-        ══════════════════════════════════════ -->
+        -------------------------------------- -->
         <div class="filter-bar">
             <div class="container">
                 <div class="filter-inner">
@@ -1353,22 +1337,22 @@
             </div>
         </div>
 
-        <!-- ══════════════════════════════════════
+        <!-- --------------------------------------
              JOB LISTINGS
-        ══════════════════════════════════════ -->
+        -------------------------------------- -->
         <section class="jobs-section">
             <div class="container">
                 <div class="jobs-section-header">
                     <div>
                         <h2 class="jsh-title">Current Openings</h2>
-                        <p class="jsh-sub">All roles based in Tamil Nadu · Full-time · Immediate joining</p>
+                        <p class="jsh-sub">All roles based in Tamil Nadu – Full-time – Immediate joining</p>
                     </div>
                     <div class="total-count">12 Total Positions</div>
                 </div>
 
                 <div class="jobs-grid">
 
-                    <!-- ── JOB 1: Lathe Machine Operator ── -->
+                    <!-- -- JOB 1: Lathe Machine Operator -- -->
                     <div class="job-card" data-category="conventional" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon blue"><i class="fa fa-cog"></i></div>
@@ -1434,7 +1418,7 @@
                         </div>
                     </div>
 
-                    <!-- ── JOB 2: Milling Operator ── -->
+                    <!-- -- JOB 2: Milling Operator -- -->
                     <div class="job-card" data-category="conventional" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon teal"><i class="fa fa-gear"></i></div>
@@ -1498,7 +1482,7 @@
                         </div>
                     </div>
 
-                    <!-- ── JOB 3: Tool Assembler ── -->
+                    <!-- -- JOB 3: Tool Assembler -- -->
                     <div class="job-card" data-category="tooling" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon orange"><i class="fa fa-wrench"></i></div>
@@ -1562,7 +1546,7 @@
                         </div>
                     </div>
 
-                    <!-- ── JOB 4: CNC Turning Operator ── -->
+                    <!-- -- JOB 4: CNC Turning Operator -- -->
                     <div class="job-card" data-category="cnc" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon navy"><i class="fa fa-microchip"></i><i class="fa fa-sliders"></i>
@@ -1632,7 +1616,7 @@
 
                     <!-- ========== NEW FULL-TIME JOBS ADDED ========== -->
 
-                    <!-- ── JOB 5: Senior Production Supervisor ── -->
+                    <!-- -- JOB 5: Senior Production Supervisor -- -->
                     <div class="job-card" data-category="production" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon blue"><i class="fa fa-tasks"></i></div>
@@ -1697,7 +1681,7 @@
                         </div>
                     </div>
 
-                    <!-- ── JOB 6: Quality Control Inspector ── -->
+                    <!-- -- JOB 6: Quality Control Inspector -- -->
                     <div class="job-card" data-category="quality" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon teal"><i class="fa fa-check-circle"></i></div>
@@ -1763,7 +1747,7 @@
                         </div>
                     </div>
 
-                    <!-- ── JOB 7: Maintenance Engineer ── -->
+                    <!-- -- JOB 7: Maintenance Engineer -- -->
                     <div class="job-card" data-category="maintenance" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon orange"><i class="fa fa-wrench"></i><i class="fa fa-gear"></i></div>
@@ -1828,7 +1812,7 @@
                         </div>
                     </div>
 
-                    <!-- ── JOB 8: Supply Chain Coordinator ── -->
+                    <!-- -- JOB 8: Supply Chain Coordinator -- -->
                     <div class="job-card" data-category="logistics" data-job-type="fulltime">
                         <div class="job-card-top">
                             <div class="job-icon navy"><i class="fa fa-truck"></i></div>
@@ -1898,9 +1882,9 @@
         </section>
 
 
-        <!-- ══════════════════════════════════════
+        <!-- --------------------------------------
              HOW TO APPLY
-        ══════════════════════════════════════ -->
+        -------------------------------------- -->
         <div class="apply-strip">
             <div class="container">
                 <div class="apply-strip-inner">
@@ -1953,7 +1937,7 @@
                 <ul class="flat-information">
                   <li class="phone"><a href="tel:+919865223321">+91 98652 23321</a></li>
                   <li class="email"><a href="mailto:carehrdindia@gmail.com">carehrdindia@gmail.com</a></li>
-                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Royakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
+                  <li class="address"><a href="#">7, Subramaniyasiva Nagar, Rayakotta Road - Ring Road Junction, Near Ashok Pillar, Hosur - 635 109. (TN).</a></li>
                 </ul>
 
                 <ul class="social-links style2">
@@ -2027,6 +2011,7 @@
     </div>
 
     <script type="text/javascript" src="javascript/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/site-header.js"></script>
     <script type="text/javascript" src="javascript/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascript/main.js"></script>
 
@@ -2182,7 +2167,7 @@
         // Update the "Now Hiring" badge
         const wfBadge = document.querySelector('.wf-badge');
         if (wfBadge) {
-            wfBadge.innerHTML = `&#9673;&nbsp; Now Hiring — ${totalPositions} Open Positions`;
+            wfBadge.innerHTML = `&#9673;&nbsp; Now Hiring – ${totalPositions} Open Positions`;
         }
         
         return { totalJobs, fullTimeCount, internshipCount, totalPositions };
@@ -2252,11 +2237,11 @@
         const jshSub = document.querySelector('.jsh-sub');
         if (jshSub) {
             if (filterType === 'Full-time') {
-                jshSub.innerHTML = 'All roles based in Tamil Nadu · Full-time positions · Immediate joining';
+                jshSub.innerHTML = 'All roles based in Tamil Nadu – Full-time positions – Immediate joining';
             } else if (filterType === 'Internship') {
-                jshSub.innerHTML = 'Internship opportunities · Learn & earn · Hands-on experience';
+                jshSub.innerHTML = 'Internship opportunities – Learn & earn – Hands-on experience';
             } else {
-                jshSub.innerHTML = 'All roles based in Tamil Nadu · Full-time & Internship · Immediate joining';
+                jshSub.innerHTML = 'All roles based in Tamil Nadu – Full-time & Internship – Immediate joining';
             }
         }
         
@@ -2295,7 +2280,7 @@
             if (arrow) {
                 arrow.style.transform = jdDiv.classList.contains('open') ? 'rotate(180deg)' : '';
             }
-            btn.innerHTML = jdDiv.classList.contains('open') ? 'View JD ▲' : 'View JD ▼';
+            btn.innerHTML = jdDiv.classList.contains('open') ? 'View JD ?' : 'View JD ?';
         }
     }
     
@@ -2321,9 +2306,9 @@
                 title: "HR Internship",
                 dept: "Human Resources",
                 duration: "3-6 months",
-                stipend: "₹10,000/month",
+                stipend: "?10,000/month",
                 positions: 2,
-                icon: "👥",
+                icon: "??",
                 duties: [
                     "Assist in recruitment and onboarding processes",
                     "Maintain employee records and HR documentation",
@@ -2335,9 +2320,9 @@
                 title: "Digital Marketing Intern",
                 dept: "Marketing",
                 duration: "3 months",
-                stipend: "₹8,000/month",
+                stipend: "?8,000/month",
                 positions: 2,
-                icon: "📢",
+                icon: "??",
                 duties: [
                     "Create social media content and schedule posts",
                     "Assist in SEO and website content optimization",
@@ -2349,9 +2334,9 @@
                 title: "Training & Development Intern",
                 dept: "Learning & Development",
                 duration: "4 months",
-                stipend: "₹8,000/month",
+                stipend: "?8,000/month",
                 positions: 1,
-                icon: "📚",
+                icon: "??",
                 duties: [
                     "Assist in organizing training sessions and workshops",
                     "Prepare training materials and presentations",
@@ -2533,7 +2518,7 @@
             var submitBtn = document.querySelector('.modal-submit-btn');
             if (submitBtn) submitBtn.disabled = true;
 
-            var presignedEndpoint = 'https://erle4nqql3.execute-api.ap-south-1.amazonaws.com/dev/upload-resume/presigned';
+            var presignedEndpoint = 'https://7gx12p96i3.execute-api.ap-south-1.amazonaws.com/dev/upload-resume/presigned';
             var qs = '?fileName=' + encodeURIComponent(file.name) + '&contentType=' + encodeURIComponent(file.type || 'application/octet-stream');
 
             fetch(presignedEndpoint + qs, { method: 'GET' })
@@ -2704,7 +2689,7 @@
             resume: uploadedResumeUrl
         };
 
-        fetch('https://erle4nqql3.execute-api.ap-south-1.amazonaws.com/dev/applications', {
+        fetch('https://7gx12p96i3.execute-api.ap-south-1.amazonaws.com/dev/applications', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
